@@ -54,13 +54,12 @@ Issue как completed. Интервью и отзыв руководителя 
 но не `project`. Обычный `GITHUB_TOKEN` из Actions тоже не даёт доступа к Projects.
 Поэтому требуется отдельный секрет. Не отправляйте его в чат и не храните в Git.
 
-1. После слияния PR настройки под аккаунтом `vbl0-0` создайте personal access
-   token с правом записи в пользовательские Projects. Для fine-grained token
-   используйте User/Account Projects: read and write; для выбранного
-   `AITU-Career` — Issues: read и Pull requests: read. Если ваш интерфейс не
-   предлагает пользовательские Projects, используйте classic token со scope
-   `project`; для этого публичного репозитория чтение публичных Issue/PR не
-   требует доступа к другим частным репозиториям. Ограничьте срок действия.
+1. После слияния PR настройки под аккаунтом `vbl0-0` откройте
+   https://github.com/settings/tokens/new?description=AITU-Career-Project-Sync&scopes=project
+   и создайте **personal access token (classic)** со scope **project**.
+   Fine-grained tokens пока не поддерживают Projects личного аккаунта — это
+   ограничение GitHub. Для чтения этого публичного репозитория дополнительный
+   доступ `repo` не требуется. Ограничьте срок действия токена.
 2. Откройте https://github.com/vbl0-0/AITU-Career/settings/secrets/actions.
    Создайте **New repository secret** с именем **PROJECTS_TOKEN** и вставьте
    токен непосредственно в поле Secret.
@@ -101,3 +100,4 @@ node --test .github/scripts/project-sync.test.mjs
 
 - https://docs.github.com/en/issues/planning-and-tracking-with-projects/automating-your-project/automating-projects-using-actions
 - https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/linking-a-pull-request-to-an-issue
+- https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens
