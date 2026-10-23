@@ -1,0 +1,19 @@
+﻿YouTrack ID,Local planning ID,Summary,Planned owner,Assignee account,State,Priority,Due date,URL
+AITU-1,PLAN-01,Confirm team details and project scope,Ayadil,,Backlog,Critical,2026-10-21,https://aitu-career-diploma.youtrack.cloud/issue/AITU-1
+AITU-2,PLAN-02,Conduct 3–5 user discussions,Zhan,,Backlog,Critical,2026-10-22,https://aitu-career-diploma.youtrack.cloud/issue/AITU-2
+AITU-3,PLAN-03,Revise requirements using discussion findings,Ayadil,,Backlog,Major,2026-10-22,https://aitu-career-diploma.youtrack.cloud/issue/AITU-3
+AITU-4,PLAN-04,Review the literature and source analysis,Zhan,,Backlog,Major,2026-10-22,https://aitu-career-diploma.youtrack.cloud/issue/AITU-4
+AITU-5,PLAN-05,Review existing systems against common criteria,Zhan,,Backlog,Major,2026-10-22,https://aitu-career-diploma.youtrack.cloud/issue/AITU-5
+AITU-6,PLAN-06,Review technology alternatives and ADRs,Ayadil,,Backlog,Major,2026-10-22,https://aitu-career-diploma.youtrack.cloud/issue/AITU-6
+AITU-7,PLAN-07,Review architectural diagrams,Ayadil,,Backlog,Major,2026-10-22,https://aitu-career-diploma.youtrack.cloud/issue/AITU-7
+AITU-8,PLAN-08,Verify the updated interface palette and UX,Zhan,,Backlog,Major,2026-10-21,https://aitu-career-diploma.youtrack.cloud/issue/AITU-8
+AITU-9,PLAN-09,Verify the application and preserve results,Ayadil,,Backlog,Major,2026-10-22,https://aitu-career-diploma.youtrack.cloud/issue/AITU-9
+AITU-10,PLAN-10,Prepare independent matching relevance labels,Zhan,,Backlog,Normal,2026-11-06,https://aitu-career-diploma.youtrack.cloud/issue/AITU-10
+AITU-11,PLAN-11,Evaluate matching baselines and latency,Ayadil,,Backlog,Normal,2026-11-13,https://aitu-career-diploma.youtrack.cloud/issue/AITU-11
+AITU-12,PLAN-12,Set up the shared repository and access,Ayadil,,Backlog,Critical,2026-10-22,https://aitu-career-diploma.youtrack.cloud/issue/AITU-12
+AITU-13,PLAN-13,Set up the tracker and assign responsibilities,Zhan,,Backlog,Critical,2026-10-22,https://aitu-career-diploma.youtrack.cloud/issue/AITU-13
+AITU-14,PLAN-14,Link code changes and reviews to real tasks,Ayadil,,Backlog,Major,2026-10-23,https://aitu-career-diploma.youtrack.cloud/issue/AITU-14
+AITU-15,PLAN-15,Obtain substantive supervisor feedback,Zhan,,Backlog,Critical,2026-10-23,https://aitu-career-diploma.youtrack.cloud/issue/AITU-15
+AITU-16,PLAN-16,Address review comments and finalize the report,Zhan,,Backlog,Critical,2026-10-23,https://aitu-career-diploma.youtrack.cloud/issue/AITU-16
+AITU-17,PLAN-17,Compile actual board and task screenshots into PDF,Zhan,,Backlog,Critical,2026-10-23,https://aitu-career-diploma.youtrack.cloud/issue/AITU-17
+AITU-18,PLAN-18,Verify access and submit the team materials,Ayadil,,Backlog,Critical,2026-10-24,https://aitu-career-diploma.youtrack.cloud/issue/AITU-18

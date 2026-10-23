@@ -66,7 +66,7 @@ try {
     const missing=await page.locator('.missing').allTextContents();
     const broken=await page.locator('img').evaluateAll(imgs=>imgs.filter(i=>!i.complete||i.naturalWidth===0).map(i=>i.src));
     if(missing.length||broken.length)throw new Error('Incomplete report images: '+JSON.stringify({missing,broken}));
-    await page.pdf({path:resolve(output,'report.pdf'),format:'A4',printBackground:true,displayHeaderFooter:true,headerTemplate:'<span></span>',footerTemplate:'<div style="font:9px Arial;width:100%;text-align:center;color:#444444">AITU Career · Draft report · <span class="pageNumber"></span> / <span class="totalPages"></span></div>',preferCSSPageSize:true});
+    await page.pdf({path:resolve(output,'report.pdf'),format:'A4',printBackground:true,displayHeaderFooter:true,headerTemplate:'<span></span>',footerTemplate:'<div style="font:9px Arial;width:100%;text-align:center;color:#444444">AITU Career · Probationary period 1 · <span class="pageNumber"></span> / <span class="totalPages"></span></div>',preferCSSPageSize:true});
     await page.screenshot({path:resolve(output,'report-cover.png')});
     console.log(mode==='report' ? 'Exported report.pdf and report.docx.' : 'Exported report.pdf from existing HTML; DOCX and prototype images preserved.');
   } else if(mode==='evidence') {

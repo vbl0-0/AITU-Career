@@ -2,7 +2,7 @@
 
 ## Implementation and local launch
 
-The working implementation is in `frontend/` and `backend/`. Setup, demo accounts, matching formulas, optional semantic matching, and testing instructions: [Development guide](docs/DEVELOPMENT.md).
+The working implementation is in `frontend/` and `backend/`. Setup, demo accounts, matching formulas, optional semantic matching, and testing instructions: [Development guide](DEVELOPMENT.md).
 
 ```bash
 python scripts/setup_env.py

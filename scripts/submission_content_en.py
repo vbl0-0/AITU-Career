@@ -263,4 +263,7 @@ def build_content(cfg, root):
         ['Unified report', 'This editable English draft and PDF export.', 'Final review after adding genuine evidence.'],
     ])
     p(b, 'One representative submits on behalf of both students. Before submission, verify the topic, supervisor details, each participant’s full name/account and actual contribution, repository/tracker links and committee access. Upload the unified report and a separate PDF of real board/task screenshots, then retain confirmation. Known names and groups are recorded from the supplied project justification; any remaining blank fields require confirmed information before final submission.')
+    if cfg.get('submission_tag') == 'prob-period-1':
+        from submission_finalize import finalize_sections
+        return finalize_sections(sources, sections, cfg, root)
     return sources, sections

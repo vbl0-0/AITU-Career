@@ -1,0 +1,190 @@
+{
+  "checked_on": "2026-10-24",
+  "screen_states": 22,
+  "records": [
+    {
+      "step": 1,
+      "route": "/dashboard",
+      "width": 1440,
+      "file": "01-dashboard-1440.png",
+      "overflow": false,
+      "alerts": []
+    },
+    {
+      "step": 1,
+      "route": "/dashboard",
+      "width": 390,
+      "file": "01-dashboard-390.png",
+      "overflow": false,
+      "alerts": []
+    },
+    {
+      "step": 2,
+      "route": "/profile",
+      "width": 1440,
+      "file": "02-profile-1440.png",
+      "overflow": false,
+      "alerts": []
+    },
+    {
+      "step": 2,
+      "route": "/profile",
+      "width": 390,
+      "file": "02-profile-390.png",
+      "overflow": false,
+      "alerts": []
+    },
+    {
+      "step": 3,
+      "route": "/skills",
+      "width": 1440,
+      "file": "03-skills-1440.png",
+      "overflow": false,
+      "alerts": []
+    },
+    {
+      "step": 3,
+      "route": "/skills",
+      "width": 390,
+      "file": "03-skills-390.png",
+      "overflow": false,
+      "alerts": []
+    },
+    {
+      "step": 4,
+      "route": "/projects",
+      "width": 1440,
+      "file": "04-projects-1440.png",
+      "overflow": false,
+      "alerts": []
+    },
+    {
+      "step": 4,
+      "route": "/projects",
+      "width": 390,
+      "file": "04-projects-390.png",
+      "overflow": false,
+      "alerts": []
+    },
+    {
+      "step": 5,
+      "route": "/certificates",
+      "width": 1440,
+      "file": "05-certificates-1440.png",
+      "overflow": false,
+      "alerts": []
+    },
+    {
+      "step": 5,
+      "route": "/certificates",
+      "width": 390,
+      "file": "05-certificates-390.png",
+      "overflow": false,
+      "alerts": []
+    },
+    {
+      "step": 6,
+      "route": "/experience",
+      "width": 1440,
+      "file": "06-experience-1440.png",
+      "overflow": false,
+      "alerts": []
+    },
+    {
+      "step": 6,
+      "route": "/experience",
+      "width": 390,
+      "file": "06-experience-390.png",
+      "overflow": false,
+      "alerts": []
+    },
+    {
+      "step": 7,
+      "route": "/jobs",
+      "width": 1440,
+      "file": "07-jobs-1440.png",
+      "overflow": false,
+      "alerts": []
+    },
+    {
+      "step": 7,
+      "route": "/jobs",
+      "width": 390,
+      "file": "07-jobs-390.png",
+      "overflow": false,
+      "alerts": []
+    },
+    {
+      "step": 8,
+      "route": "/jobs/1",
+      "width": 1440,
+      "file": "08-jobs-1-1440.png",
+      "overflow": false,
+      "alerts": []
+    },
+    {
+      "step": 8,
+      "route": "/jobs/1",
+      "width": 390,
+      "file": "08-jobs-1-390.png",
+      "overflow": false,
+      "alerts": []
+    },
+    {
+      "step": 9,
+      "route": "/saved",
+      "width": 1440,
+      "file": "09-saved-1440.png",
+      "overflow": false,
+      "alerts": []
+    },
+    {
+      "step": 9,
+      "route": "/saved",
+      "width": 390,
+      "file": "09-saved-390.png",
+      "overflow": false,
+      "alerts": []
+    },
+    {
+      "step": 10,
+      "route": "/recommendations",
+      "width": 1440,
+      "file": "10-recommendations-1440.png",
+      "overflow": false,
+      "alerts": []
+    },
+    {
+      "step": 10,
+      "route": "/recommendations",
+      "width": 390,
+      "file": "10-recommendations-390.png",
+      "overflow": false,
+      "alerts": []
+    },
+    {
+      "step": 11,
+      "route": "/admin",
+      "width": 1440,
+      "file": "11-admin-1440.png",
+      "overflow": false
+    },
+    {
+      "step": 11,
+      "route": "/admin",
+      "width": 390,
+      "file": "11-admin-390.png",
+      "overflow": false
+    }
+  ],
+  "keyboard_focus": {
+    "tag": "A",
+    "text": "Skip to content",
+    "outline": "solid",
+    "outlineWidth": "3px"
+  },
+  "limits": [
+    "Targeted visual/keyboard review, not a comprehensive WCAG or screen-reader audit.",
+    "Screens depict explicitly fictional demonstration data."
+  ]
+}

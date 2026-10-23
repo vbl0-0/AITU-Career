@@ -1,0 +1,41 @@
+{
+  "title": "AI-Based Platform to Support the Employment of Astana IT University Graduates",
+  "group": "SE-2425 (student 1); SE-2419 (student 2)",
+  "members": [
+    {
+      "name": "Қожабек Аяділ Нұрланұлы",
+      "gitlab": "",
+      "contribution": "Backend/API and migration delivery, backend regression tests and repository automation; publication and verification assisted by OpenAI Codex. Evidence: https://github.com/vbl0-0/AITU-Career/pull/19 ; https://github.com/vbl0-0/AITU-Career/pull/21 ; commits 6c434f2 and 0b8c8bb. These records describe current delivery, not exclusive initial authorship of all imported code.",
+      "group": "SE-2425",
+      "github": "https://github.com/vbl0-0"
+    },
+    {
+      "name": "Амантай Жан Әділұлы",
+      "gitlab": "",
+      "contribution": "Frontend, multilingual interface, research documentation and report-source delivery; publication and verification assisted by OpenAI Codex. Evidence: https://github.com/vbl0-0/AITU-Career/pull/20 ; https://github.com/vbl0-0/AITU-Career/pull/22 ; commits 7717652, c12021f and 203f7c7. These records describe current delivery, not exclusive initial authorship of all imported code.",
+      "group": "SE-2419",
+      "github": "https://github.com/igiiaw"
+    }
+  ],
+  "supervisor": "Оразова Арайлым Жанболаткызы",
+  "supervisor_position": "Senior Lecturer",
+  "repository_url": "https://github.com/vbl0-0/AITU-Career",
+  "tracker_url": "https://github.com/users/vbl0-0/projects/1",
+  "submission_tag": "prob-period-1",
+  "prototype_url": "https://vbl0-0.github.io/AITU-Career/",
+  "report_upload_filename": "SE-2425_Kozhabek_ProbPeriod1.pdf",
+  "report_status": "Probationary period 1 submission. Current implementation and verification evidence are documented. Interviews and supervisor feedback are optional; no such evidence or approval is claimed.",
+  "interviews_required": false,
+  "supervisor_feedback_required": false,
+  "requirement_clarification": {
+    "date": "2026-10-24",
+    "source": "Team clarification relayed by Ayadil; not a supervisor approval record.",
+    "text": "User interviews and supervisor feedback are optional for the current submission."
+  },
+  "form_url": "https://forms.cloud.microsoft/r/Yy6AXT5pe3",
+  "deadline": "2026-10-24T18:00:00+05:00",
+  "interview_evidence": [],
+  "supervisor_feedback_evidence": [],
+  "team_size": 2,
+  "report_date": "24 October 2026"
+}

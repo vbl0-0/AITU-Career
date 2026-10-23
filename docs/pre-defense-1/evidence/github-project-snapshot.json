@@ -1,0 +1,1121 @@
+{
+  "captured_on": "2026-10-22",
+  "id": "PVT_kwHODc8qX84BoOZj",
+  "items": {
+    "nodes": [
+      {
+        "content": {
+          "assignees": {
+            "nodes": [
+              {
+                "login": "vbl0-0"
+              }
+            ]
+          },
+          "body": "## Expected outcome\nRecord the two students, group, personal accounts and supervisor in submission.json. Confirm the topic and scope with the supervisor.\n\n## Acceptance criteria\n- Record the two students, group, personal accounts and supervisor in submission.json. Confirm the topic and scope with the supervisor.\n\n## Traceability\nReport requirement/section: 1; 11\n\n## Planning\nDue date: 2026-10-21\nSuggested work area: Research / coordination\n\n## Evidence\nLink actual artifacts, commits and review records before marking this task complete.\n\nLocal planning reference: PLAN-01\n\n## Migration reference\nOriginal task: https://aitu-career-diploma.youtrack.cloud/issue/AITU-1\nPlanned owner: Ayadil\nOriginal priority: Critical\nOriginal due date: 2026-10-21\n\nMigration snapshot: 19 October 2026. Status copied as To Do; completion must be supported by actual evidence.",
+          "id": "I_kwDOVOwwQM8AAAABZGCIAA",
+          "number": 1,
+          "state": "OPEN",
+          "title": "[AITU-1] Confirm team details and project scope",
+          "url": "https://github.com/vbl0-0/AITU-Career/issues/1"
+        },
+        "fieldValues": {
+          "nodes": [
+            {},
+            {},
+            {
+              "field": {
+                "name": "Title"
+              },
+              "text": "[AITU-1] Confirm team details and project scope"
+            },
+            {
+              "field": {
+                "name": "Status"
+              },
+              "name": "To Do"
+            },
+            {
+              "field": {
+                "name": "Priority"
+              },
+              "name": "Critical"
+            },
+            {
+              "field": {
+                "name": "Planned owner"
+              },
+              "name": "Ayadil"
+            },
+            {
+              "date": "2026-10-21",
+              "field": {
+                "name": "Due date"
+              }
+            },
+            {
+              "field": {
+                "name": "YouTrack ID"
+              },
+              "text": "AITU-1"
+            }
+          ]
+        },
+        "id": "PVTI_lAHODc8qX84BoOZjzhCsduY"
+      },
+      {
+        "content": {
+          "assignees": {
+            "nodes": [
+              {
+                "login": "igiiaw"
+              }
+            ]
+          },
+          "body": "## Expected outcome\nRetain actual anonymized discussion records, dates, consent and participant roles. Separate observations from assumptions.\n\n## Acceptance criteria\n- Retain actual anonymized discussion records, dates, consent and participant roles. Separate observations from assumptions.\n\n## Traceability\nReport requirement/section: 2\n\n## Planning\nDue date: 2026-10-22\nSuggested work area: Research / UX\n\n## Evidence\nLink actual artifacts, commits and review records before marking this task complete.\n\nLocal planning reference: PLAN-02\n\n## Migration reference\nOriginal task: https://aitu-career-diploma.youtrack.cloud/issue/AITU-2\nPlanned owner: Zhan\nOriginal priority: Critical\nOriginal due date: 2026-10-22\n\nMigration snapshot: 19 October 2026. Status copied as To Do; completion must be supported by actual evidence.",
+          "id": "I_kwDOVOwwQM8AAAABZGCIhw",
+          "number": 2,
+          "state": "OPEN",
+          "title": "[AITU-2] Conduct 3–5 user discussions",
+          "url": "https://github.com/vbl0-0/AITU-Career/issues/2"
+        },
+        "fieldValues": {
+          "nodes": [
+            {},
+            {},
+            {
+              "field": {
+                "name": "Title"
+              },
+              "text": "[AITU-2] Conduct 3–5 user discussions"
+            },
+            {
+              "field": {
+                "name": "Status"
+              },
+              "name": "To Do"
+            },
+            {
+              "field": {
+                "name": "Priority"
+              },
+              "name": "Critical"
+            },
+            {
+              "field": {
+                "name": "Planned owner"
+              },
+              "name": "Zhan"
+            },
+            {
+              "date": "2026-10-22",
+              "field": {
+                "name": "Due date"
+              }
+            },
+            {
+              "field": {
+                "name": "YouTrack ID"
+              },
+              "text": "AITU-2"
+            }
+          ]
+        },
+        "id": "PVTI_lAHODc8qX84BoOZjzhCsdus"
+      },
+      {
+        "content": {
+          "assignees": {
+            "nodes": [
+              {
+                "login": "vbl0-0"
+              }
+            ]
+          },
+          "body": "## Expected outcome\nLink each confirmed finding to FR/NFR IDs and record the rationale for changed or rejected requirements.\n\n## Acceptance criteria\n- Link each confirmed finding to FR/NFR IDs and record the rationale for changed or rejected requirements.\n\n## Traceability\nReport requirement/section: 2; 6\n\n## Planning\nDue date: 2026-10-22\nSuggested work area: Research / backend / frontend\n\n## Evidence\nLink actual artifacts, commits and review records before marking this task complete.\n\nLocal planning reference: PLAN-03\n\n## Migration reference\nOriginal task: https://aitu-career-diploma.youtrack.cloud/issue/AITU-3\nPlanned owner: Ayadil\nOriginal priority: Major\nOriginal due date: 2026-10-22\n\nMigration snapshot: 19 October 2026. Status copied as To Do; completion must be supported by actual evidence.",
+          "id": "I_kwDOVOwwQM8AAAABZGCIvA",
+          "number": 3,
+          "state": "OPEN",
+          "title": "[AITU-3] Revise requirements using discussion findings",
+          "url": "https://github.com/vbl0-0/AITU-Career/issues/3"
+        },
+        "fieldValues": {
+          "nodes": [
+            {},
+            {},
+            {
+              "field": {
+                "name": "Title"
+              },
+              "text": "[AITU-3] Revise requirements using discussion findings"
+            },
+            {
+              "field": {
+                "name": "Status"
+              },
+              "name": "To Do"
+            },
+            {
+              "field": {
+                "name": "Priority"
+              },
+              "name": "Major"
+            },
+            {
+              "field": {
+                "name": "Planned owner"
+              },
+              "name": "Ayadil"
+            },
+            {
+              "date": "2026-10-22",
+              "field": {
+                "name": "Due date"
+              }
+            },
+            {
+              "field": {
+                "name": "YouTrack ID"
+              },
+              "text": "AITU-3"
+            }
+          ]
+        },
+        "id": "PVTI_lAHODc8qX84BoOZjzhCsdvM"
+      },
+      {
+        "content": {
+          "assignees": {
+            "nodes": [
+              {
+                "login": "igiiaw"
+              }
+            ]
+          },
+          "body": "## Expected outcome\nUse at least 12 meaningful sources, including eight scientific publications. Connect limitations to engineering decisions.\n\n## Acceptance criteria\n- Use at least 12 meaningful sources, including eight scientific publications. Connect limitations to engineering decisions.\n\n## Traceability\nReport requirement/section: 3\n\n## Planning\nDue date: 2026-10-22\nSuggested work area: Research\n\n## Evidence\nLink actual artifacts, commits and review records before marking this task complete.\n\nLocal planning reference: PLAN-04\n\n## Migration reference\nOriginal task: https://aitu-career-diploma.youtrack.cloud/issue/AITU-4\nPlanned owner: Zhan\nOriginal priority: Major\nOriginal due date: 2026-10-22\n\nMigration snapshot: 19 October 2026. Status copied as To Do; completion must be supported by actual evidence.",
+          "id": "I_kwDOVOwwQM8AAAABZGCJFQ",
+          "number": 4,
+          "state": "OPEN",
+          "title": "[AITU-4] Review the literature and source analysis",
+          "url": "https://github.com/vbl0-0/AITU-Career/issues/4"
+        },
+        "fieldValues": {
+          "nodes": [
+            {},
+            {},
+            {
+              "field": {
+                "name": "Title"
+              },
+              "text": "[AITU-4] Review the literature and source analysis"
+            },
+            {
+              "field": {
+                "name": "Status"
+              },
+              "name": "To Do"
+            },
+            {
+              "field": {
+                "name": "Priority"
+              },
+              "name": "Major"
+            },
+            {
+              "field": {
+                "name": "Planned owner"
+              },
+              "name": "Zhan"
+            },
+            {
+              "date": "2026-10-22",
+              "field": {
+                "name": "Due date"
+              }
+            },
+            {
+              "field": {
+                "name": "YouTrack ID"
+              },
+              "text": "AITU-4"
+            }
+          ]
+        },
+        "id": "PVTI_lAHODc8qX84BoOZjzhCsdvs"
+      },
+      {
+        "content": {
+          "assignees": {
+            "nodes": [
+              {
+                "login": "igiiaw"
+              }
+            ]
+          },
+          "body": "## Expected outcome\nCompare four relevant systems against eight consistent criteria. Distinguish unsupported capabilities from absent features.\n\n## Acceptance criteria\n- Compare four relevant systems against eight consistent criteria. Distinguish unsupported capabilities from absent features.\n\n## Traceability\nReport requirement/section: 4\n\n## Planning\nDue date: 2026-10-22\nSuggested work area: Research\n\n## Evidence\nLink actual artifacts, commits and review records before marking this task complete.\n\nLocal planning reference: PLAN-05\n\n## Migration reference\nOriginal task: https://aitu-career-diploma.youtrack.cloud/issue/AITU-5\nPlanned owner: Zhan\nOriginal priority: Major\nOriginal due date: 2026-10-22\n\nMigration snapshot: 19 October 2026. Status copied as To Do; completion must be supported by actual evidence.",
+          "id": "I_kwDOVOwwQM8AAAABZGCJRg",
+          "number": 5,
+          "state": "OPEN",
+          "title": "[AITU-5] Review existing systems against common criteria",
+          "url": "https://github.com/vbl0-0/AITU-Career/issues/5"
+        },
+        "fieldValues": {
+          "nodes": [
+            {},
+            {},
+            {
+              "field": {
+                "name": "Title"
+              },
+              "text": "[AITU-5] Review existing systems against common criteria"
+            },
+            {
+              "field": {
+                "name": "Status"
+              },
+              "name": "To Do"
+            },
+            {
+              "field": {
+                "name": "Priority"
+              },
+              "name": "Major"
+            },
+            {
+              "field": {
+                "name": "Planned owner"
+              },
+              "name": "Zhan"
+            },
+            {
+              "date": "2026-10-22",
+              "field": {
+                "name": "Due date"
+              }
+            },
+            {
+              "field": {
+                "name": "YouTrack ID"
+              },
+              "text": "AITU-5"
+            }
+          ]
+        },
+        "id": "PVTI_lAHODc8qX84BoOZjzhCsdwU"
+      },
+      {
+        "content": {
+          "assignees": {
+            "nodes": [
+              {
+                "login": "vbl0-0"
+              }
+            ]
+          },
+          "body": "## Expected outcome\nCompare at least three key decisions with two or three reasonable alternatives each. Link trade-offs to requirements.\n\n## Acceptance criteria\n- Compare at least three key decisions with two or three reasonable alternatives each. Link trade-offs to requirements.\n\n## Traceability\nReport requirement/section: 5\n\n## Planning\nDue date: 2026-10-22\nSuggested work area: Backend / architecture\n\n## Evidence\nLink actual artifacts, commits and review records before marking this task complete.\n\nLocal planning reference: PLAN-06\n\n## Migration reference\nOriginal task: https://aitu-career-diploma.youtrack.cloud/issue/AITU-6\nPlanned owner: Ayadil\nOriginal priority: Major\nOriginal due date: 2026-10-22\n\nMigration snapshot: 19 October 2026. Status copied as To Do; completion must be supported by actual evidence.",
+          "id": "I_kwDOVOwwQM8AAAABZGCJgA",
+          "number": 6,
+          "state": "OPEN",
+          "title": "[AITU-6] Review technology alternatives and ADRs",
+          "url": "https://github.com/vbl0-0/AITU-Career/issues/6"
+        },
+        "fieldValues": {
+          "nodes": [
+            {},
+            {},
+            {
+              "field": {
+                "name": "Title"
+              },
+              "text": "[AITU-6] Review technology alternatives and ADRs"
+            },
+            {
+              "field": {
+                "name": "Status"
+              },
+              "name": "To Do"
+            },
+            {
+              "field": {
+                "name": "Priority"
+              },
+              "name": "Major"
+            },
+            {
+              "field": {
+                "name": "Planned owner"
+              },
+              "name": "Ayadil"
+            },
+            {
+              "date": "2026-10-22",
+              "field": {
+                "name": "Due date"
+              }
+            },
+            {
+              "field": {
+                "name": "YouTrack ID"
+              },
+              "text": "AITU-6"
+            }
+          ]
+        },
+        "id": "PVTI_lAHODc8qX84BoOZjzhCsdws"
+      },
+      {
+        "content": {
+          "assignees": {
+            "nodes": [
+              {
+                "login": "vbl0-0"
+              }
+            ]
+          },
+          "body": "## Expected outcome\nCheck system context, use cases and components against the implementation. Retain readable exports and editable sources.\n\n## Acceptance criteria\n- Check system context, use cases and components against the implementation. Retain readable exports and editable sources.\n\n## Traceability\nReport requirement/section: 7\n\n## Planning\nDue date: 2026-10-22\nSuggested work area: Backend / architecture\n\n## Evidence\nLink actual artifacts, commits and review records before marking this task complete.\n\nLocal planning reference: PLAN-07\n\n## Migration reference\nOriginal task: https://aitu-career-diploma.youtrack.cloud/issue/AITU-7\nPlanned owner: Ayadil\nOriginal priority: Major\nOriginal due date: 2026-10-22\n\nMigration snapshot: 19 October 2026. Status copied as To Do; completion must be supported by actual evidence.",
+          "id": "I_kwDOVOwwQM8AAAABZGCJ7A",
+          "number": 7,
+          "state": "OPEN",
+          "title": "[AITU-7] Review architectural diagrams",
+          "url": "https://github.com/vbl0-0/AITU-Career/issues/7"
+        },
+        "fieldValues": {
+          "nodes": [
+            {},
+            {},
+            {
+              "field": {
+                "name": "Title"
+              },
+              "text": "[AITU-7] Review architectural diagrams"
+            },
+            {
+              "field": {
+                "name": "Status"
+              },
+              "name": "To Do"
+            },
+            {
+              "field": {
+                "name": "Priority"
+              },
+              "name": "Major"
+            },
+            {
+              "field": {
+                "name": "Planned owner"
+              },
+              "name": "Ayadil"
+            },
+            {
+              "date": "2026-10-22",
+              "field": {
+                "name": "Due date"
+              }
+            },
+            {
+              "field": {
+                "name": "YouTrack ID"
+              },
+              "text": "AITU-7"
+            }
+          ]
+        },
+        "id": "PVTI_lAHODc8qX84BoOZjzhCsdxE"
+      },
+      {
+        "content": {
+          "assignees": {
+            "nodes": [
+              {
+                "login": "igiiaw"
+              }
+            ]
+          },
+          "body": "## Expected outcome\nReview the AITU-style application palette, visible keyboard focus and core desktop/mobile screens without horizontal overflow.\n\n## Acceptance criteria\n- Review the AITU-style application palette, visible keyboard focus and core desktop/mobile screens without horizontal overflow.\n\n## Traceability\nReport requirement/section: 8; NFR-04/05\n\n## Planning\nDue date: 2026-10-21\nSuggested work area: Frontend / UX\n\n## Evidence\nLink actual artifacts, commits and review records before marking this task complete.\n\nLocal planning reference: PLAN-08\n\n## Migration reference\nOriginal task: https://aitu-career-diploma.youtrack.cloud/issue/AITU-8\nPlanned owner: Zhan\nOriginal priority: Major\nOriginal due date: 2026-10-21\n\nMigration snapshot: 19 October 2026. Status copied as To Do; completion must be supported by actual evidence.",
+          "id": "I_kwDOVOwwQM8AAAABZGCKWA",
+          "number": 8,
+          "state": "OPEN",
+          "title": "[AITU-8] Verify the updated interface palette and UX",
+          "url": "https://github.com/vbl0-0/AITU-Career/issues/8"
+        },
+        "fieldValues": {
+          "nodes": [
+            {},
+            {},
+            {
+              "field": {
+                "name": "Title"
+              },
+              "text": "[AITU-8] Verify the updated interface palette and UX"
+            },
+            {
+              "field": {
+                "name": "Status"
+              },
+              "name": "To Do"
+            },
+            {
+              "field": {
+                "name": "Priority"
+              },
+              "name": "Major"
+            },
+            {
+              "field": {
+                "name": "Planned owner"
+              },
+              "name": "Zhan"
+            },
+            {
+              "date": "2026-10-21",
+              "field": {
+                "name": "Due date"
+              }
+            },
+            {
+              "field": {
+                "name": "YouTrack ID"
+              },
+              "text": "AITU-8"
+            }
+          ]
+        },
+        "id": "PVTI_lAHODc8qX84BoOZjzhCsdxs"
+      },
+      {
+        "content": {
+          "assignees": {
+            "nodes": [
+              {
+                "login": "vbl0-0"
+              }
+            ]
+          },
+          "body": "## Expected outcome\nRecord pytest, production build, browser E2E and Alembic results. Explicitly identify checks that were not performed.\n\n## Acceptance criteria\n- Record pytest, production build, browser E2E and Alembic results. Explicitly identify checks that were not performed.\n\n## Traceability\nReport requirement/section: 9\n\n## Planning\nDue date: 2026-10-22\nSuggested work area: QA / backend / frontend\n\n## Evidence\nLink actual artifacts, commits and review records before marking this task complete.\n\nLocal planning reference: PLAN-09\n\n## Migration reference\nOriginal task: https://aitu-career-diploma.youtrack.cloud/issue/AITU-9\nPlanned owner: Ayadil\nOriginal priority: Major\nOriginal due date: 2026-10-22\n\nMigration snapshot: 19 October 2026. Status copied as To Do; completion must be supported by actual evidence.",
+          "id": "I_kwDOVOwwQM8AAAABZGCKkw",
+          "number": 9,
+          "state": "OPEN",
+          "title": "[AITU-9] Verify the application and preserve results",
+          "url": "https://github.com/vbl0-0/AITU-Career/issues/9"
+        },
+        "fieldValues": {
+          "nodes": [
+            {},
+            {},
+            {
+              "field": {
+                "name": "Title"
+              },
+              "text": "[AITU-9] Verify the application and preserve results"
+            },
+            {
+              "field": {
+                "name": "Status"
+              },
+              "name": "To Do"
+            },
+            {
+              "field": {
+                "name": "Priority"
+              },
+              "name": "Major"
+            },
+            {
+              "field": {
+                "name": "Planned owner"
+              },
+              "name": "Ayadil"
+            },
+            {
+              "date": "2026-10-22",
+              "field": {
+                "name": "Due date"
+              }
+            },
+            {
+              "field": {
+                "name": "YouTrack ID"
+              },
+              "text": "AITU-9"
+            }
+          ]
+        },
+        "id": "PVTI_lAHODc8qX84BoOZjzhCsdyU"
+      },
+      {
+        "content": {
+          "assignees": {
+            "nodes": [
+              {
+                "login": "igiiaw"
+              }
+            ]
+          },
+          "body": "## Expected outcome\nFreeze development/test splits, preserve independent expert ratings and record agreement before resolving disagreements.\n\n## Acceptance criteria\n- Freeze development/test splits, preserve independent expert ratings and record agreement before resolving disagreements.\n\n## Traceability\nReport requirement/section: 9; FR-07/11\n\n## Planning\nDue date: 2026-11-06\nSuggested work area: Research / QA\n\n## Evidence\nLink actual artifacts, commits and review records before marking this task complete.\n\nLocal planning reference: PLAN-10\n\n## Migration reference\nOriginal task: https://aitu-career-diploma.youtrack.cloud/issue/AITU-10\nPlanned owner: Zhan\nOriginal priority: Normal\nOriginal due date: 2026-11-06\n\nMigration snapshot: 19 October 2026. Status copied as To Do; completion must be supported by actual evidence.",
+          "id": "I_kwDOVOwwQM8AAAABZGCK8g",
+          "number": 10,
+          "state": "OPEN",
+          "title": "[AITU-10] Prepare independent matching relevance labels",
+          "url": "https://github.com/vbl0-0/AITU-Career/issues/10"
+        },
+        "fieldValues": {
+          "nodes": [
+            {},
+            {},
+            {
+              "field": {
+                "name": "Title"
+              },
+              "text": "[AITU-10] Prepare independent matching relevance labels"
+            },
+            {
+              "field": {
+                "name": "Status"
+              },
+              "name": "To Do"
+            },
+            {
+              "field": {
+                "name": "Priority"
+              },
+              "name": "Normal"
+            },
+            {
+              "field": {
+                "name": "Planned owner"
+              },
+              "name": "Zhan"
+            },
+            {
+              "date": "2026-11-06",
+              "field": {
+                "name": "Due date"
+              }
+            },
+            {
+              "field": {
+                "name": "YouTrack ID"
+              },
+              "text": "AITU-10"
+            }
+          ]
+        },
+        "id": "PVTI_lAHODc8qX84BoOZjzhCsdzY"
+      },
+      {
+        "content": {
+          "assignees": {
+            "nodes": [
+              {
+                "login": "vbl0-0"
+              }
+            ]
+          },
+          "body": "## Expected outcome\nCompare B0/B1/B2 using nDCG@5, Precision@5 and p95 latency under fixed conditions. Preserve negative outcomes.\n\n## Acceptance criteria\n- Compare B0/B1/B2 using nDCG@5, Precision@5 and p95 latency under fixed conditions. Preserve negative outcomes.\n\n## Traceability\nReport requirement/section: 9; NFR-06\n\n## Planning\nDue date: 2026-11-13\nSuggested work area: Backend / QA\n\n## Evidence\nLink actual artifacts, commits and review records before marking this task complete.\n\nLocal planning reference: PLAN-11\n\n## Migration reference\nOriginal task: https://aitu-career-diploma.youtrack.cloud/issue/AITU-11\nPlanned owner: Ayadil\nOriginal priority: Normal\nOriginal due date: 2026-11-13\n\nMigration snapshot: 19 October 2026. Status copied as To Do; completion must be supported by actual evidence.",
+          "id": "I_kwDOVOwwQM8AAAABZGCLLA",
+          "number": 11,
+          "state": "OPEN",
+          "title": "[AITU-11] Evaluate matching baselines and latency",
+          "url": "https://github.com/vbl0-0/AITU-Career/issues/11"
+        },
+        "fieldValues": {
+          "nodes": [
+            {},
+            {},
+            {
+              "field": {
+                "name": "Title"
+              },
+              "text": "[AITU-11] Evaluate matching baselines and latency"
+            },
+            {
+              "field": {
+                "name": "Status"
+              },
+              "name": "To Do"
+            },
+            {
+              "field": {
+                "name": "Priority"
+              },
+              "name": "Normal"
+            },
+            {
+              "field": {
+                "name": "Planned owner"
+              },
+              "name": "Ayadil"
+            },
+            {
+              "date": "2026-11-13",
+              "field": {
+                "name": "Due date"
+              }
+            },
+            {
+              "field": {
+                "name": "YouTrack ID"
+              },
+              "text": "AITU-11"
+            }
+          ]
+        },
+        "id": "PVTI_lAHODc8qX84BoOZjzhCsdz8"
+      },
+      {
+        "content": {
+          "assignees": {
+            "nodes": [
+              {
+                "login": "vbl0-0"
+              }
+            ]
+          },
+          "body": "## Expected outcome\nUse one real repository and personal accounts. Verify access for both students, the supervisor and committee.\n\n## Acceptance criteria\n- Use one real repository and personal accounts. Verify access for both students, the supervisor and committee.\n\n## Traceability\nReport requirement/section: 10\n\n## Planning\nDue date: 2026-10-22\nSuggested work area: Coordination\n\n## Evidence\nLink actual artifacts, commits and review records before marking this task complete.\n\nLocal planning reference: PLAN-12\n\n## Migration reference\nOriginal task: https://aitu-career-diploma.youtrack.cloud/issue/AITU-12\nPlanned owner: Ayadil\nOriginal priority: Critical\nOriginal due date: 2026-10-22\n\nMigration snapshot: 19 October 2026. Status copied as To Do; completion must be supported by actual evidence.",
+          "id": "I_kwDOVOwwQM8AAAABZGCLnQ",
+          "number": 12,
+          "state": "OPEN",
+          "title": "[AITU-12] Set up the shared repository and access",
+          "url": "https://github.com/vbl0-0/AITU-Career/issues/12"
+        },
+        "fieldValues": {
+          "nodes": [
+            {},
+            {},
+            {
+              "field": {
+                "name": "Title"
+              },
+              "text": "[AITU-12] Set up the shared repository and access"
+            },
+            {
+              "field": {
+                "name": "Status"
+              },
+              "name": "To Do"
+            },
+            {
+              "field": {
+                "name": "Priority"
+              },
+              "name": "Critical"
+            },
+            {
+              "field": {
+                "name": "Planned owner"
+              },
+              "name": "Ayadil"
+            },
+            {
+              "date": "2026-10-22",
+              "field": {
+                "name": "Due date"
+              }
+            },
+            {
+              "field": {
+                "name": "YouTrack ID"
+              },
+              "text": "AITU-12"
+            }
+          ]
+        },
+        "id": "PVTI_lAHODc8qX84BoOZjzhCsd0s"
+      },
+      {
+        "content": {
+          "assignees": {
+            "nodes": [
+              {
+                "login": "igiiaw"
+              }
+            ]
+          },
+          "body": "## Expected outcome\nCreate the real board and tasks. Assign the two actual participants, priorities, deadlines and acceptance criteria. Verify reviewer access.\n\n## Acceptance criteria\n- Create the real board and tasks. Assign the two actual participants, priorities, deadlines and acceptance criteria. Verify reviewer access.\n\n## Traceability\nReport requirement/section: 10\n\n## Planning\nDue date: 2026-10-22\nSuggested work area: Coordination / team\n\n## Evidence\nLink actual artifacts, commits and review records before marking this task complete.\n\nLocal planning reference: PLAN-13\n\n## Migration reference\nOriginal task: https://aitu-career-diploma.youtrack.cloud/issue/AITU-13\nPlanned owner: Zhan\nOriginal priority: Critical\nOriginal due date: 2026-10-22\n\nMigration snapshot: 19 October 2026. Status copied as To Do; completion must be supported by actual evidence.",
+          "id": "I_kwDOVOwwQM8AAAABZGCMBQ",
+          "number": 13,
+          "state": "OPEN",
+          "title": "[AITU-13] Set up the tracker and assign responsibilities",
+          "url": "https://github.com/vbl0-0/AITU-Career/issues/13"
+        },
+        "fieldValues": {
+          "nodes": [
+            {},
+            {},
+            {
+              "field": {
+                "name": "Title"
+              },
+              "text": "[AITU-13] Set up the tracker and assign responsibilities"
+            },
+            {
+              "field": {
+                "name": "Status"
+              },
+              "name": "To Do"
+            },
+            {
+              "field": {
+                "name": "Priority"
+              },
+              "name": "Critical"
+            },
+            {
+              "field": {
+                "name": "Planned owner"
+              },
+              "name": "Zhan"
+            },
+            {
+              "date": "2026-10-22",
+              "field": {
+                "name": "Due date"
+              }
+            },
+            {
+              "field": {
+                "name": "YouTrack ID"
+              },
+              "text": "AITU-13"
+            }
+          ]
+        },
+        "id": "PVTI_lAHODc8qX84BoOZjzhCsd1c"
+      },
+      {
+        "content": {
+          "assignees": {
+            "nodes": [
+              {
+                "login": "vbl0-0"
+              }
+            ]
+          },
+          "body": "## Expected outcome\nUse real issue IDs in branches and commits/MRs. Link changes back to tasks and preserve review comments and individual contributions.\n\n## Acceptance criteria\n- Use real issue IDs in branches and commits/MRs. Link changes back to tasks and preserve review comments and individual contributions.\n\n## Traceability\nReport requirement/section: 10\n\n## Planning\nDue date: 2026-10-23\nSuggested work area: Team\n\n## Evidence\nLink actual artifacts, commits and review records before marking this task complete.\n\nLocal planning reference: PLAN-14\n\n## Migration reference\nOriginal task: https://aitu-career-diploma.youtrack.cloud/issue/AITU-14\nPlanned owner: Ayadil\nOriginal priority: Major\nOriginal due date: 2026-10-23\n\nMigration snapshot: 19 October 2026. Status copied as To Do; completion must be supported by actual evidence.",
+          "id": "I_kwDOVOwwQM8AAAABZGCMWg",
+          "number": 14,
+          "state": "OPEN",
+          "title": "[AITU-14] Link code changes and reviews to real tasks",
+          "url": "https://github.com/vbl0-0/AITU-Career/issues/14"
+        },
+        "fieldValues": {
+          "nodes": [
+            {},
+            {},
+            {
+              "field": {
+                "name": "Title"
+              },
+              "text": "[AITU-14] Link code changes and reviews to real tasks"
+            },
+            {
+              "field": {
+                "name": "Status"
+              },
+              "name": "To Do"
+            },
+            {
+              "field": {
+                "name": "Priority"
+              },
+              "name": "Major"
+            },
+            {
+              "field": {
+                "name": "Planned owner"
+              },
+              "name": "Ayadil"
+            },
+            {
+              "date": "2026-10-23",
+              "field": {
+                "name": "Due date"
+              }
+            },
+            {
+              "field": {
+                "name": "YouTrack ID"
+              },
+              "text": "AITU-14"
+            }
+          ]
+        },
+        "id": "PVTI_lAHODc8qX84BoOZjzhCsd14"
+      },
+      {
+        "content": {
+          "assignees": {
+            "nodes": [
+              {
+                "login": "igiiaw"
+              }
+            ]
+          },
+          "body": "## Expected outcome\nRetain actual comments on deliverables and decisions, the reviewed version and a response decision for each comment.\n\n## Acceptance criteria\n- Retain actual comments on deliverables and decisions, the reviewed version and a response decision for each comment.\n\n## Traceability\nReport requirement/section: 11\n\n## Planning\nDue date: 2026-10-23\nSuggested work area: Coordination / supervisor\n\n## Evidence\nLink actual artifacts, commits and review records before marking this task complete.\n\nLocal planning reference: PLAN-15\n\n## Migration reference\nOriginal task: https://aitu-career-diploma.youtrack.cloud/issue/AITU-15\nPlanned owner: Zhan\nOriginal priority: Critical\nOriginal due date: 2026-10-23\n\nMigration snapshot: 19 October 2026. Status copied as To Do; completion must be supported by actual evidence.",
+          "id": "I_kwDOVOwwQM8AAAABZGCMww",
+          "number": 15,
+          "state": "OPEN",
+          "title": "[AITU-15] Obtain substantive supervisor feedback",
+          "url": "https://github.com/vbl0-0/AITU-Career/issues/15"
+        },
+        "fieldValues": {
+          "nodes": [
+            {},
+            {},
+            {
+              "field": {
+                "name": "Title"
+              },
+              "text": "[AITU-15] Obtain substantive supervisor feedback"
+            },
+            {
+              "field": {
+                "name": "Status"
+              },
+              "name": "To Do"
+            },
+            {
+              "field": {
+                "name": "Priority"
+              },
+              "name": "Critical"
+            },
+            {
+              "field": {
+                "name": "Planned owner"
+              },
+              "name": "Zhan"
+            },
+            {
+              "date": "2026-10-23",
+              "field": {
+                "name": "Due date"
+              }
+            },
+            {
+              "field": {
+                "name": "YouTrack ID"
+              },
+              "text": "AITU-15"
+            }
+          ]
+        },
+        "id": "PVTI_lAHODc8qX84BoOZjzhCsd2Y"
+      },
+      {
+        "content": {
+          "assignees": {
+            "nodes": [
+              {
+                "login": "igiiaw"
+              }
+            ]
+          },
+          "body": "## Expected outcome\nLink revisions to actual feedback. Complete confirmed identity fields and regenerate reviewed final Word/PDF files.\n\n## Acceptance criteria\n- Link revisions to actual feedback. Complete confirmed identity fields and regenerate reviewed final Word/PDF files.\n\n## Traceability\nReport requirement/section: 11; Appendix B\n\n## Planning\nDue date: 2026-10-23\nSuggested work area: Team\n\n## Evidence\nLink actual artifacts, commits and review records before marking this task complete.\n\nLocal planning reference: PLAN-16\n\n## Migration reference\nOriginal task: https://aitu-career-diploma.youtrack.cloud/issue/AITU-16\nPlanned owner: Zhan\nOriginal priority: Critical\nOriginal due date: 2026-10-23\n\nMigration snapshot: 19 October 2026. Status copied as To Do; completion must be supported by actual evidence.",
+          "id": "I_kwDOVOwwQM8AAAABZGCM8g",
+          "number": 16,
+          "state": "OPEN",
+          "title": "[AITU-16] Address review comments and finalize the report",
+          "url": "https://github.com/vbl0-0/AITU-Career/issues/16"
+        },
+        "fieldValues": {
+          "nodes": [
+            {},
+            {},
+            {
+              "field": {
+                "name": "Title"
+              },
+              "text": "[AITU-16] Address review comments and finalize the report"
+            },
+            {
+              "field": {
+                "name": "Status"
+              },
+              "name": "To Do"
+            },
+            {
+              "field": {
+                "name": "Priority"
+              },
+              "name": "Critical"
+            },
+            {
+              "field": {
+                "name": "Planned owner"
+              },
+              "name": "Zhan"
+            },
+            {
+              "date": "2026-10-23",
+              "field": {
+                "name": "Due date"
+              }
+            },
+            {
+              "field": {
+                "name": "YouTrack ID"
+              },
+              "text": "AITU-16"
+            }
+          ]
+        },
+        "id": "PVTI_lAHODc8qX84BoOZjzhCsd2s"
+      },
+      {
+        "content": {
+          "assignees": {
+            "nodes": [
+              {
+                "login": "igiiaw"
+              }
+            ]
+          },
+          "body": "## Expected outcome\nCapture the real overview and readable task cards with assignees, deadlines and acceptance criteria. Combine them into one PDF.\n\n## Acceptance criteria\n- Capture the real overview and readable task cards with assignees, deadlines and acceptance criteria. Combine them into one PDF.\n\n## Traceability\nReport requirement/section: 10; Appendix B\n\n## Planning\nDue date: 2026-10-23\nSuggested work area: Coordination\n\n## Evidence\nLink actual artifacts, commits and review records before marking this task complete.\n\nLocal planning reference: PLAN-17\n\n## Migration reference\nOriginal task: https://aitu-career-diploma.youtrack.cloud/issue/AITU-17\nPlanned owner: Zhan\nOriginal priority: Critical\nOriginal due date: 2026-10-23\n\nMigration snapshot: 19 October 2026. Status copied as To Do; completion must be supported by actual evidence.",
+          "id": "I_kwDOVOwwQM8AAAABZGCNIA",
+          "number": 17,
+          "state": "OPEN",
+          "title": "[AITU-17] Compile actual board and task screenshots into PDF",
+          "url": "https://github.com/vbl0-0/AITU-Career/issues/17"
+        },
+        "fieldValues": {
+          "nodes": [
+            {},
+            {},
+            {
+              "field": {
+                "name": "Title"
+              },
+              "text": "[AITU-17] Compile actual board and task screenshots into PDF"
+            },
+            {
+              "field": {
+                "name": "Status"
+              },
+              "name": "To Do"
+            },
+            {
+              "field": {
+                "name": "Priority"
+              },
+              "name": "Critical"
+            },
+            {
+              "field": {
+                "name": "Planned owner"
+              },
+              "name": "Zhan"
+            },
+            {
+              "date": "2026-10-23",
+              "field": {
+                "name": "Due date"
+              }
+            },
+            {
+              "field": {
+                "name": "YouTrack ID"
+              },
+              "text": "AITU-17"
+            }
+          ]
+        },
+        "id": "PVTI_lAHODc8qX84BoOZjzhCsd3U"
+      },
+      {
+        "content": {
+          "assignees": {
+            "nodes": [
+              {
+                "login": "vbl0-0"
+              }
+            ]
+          },
+          "body": "## Expected outcome\nOne representative verifies all links, uploads the unified report and separate tracker-evidence PDF, and submits before 18:00 UTC+5 on 24 October 2026. Retain confirmation.\n\n## Acceptance criteria\n- One representative verifies all links, uploads the unified report and separate tracker-evidence PDF, and submits before 18:00 UTC+5 on 24 October 2026. Retain confirmation.\n\n## Traceability\nReport requirement/section: Appendix B\n\n## Planning\nDue date: 2026-10-24\nSuggested work area: Representative\n\n## Evidence\nLink actual artifacts, commits and review records before marking this task complete.\n\nLocal planning reference: PLAN-18\n\n## Migration reference\nOriginal task: https://aitu-career-diploma.youtrack.cloud/issue/AITU-18\nPlanned owner: Ayadil\nOriginal priority: Critical\nOriginal due date: 2026-10-24\n\nMigration snapshot: 19 October 2026. Status copied as To Do; completion must be supported by actual evidence.",
+          "id": "I_kwDOVOwwQM8AAAABZGCNZA",
+          "number": 18,
+          "state": "OPEN",
+          "title": "[AITU-18] Verify access and submit the team materials",
+          "url": "https://github.com/vbl0-0/AITU-Career/issues/18"
+        },
+        "fieldValues": {
+          "nodes": [
+            {},
+            {},
+            {
+              "field": {
+                "name": "Title"
+              },
+              "text": "[AITU-18] Verify access and submit the team materials"
+            },
+            {
+              "field": {
+                "name": "Status"
+              },
+              "name": "To Do"
+            },
+            {
+              "field": {
+                "name": "Priority"
+              },
+              "name": "Critical"
+            },
+            {
+              "field": {
+                "name": "Planned owner"
+              },
+              "name": "Ayadil"
+            },
+            {
+              "date": "2026-10-24",
+              "field": {
+                "name": "Due date"
+              }
+            },
+            {
+              "field": {
+                "name": "YouTrack ID"
+              },
+              "text": "AITU-18"
+            }
+          ]
+        },
+        "id": "PVTI_lAHODc8qX84BoOZjzhCsd6o"
+      }
+    ],
+    "pageInfo": {
+      "endCursor": "Y3Vyc29yOnYyOpK5MDAwMDAwMDAuMDU1NTU1NTU1NTU1NTU1Nc4QrHeq",
+      "hasNextPage": false
+    },
+    "totalCount": 18
+  },
+  "number": 1,
+  "public": true,
+  "readme": "AITU Career diploma project management.\n\nRepository: https://github.com/vbl0-0/AITU-Career\n\n18 repository issues (#1–#18) were migrated on 22 October 2026 from the saved YouTrack export (AITU-1–AITU-18). Original descriptions, acceptance criteria, priorities, due dates and planned owners are preserved. Original export date: 19 October 2026; live YouTrack changes after that date were not reverified.\n\nWorkflow: To Do → In Progress → Review → Done. Each issue has a Priority, Due date, Planned owner and YouTrack ID. Use the Board for progress and Tasks and Deadlines for planning.\n\nTeam assignments: Ayadil (@vbl0-0), nine issues; Zhan (@igiiaw), nine issues. Both names are planning roles, not claims of completed individual contributions.\n\nLink actual branches, commits and pull requests to issues. Move an issue to Done only after its acceptance criteria are met and evidence/review is linked. Creating tasks does not establish historical contributions or supervisor approval.\n\nSubmission deadline: 24 October 2026 before 18:00 (UTC+5). November evaluation tasks retain their later deadlines. Confirm the use of GitHub Projects as the tracker alternative with the supervisor.\n\nThe board and issue pages are public for read access. Supervisor review, actual contribution history and submission evidence remain separate requirements.",
+  "repositories": {
+    "nodes": [
+      {
+        "nameWithOwner": "vbl0-0/AITU-Career"
+      }
+    ]
+  },
+  "title": "AITU Career - Diploma",
+  "url": "https://github.com/users/vbl0-0/projects/1",
+  "views": {
+    "nodes": [
+      {
+        "id": "PVTV_lAHODc8qX84BoOZjzgML4IY",
+        "layout": "BOARD_LAYOUT",
+        "name": "Diploma Board",
+        "number": 1
+      },
+      {
+        "id": "PVTV_lAHODc8qX84BoOZjzgML4PM",
+        "layout": "TABLE_LAYOUT",
+        "name": "Tasks and Deadlines",
+        "number": 2
+      }
+    ]
+  }
+}

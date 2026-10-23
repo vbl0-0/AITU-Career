@@ -1,0 +1,21 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><style>
+@page { size:A4; margin:18mm 16mm 19mm; }
+* { box-sizing:border-box; } body { color:#111; font:10.5pt/1.45 'Segoe UI',Arial,sans-serif; margin:0; }
+h1 { color:#111; font-size:25pt; line-height:1.2; } h2 { font-size:18pt; color:#111; line-height:1.3; margin:0 0 18px; }
+h3 { font-size:12pt; color:#111; } p { margin:0 0 10px; orphans:3; widows:3; } a { color:#111; overflow-wrap:anywhere; }
+section { break-before:page; } .cover { min-height:238mm; display:flex; flex-direction:column; justify-content:space-between; }
+.label { color:#333; font-weight:700; letter-spacing:2px; font-size:10pt; } .status { border-left:3px solid #555; background:#f3f3f3; padding:14px; }
+table { width:100%; border-collapse:collapse; table-layout:fixed; margin:12px 0 16px; font-size:9pt; line-height:1.4; }
+th,td { border:1px solid #d9e3ed; padding:7px; vertical-align:top; overflow-wrap:anywhere; } th { background:#eaf3fc; text-align:left; color:#111; }
+tr { break-inside:avoid; } thead { display:table-header-group; } figure { margin:18px 0; break-inside:avoid; }
+figure img { display:block; max-width:100%; max-height:210mm; margin:auto; object-fit:contain; } figcaption { font-size:9pt; color:#444; margin:8px 0; }
+.toc { line-height:2; list-style:none; padding:0; } .small { font-size:9pt; color:#444; }
+.section-1, .section-2 { font-size:10pt; line-height:1.38; }
+.section-1 table, .section-2 table { font-size:8.8pt; line-height:1.35; }
+.section-1 td, .section-1 th, .section-2 td, .section-2 th { padding:6px; }
+.section-2 { font-size:9.7pt; line-height:1.35; }
+.section-2 table { font-size:8.7pt; line-height:1.3; }
+.section-2 td, .section-2 th { padding:5.5px; }
+.section-12 { font-size:9.5pt; line-height:1.35; }
+.fields td { height:28px; } h2,h3 { break-after:avoid; }
+</style><h2>8. UX and Prototype</h2><p>Public screen walkthrough: <a href="https://vbl0-0.github.io/AITU-Career/">https://vbl0-0.github.io/AITU-Career/</a>. It presents actual captures of the local application with navigation between screens, not a hosted backend or live editing service. The complete application runs locally using the published development instructions. The interface supports Kazakh, Russian and English; the report is in English. Original screenshot and diagram colors are preserved.</p><table><thead><tr><th>Journey</th><th>Steps</th><th>Expected outcome</th></tr></thead><tbody><tr><td>UC-01: Start</td><td>Landing → registration/sign-in → dashboard.</td><td>An authenticated session and an accessible profile.</td></tr><tr><td>UC-02: Profile</td><td>Education program → desired role → skills → project.</td><td>Saved data and explicit confirmation.</td></tr><tr><td>UC-03: Match</td><td>Search → vacancy → score → detailed analysis.</td><td>Requirement groups and a traceable calculation.</td></tr><tr><td>UC-04: Improve</td><td>Add FastAPI → open an old analysis → recalculate.</td><td>A stale warning followed by a result based on current inputs.</td></tr><tr><td>UC-05: Administer</td><td>Admin sign-in → jobs → create/update.</td><td>Permission checks and validated skill requirements.</td></tr></tbody></table><p>UX states include loading, no records, validation errors, server failures, save confirmation and stale results. Focus indication, labels and accessible action names are implemented; a comprehensive accessibility audit remains outstanding. A user-evaluation task asks participants to find a relevant vacancy, identify two gaps and explain the score.</p><figure><img src="prototype/landing.png"><figcaption>Figure 4. Entry to the graduate journey.</figcaption></figure><figure><img src="prototype/dashboard.png"><figcaption>Figure 5. Demonstration graduate dashboard.</figcaption></figure><figure><img src="prototype/mobile.png"><figcaption>Figure 6. Mobile interface at 390×844.</figcaption></figure><figure><img src="prototype/job-detail.png"><figcaption>Figure 7. Vacancy requirements and explained matching.</figcaption></figure><figure><img src="prototype/admin.png"><figcaption>Figure 8. Administrative vacancy management.</figcaption></figure></html>
