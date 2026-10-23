@@ -16,18 +16,19 @@ try {
     if (!response?.ok()) throw new Error(`GitHub returned ${response?.status()} for ${url}`);
     await page.getByText(title, { exact: false }).first().waitFor({ timeout: 30000 });
     await page.evaluate(() => document.fonts.ready);
-    if (options.criteria) await page.getByRole('heading', { name: 'Acceptance criteria', exact: true }).waitFor();
+    if (options.criteria) await page.getByRole('heading', { name: 'Acceptance criteria', exact: true }).first().waitFor();
     await page.screenshot({ path: resolve(folder, file), fullPage: Boolean(options.fullPage), animations: 'disabled' });
     result.push({ url, file, title });
     console.log('Captured', file);
   }
-  await capture(manifest.project_url + '/views/1', '01-board.png', 'Confirm team details and project scope');
-  await capture(manifest.project_url + '/views/2', '02-table.png', 'Confirm team details and project scope');
+  await capture(manifest.project_url + '/views/1', '01-board.png', 'AITU Career - Diploma');
+  await capture(manifest.project_url + '/views/2', '02-table.png', 'AITU Career - Diploma');
   // Scroll the actual table's scroll containers so later tasks are also visible.
   const lastTask = page.getByText('Verify access and submit the team materials', { exact: false }).first();
   await lastTask.scrollIntoViewIfNeeded();
   await page.screenshot({ path: resolve(folder, '03-table-bottom.png'), animations: 'disabled' });
   result.push({ url: page.url(), file: '03-table-bottom.png', title: 'Remaining tasks and deadlines' });
+  await page.setViewportSize({ width:1280, height:1100 });
   for (const [index, issue] of manifest.issues.entries()) {
     await capture(issue.url, `${String(index + 4).padStart(2, '0')}-${issue.legacy_id}.png`, issue.title, { criteria: true, fullPage: true });
   }

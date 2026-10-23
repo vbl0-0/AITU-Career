@@ -74,8 +74,22 @@ try {
     if(!existsSync(folder))throw new Error('Provide a directory containing real tracker screenshots. No screenshots were supplied.');
     const images=readdirSync(folder).filter(name=>/^\.(png|jpe?g|webp)$/i.test(extname(name))).sort();
     if(!images.length)throw new Error('No real screenshots found; no evidence PDF was created.');
-    const items=images.map((name,i)=>{const file=resolve(folder,name);const mime=extname(name).toLowerCase()==='.png'?'image/png':extname(name).toLowerCase()==='.webp'?'image/webp':'image/jpeg';return `<section><h2>${i+1}. ${escape(basename(name))}</h2><img src="data:${mime};base64,${readFileSync(file).toString('base64')}"></section>`;});
-    await page.setContent('<!doctype html><meta charset="utf-8"><style>@page{size:A4 landscape;margin:12mm}body{font:12px Arial;color:#111111}section{break-before:page}section:first-child{break-before:auto}img{display:block;max-width:100%;max-height:165mm;object-fit:contain;margin:auto}</style>'+items.join(''));
+    const assets=images.map(name=>{const file=resolve(folder,name);const mime=extname(name).toLowerCase()==='.png'?'image/png':extname(name).toLowerCase()==='.webp'?'image/webp':'image/jpeg';return {name,src:`data:${mime};base64,${readFileSync(file).toString('base64')}`};});
+    await page.setContent(assets.map(x=>`<img src="${x.src}">`).join(''));
+    const sizes=await page.locator('img').evaluateAll(imgs=>Promise.all(imgs.map(async i=>{await i.decode();return {width:i.naturalWidth,height:i.naturalHeight};})));
+    const manifestFile=resolve(folder,'capture-manifest.json');
+    const captures=existsSync(manifestFile)?JSON.parse(readFileSync(manifestFile,'utf8')).screenshots:[];
+    const items=[];
+    for(const [i,asset] of assets.entries()){
+      const heightMm=sizes[i].height*273/sizes[i].width;
+      let parts=Math.max(1,Math.ceil(heightMm/165)),widthMm=273;
+      // Avoid a nearly empty continuation page while keeping text legible.
+      if(parts>1 && heightMm-(parts-1)*165<58){parts--;widthMm=273*(parts*165)/heightMm;}
+      const capture=captures.find(x=>x.file===asset.name);
+      const link=capture?` · <a href="${escape(capture.url)}">Open actual GitHub page</a>`:'';
+      for(let part=0;part<parts;part++)items.push(`<section><h2>${i+1}. ${escape(basename(asset.name))} — part ${part+1}/${parts}${link}</h2><div class="frame"><img src="${asset.src}" style="top:-${part*165}mm;width:${widthMm}mm;left:${(273-widthMm)/2}mm"></div></section>`);
+    }
+    await page.setContent('<!doctype html><meta charset="utf-8"><style>@page{size:A4 landscape;margin:12mm}body{margin:0;font:12px Arial;color:#111111}a{color:inherit}section{break-before:page}section:first-child{break-before:auto}h2{font-size:12px;margin:0 0 5mm}.frame{position:relative;width:273mm;height:165mm;overflow:hidden}img{position:absolute;left:0;display:block;width:273mm;height:auto}</style>'+items.join(''));
     await page.locator('img').evaluateAll(imgs=>Promise.all(imgs.map(i=>i.decode())));
     await page.pdf({path:resolve(output,'tracker-evidence.pdf'),printBackground:true,preferCSSPageSize:true});
     console.log(`Combined ${images.length} supplied screenshots into tracker-evidence.pdf. Content and access must still be reviewed.`);
