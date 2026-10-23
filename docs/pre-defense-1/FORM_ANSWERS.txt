@@ -1,0 +1,34 @@
+FORM ANSWERS — one representative for both members
+
+Topic:
+AI-Based Platform to Support the Employment of Astana IT University Graduates
+
+Supervisor:
+Оразова Арайлым Жанболаткызы — Senior Lecturer
+
+4. Repository URL:
+https://github.com/vbl0-0/AITU-Career
+
+5. Tagged project version URL:
+https://github.com/vbl0-0/AITU-Career/tree/prob-period-1
+
+6. Responsibilities and contributions:
+1) Қожабек Аяділ Нұрланұлы — SE-2425 — https://github.com/vbl0-0
+Backend/API and migration delivery, backend regression tests and repository automation; publication and verification assisted by OpenAI Codex. Evidence: https://github.com/vbl0-0/AITU-Career/pull/19 ; https://github.com/vbl0-0/AITU-Career/pull/21 ; commits 6c434f2 and 0b8c8bb. These records describe current delivery, not exclusive initial authorship of all imported code.
+
+2) Амантай Жан Әділұлы — SE-2419 — https://github.com/igiiaw
+Frontend, multilingual interface, research documentation and report-source delivery; publication and verification assisted by OpenAI Codex. Evidence: https://github.com/vbl0-0/AITU-Career/pull/20 ; https://github.com/vbl0-0/AITU-Career/pull/22 ; commits 7717652, c12021f and 203f7c7. These records describe current delivery, not exclusive initial authorship of all imported code.
+
+Task references: Ayadil — GitHub issues #7, #9, #12, #14; Zhan — #4, #5, #8, #16, #17. GitHub Projects is used as the permitted tracker alternative; the original YouTrack IDs are retained in issue descriptions. Dates and links document actual publication. No independent initial authorship or human peer approval is inferred from account attribution.
+
+7. Current project status, limitations and next steps:
+The local React/FastAPI/PostgreSQL prototype implements registration, authentication and roles, graduate profiles and portfolio CRUD, vacancy browsing/saving, weighted skill matching with matched/partial/missing explanations, readiness components, recommendations, administration and Kazakh/Russian/English interfaces. Verification passed: 60 backend tests, 20 browser tests, 459 translation keys, production build and Alembic consistency. The public screen walkthrough is https://vbl0-0.github.io/AITU-Career/ . The complete authenticated application is reproducible locally. Vacancies are fictional demonstration data; live HeadHunter access was unavailable. The real embedding model, Docker runtime and independent ranking-quality evaluation have not been exercised. Next phase: independent relevance labels, baseline/latency experiments and authorized live vacancy sourcing. Interviews and supervisor feedback are optional according to the team clarification; none are fabricated.
+
+8. Upload board/task PDF:
+tracker-evidence.pdf (one PDF, maximum 10 MB)
+
+9. Upload consolidated report PDF:
+SE-2425_Kozhabek_ProbPeriod1.pdf (one PDF, maximum 100 MB)
+
+Final page:
+Its requirements could not be read through the available automated form access. Check it in your normal signed-in browser. Do not treat this preparation as a submitted response. Retain the actual confirmation after submitting before 18:00 UTC+5 on 24 October 2026.

@@ -31,7 +31,7 @@ try {
   for (const [index, issue] of manifest.issues.entries()) {
     await capture(issue.url, `${String(index + 4).padStart(2, '0')}-${issue.legacy_id}.png`, issue.title, { criteria: true, fullPage: true });
   }
-  writeFileSync(resolve(folder, 'capture-manifest.json'), JSON.stringify({ captured_on: '2026-10-22', public_access_verified: true, screenshots: result }, null, 2) + '\n');
+  writeFileSync(resolve(folder, 'capture-manifest.json'), JSON.stringify({ captured_on: new Intl.DateTimeFormat('en-CA', { timeZone:'Asia/Qyzylorda' }).format(new Date()), public_access_verified: true, screenshots: result }, null, 2) + '\n');
   console.log(`Verified public access and captured ${result.length} genuine GitHub views.`);
 } finally {
   await browser.close();

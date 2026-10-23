@@ -17,7 +17,12 @@ def draw(name,title,nodes,edges,width=1100,height=700,boundary=None):
         src,dst,label,*options=edge
         a=lookup[src];b=lookup[dst]; dashed='dashed' in options
         # Connect facing sides; use centered vertical links only for same-column nodes.
-        if abs(a['x']-b['x'])<20:
+        routed = 'right' in options
+        if routed:
+            x1=a['x']+a['w']; y1=a['y']+a['h']/2
+            x2=b['x']+b['w']; y2=b['y']+b['h']/2
+            route_x=max(x1,x2)+20
+        elif abs(a['x']-b['x'])<20:
             x1=a['x']+a['w']/2;y1=a['y']+(a['h'] if b['y']>a['y'] else 0)
             x2=b['x']+b['w']/2;y2=b['y']+(0 if b['y']>a['y'] else b['h'])
         else:
@@ -25,9 +30,10 @@ def draw(name,title,nodes,edges,width=1100,height=700,boundary=None):
             x2=b['x']+(0 if right else b['w']);y2=b['y']+b['h']/2
         dash='stroke-dasharray="5 4"' if dashed else ''
         arrow='' if 'association' in options else 'marker-end="url(#arrow)"'
-        parts.append(f'<path d="M{x1},{y1} L{x2},{y2}" fill="none" stroke="#526579" stroke-width="1.5" {dash} {arrow}/>')
+        path=f'M{x1},{y1} H{route_x} V{y2} H{x2}' if routed else f'M{x1},{y1} L{x2},{y2}'
+        parts.append(f'<path d="{path}" fill="none" stroke="#526579" stroke-width="1.5" {dash} {arrow}/>')
         if label:
-            mx=(x1+x2)/2;my=(y1+y2)/2-8;length=len(label)*7.2
+            mx=route_x if routed else (x1+x2)/2;my=(y1+y2)/2-8;length=len(label)*7.2
             parts.append(f'<rect x="{mx-length/2-4}" y="{my-15}" width="{length+8}" height="21" fill="white"/><text x="{mx}" y="{my}" text-anchor="middle" font-family="Segoe UI,Arial" font-size="13" fill="#526579">{escape(label)}</text>')
     for n in nodes:
         x,y,w,h=n['x'],n['y'],n['w'],n['h'];kind=n['kind']
@@ -47,19 +53,20 @@ def draw(name,title,nodes,edges,width=1100,height=700,boundary=None):
 draw('context','System Context — AITU Career',[
  box('graduate',25,160,210,120,['Student / graduate','Profile, skills, opportunities']),
  box('system',400,215,300,150,['AITU Career','Profile + matching + guidance','React / FastAPI / PostgreSQL']),
- box('admin',865,160,210,120,['Administrator','Demo jobs and skill catalog']),
- box('data',400,500,300,100,['Local data only','Profiles / demo vacancies']),
-], [('graduate','system','HTTPS / local HTTP'),('admin','system','Manage catalog'),('system','data','Read / persist')],height=660)
+ box('admin',865,160,210,120,['Administrator','Jobs and skill catalog']),
+ box('data',400,500,300,100,['Persisted project data','Profiles / demo or imported jobs']),
+ box('hh',25,470,230,115,['HeadHunter API adapter','Optional import/refresh','Live access not verified']),
+], [('graduate','system','HTTPS / local HTTP'),('admin','system','Manage catalog'),('system','data','Read / persist'),('system','hh','Optional API call','dashed')],height=660)
 
-draw('components','Component Diagram — draft / modular monolith',[
+draw('components','Component Diagram — modular monolith',[
  box('browser',20,190,180,100,['Browser','React + TypeScript']),
- box('api',305,145,240,105,['FastAPI routers','Validation / CRUD','FR-03–FR-06 / FR-10']),
+ box('api',305,145,240,105,['FastAPI routers','CRUD / HH import adapter','FR-03–FR-06 / FR-10']),
  box('auth',305,355,240,105,['Auth / security','JWT + sessions + Argon2id','FR-01 / FR-02']),
  box('ai',635,145,240,105,['AI matching module','Score / gaps / fingerprint','FR-07–FR-09 / FR-11']),
  box('orm',635,355,240,105,['Models / SQLAlchemy','Session / migrations','NFR-02']),
  box('model',635,565,240,85,['Optional local embeddings','Keyword fallback']),
  box('db',940,355,140,105,['PostgreSQL','Persistent','source of truth']),
-], [('browser','api','/api JSON'),('api','auth','Authorize'),('api','ai','Analyze'),('api','orm','CRUD'),('auth','orm','Sessions'),('orm','db','SQL'),('ai','model','Optional','dashed')],height=705,boundary=(270,65,640,610,'Backend process — 127.0.0.1:8000'))
+], [('browser','api','/api JSON'),('api','auth','Authorize'),('api','ai','Analyze'),('api','orm','CRUD'),('auth','orm','Sessions'),('orm','db','SQL'),('ai','model','Optional','dashed','right')],height=705,boundary=(270,65,640,610,'Backend process — 127.0.0.1:8000'))
 
 draw('use-cases','Use Case Diagram — protected application scenarios',[
  box('graduate',10,250,180,120,['Student / graduate'],'actor'),
@@ -80,7 +87,8 @@ draw('use-cases',model['title'],model['nodes'],model['edges'],model['width'],mod
 (OUT/'context.mmd').write_text('''flowchart LR
   Graduate[Student / graduate] -->|Profile and analysis| App[AITU Career]
   Admin[Administrator] -->|Jobs and catalogs| App
-  App --> Data[(Local profiles and demo vacancies)]
+  App --> Data[(Persisted profiles and vacancies)]
+  App -.->|Optional import and refresh| HH[HeadHunter API adapter]
 ''',encoding='utf-8')
 (OUT/'components.mmd').write_text('''flowchart LR
   Browser[React / TypeScript] -->|REST / JSON| API
@@ -88,6 +96,7 @@ draw('use-cases',model['title'],model['nodes'],model['edges'],model['width'],mod
     API[Routers and validation] --> Auth[JWT / sessions / Argon2id]
     API --> AI[Score / gaps / recommendations]
     API --> ORM[SQLAlchemy models / session]
+    API --> HH[HH import and refresh adapter]
     AI -.-> Optional[Local embedding cache / fallback]
   end
   ORM --> DB[(PostgreSQL)]

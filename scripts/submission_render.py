@@ -3,6 +3,7 @@ from pathlib import Path
 import html
 import json
 import shutil
+import re
 from xml.sax.saxutils import escape
 from zipfile import ZipFile, ZIP_DEFLATED
 from submission_content_en import build_content
@@ -14,6 +15,7 @@ for name in ('prototype', 'templates', 'evidence', 'diagrams'):
     (OUT / name).mkdir(exist_ok=True)
 cfg = json.loads((OUT / 'submission.json').read_text(encoding='utf-8'))
 REPORT_DATE = cfg.get('report_date', '19 October 2026')
+REPORT_STATUS = cfg.get('report_status', 'Draft for academic review. User discussions and supervisor feedback have not yet been obtained.')
 cfg['team_size'] = 2
 cfg['members'] = (cfg.get('members') or [])[:2]
 while len(cfg['members']) < 2:
@@ -55,13 +57,24 @@ figure img { display:block; max-width:100%; max-height:210mm; margin:auto; objec
 
 def esc(value): return html.escape(str(value))
 
+def linked(value):
+    parts = re.split(r'(https?://[^\s<>]+)', str(value))
+    rendered = []
+    for part in parts:
+        if part.startswith(('https://', 'http://')):
+            url = part.rstrip('.,;')
+            rendered.append('<a href="'+esc(url)+'">'+esc(url)+'</a>'+esc(part[len(url):]))
+        else:
+            rendered.append(esc(part))
+    return ''.join(rendered)
+
 def render_block(block):
     kind=block['type']
-    if kind in ('p','h3'): return f'<{kind}>{esc(block["text"])}</{kind}>'
+    if kind in ('p','h3'): return f'<{kind}>{linked(block["text"])}</{kind}>'
     if kind=='table':
         headers=block['headers']
         head=''.join('<th>'+esc(v)+'</th>' for v in headers)
-        rows=''.join('<tr>'+''.join('<td>'+esc(v)+'</td>' for v in row)+'</tr>' for row in block['rows'])
+        rows=''.join('<tr>'+''.join('<td>'+linked(v)+'</td>' for v in row)+'</tr>' for row in block['rows'])
         widths=None
         if headers[0]=='Decision': widths=[19,45,36]
         elif headers[0]=='ID / priority': widths=[13,19,43,25]
@@ -81,7 +94,7 @@ def cover_fields():
 def render():
     fields='<table class="fields">'+''.join('<tr><td>'+esc(k)+'</td><td>'+esc(v)+'</td></tr>' for k,v in cover_fields())+'</table>'
     cover='<div class="cover"><div><p class="label">ASTANA IT UNIVERSITY · 2026</p><p>Pre-defense 1 · Report</p></div><div><h1>'+esc(cfg['title'])+'</h1><p>19 October 2026</p><div class="status">Draft for academic review. User discussions and supervisor feedback have not yet been obtained.</div></div><div>'+fields+'<p class="small">Submission deadline: 24 October 2026 before 18:00 (UTC+5).</p></div></div>'
-    cover=cover.replace('19 October 2026', esc(REPORT_DATE))
+    cover=cover.replace('19 October 2026', esc(REPORT_DATE)).replace('Draft for academic review. User discussions and supervisor feedback have not yet been obtained.', esc(REPORT_STATUS))
     toc='<section><h2>Contents</h2><ol class="toc">'+''.join('<li>'+esc(s['title'])+'</li>' for s in sections)+'</ol></section>'
     body=''.join(f'<section class="section-{i}"><h2>'+esc(s['title'])+'</h2>'+''.join(render_block(x) for x in s['blocks'])+'</section>' for i,s in enumerate(sections,1))
     (OUT/'report.html').write_text('<!doctype html><html lang="en"><meta charset="utf-8"><title>AITU Career — Pre-defense Report</title><style>'+CSS+'</style><body>'+cover+toc+body+'</body></html>',encoding='utf-8')
@@ -105,14 +118,14 @@ def templates():
             'Give both team members, the supervisor and committee appropriate access. Check actual access before submission.',
             'Create real tracker tasks and assign each to one of the two students. Record the expected outcome, priority, acceptance criteria and deadline.',
             'Use actual task IDs in branches and commit/merge-request descriptions. Link the implementation back to its task.',
-            'Keep main as the reviewed baseline. The other student reviews substantive changes before merging; retain comments and revisions.',
-            'Tag the exact reviewed version pre-defense-1 without moving previously submitted tags. Do not fabricate earlier history.',
+            'Keep main as the checked baseline. Preserve actual review comments and disclose AI-assisted checks; do not invent a human review.',
+            'Tag the exact reviewed version prob-period-1 without moving previously submitted tags. Do not fabricate earlier history.',
             'Exclude secrets, local databases and identifying research records.']),
         ('submission-checklist.html','Submission Checklist',[
             'Deadline: 24 October 2026 before 18:00 (UTC+5). One representative submits on behalf of both students.',
             'Complete the blank identity, supervisor, account and link fields with confirmed information.',
-            'Attach actual evidence from 3–5 discussions or a substantive client agreement and update requirements.',
-            'Obtain supervisor comments and document the resulting changes.',
+            'User interviews are optional for this submission according to the team clarification; do not fabricate records.',
+            'Supervisor feedback is optional; record actual comments and resulting changes only if received.',
             'Verify real task assignments, contributions, reviews and committee access.',
             'Combine actual board and task screenshots into one separate PDF using submission.mjs evidence.',
             'Review the editable Word report, export the final PDF, upload both PDFs and retain submission confirmation.'])]:
@@ -128,13 +141,24 @@ def write_docx():
     rels=[]; media=[]
     def para(text,style=None):
         prop=f'<w:pPr><w:pStyle w:val="{style}"/></w:pPr>' if style else ''
-        return '<w:p>'+prop+'<w:r><w:t xml:space="preserve">'+escape(str(text))+'</w:t></w:r></w:p>'
+        runs=[]
+        for part in re.split(r'(https?://[^\s<>]+)', str(text)):
+            if part.startswith(('https://', 'http://')):
+                url=part.rstrip('.,;'); rid='rLink'+str(len(rels)+1)
+                rels.append('<Relationship Id="'+rid+'" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink" Target="'+html.escape(url,quote=True)+'" TargetMode="External"/>')
+                runs.append('<w:hyperlink r:id="'+rid+'"><w:r><w:rPr><w:color w:val="111111"/><w:u w:val="single"/></w:rPr><w:t>'+escape(url)+'</w:t></w:r></w:hyperlink>')
+                part=part[len(url):]
+            runs.append('<w:r><w:t xml:space="preserve">'+escape(part)+'</w:t></w:r>')
+        return '<w:p>'+prop+''.join(runs)+'</w:p>'
     body=para(cfg['title'],'Title')+para('Pre-defense 1 report | '+REPORT_DATE)
     body+=para('Team size: 2')
-    body+=para('Draft for academic review. User discussions and supervisor feedback have not yet been obtained.')
+    body+=para(REPORT_STATUS)
     for label,value in cover_fields()[1:]:
         body+=para(label+': '+value)
     body+=para('Submission deadline: 24 October 2026 before 18:00 (UTC+5).')
+    body+=para('Contents','Heading1')
+    for s in sections:
+        body+=para(s['title'])
     for s in sections:
         body+=para(s['title'],'Heading1')
         for block in s['blocks']:

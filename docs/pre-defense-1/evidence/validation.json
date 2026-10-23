@@ -1,0 +1,66 @@
+{
+  "checked_on": "2026-10-24",
+  "environment": {
+    "os": "Windows",
+    "python": "3.12.10",
+    "database": "Existing project PostgreSQL cluster on 127.0.0.1:55432; tests use an isolated temporary schema",
+    "frontend": "React 19 / Vite 6.4.3 / TypeScript"
+  },
+  "checks": [
+    {
+      "command": "python -m pytest",
+      "cwd": "backend",
+      "result": "passed",
+      "count": 60,
+      "note": "35.06 seconds; one Starlette TestClient/httpx deprecation warning. The initial database connection timeout was resolved by starting the existing project cluster."
+    },
+    {
+      "command": "npm run test:e2e",
+      "cwd": "frontend",
+      "result": "passed",
+      "count": 20,
+      "note": "Chromium: graduate and admin journeys, portfolio CRUD, Dashboard states, role restrictions, responsive navigation, kk/ru/en and vacancy import/salary regressions. Some focused tests use API fixtures; the core journey and multilingual pages also use the real local API."
+    },
+    {
+      "command": "npm run check:i18n",
+      "cwd": "frontend",
+      "result": "passed",
+      "count": 459,
+      "note": "Translation keys, interpolation parity and static references in kk/ru/en."
+    },
+    {
+      "command": "npm run build",
+      "cwd": "frontend",
+      "result": "passed",
+      "note": "TypeScript and production Vite build. Existing main-chunk warning: 501.13 kB before gzip."
+    },
+    {
+      "command": "python -m alembic upgrade head; python -m alembic check",
+      "cwd": "backend",
+      "result": "passed",
+      "note": "Migrations applied; no new upgrade operations detected."
+    },
+    {
+      "command": "node --test .github/scripts/project-sync.test.mjs",
+      "cwd": ".",
+      "result": "passed",
+      "count": 9,
+      "note": "Reference parsing, trusted PR filtering, transitions, partial merges, pagination and status-only/idempotent mutations."
+    },
+    {
+      "command": "Targeted UI review (eleven routes, desktop/mobile)",
+      "cwd": "frontend",
+      "result": "passed",
+      "count": 22,
+      "note": "Screenshots inspected; no horizontal document overflow or blocking page alert at 1440px/390px. Keyboard skip-link focus has a 3px outline. This is not comprehensive WCAG conformance."
+    }
+  ],
+  "limitations": [
+    "Docker image build and Compose runtime were not executed because Docker CLI is unavailable.",
+    "The optional real embedding model is disabled/uninstalled; fallback and controlled semantic behavior are tested, not real model quality.",
+    "Independent relevance labels and real ranking-quality/latency experiments are next-stage work, not measured results.",
+    "User interviews and supervisor feedback are optional according to the team clarification of 24 October; none were fabricated.",
+    "The public prototype is a screen walkthrough; the complete API-backed application is reproducible locally.",
+    "The final form page and submission confirmation require the representative to check the actual form."
+  ]
+}

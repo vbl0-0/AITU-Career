@@ -1,0 +1,855 @@
+{
+  "captured_on": "2026-10-19",
+  "instance_url": "https://aitu-career-diploma.youtrack.cloud",
+  "board_url": "https://aitu-career-diploma.youtrack.cloud/agiles/204-2/current",
+  "project_id": "0-1",
+  "assignment_status": "Planned owner names only; individual YouTrack accounts not yet linked.",
+  "issues": [
+    {
+      "customFields": [
+        {
+          "value": {
+            "name": "Critical",
+            "id": "164-1",
+            "$type": "EnumBundleElement"
+          },
+          "name": "Priority",
+          "$type": "SingleEnumIssueCustomField"
+        },
+        {
+          "value": null,
+          "name": "Assignee",
+          "$type": "SingleUserIssueCustomField"
+        },
+        {
+          "value": {
+            "name": "Backlog",
+            "id": "166-15",
+            "$type": "StateBundleElement"
+          },
+          "name": "Stage",
+          "$type": "StateIssueCustomField"
+        },
+        {
+          "value": {
+            "name": "Ayadil",
+            "id": "164-13",
+            "$type": "EnumBundleElement"
+          },
+          "name": "Planned owner",
+          "$type": "SingleEnumIssueCustomField"
+        },
+        {
+          "value": 1792584000000,
+          "name": "Due Date",
+          "$type": "DateIssueCustomField"
+        }
+      ],
+      "resolved": null,
+      "summary": "Confirm team details and project scope",
+      "idReadable": "AITU-1",
+      "description": "## Planned responsible student\nAyadil\n\nThis is a name-based planning assignment. The YouTrack Assignee field can be linked after separate personal user accounts are added.\n\n## Expected outcome\nRecord the two students, group, personal accounts and supervisor in submission.json. Confirm the topic and scope with the supervisor.\n\n## Acceptance criteria\n- Record the two students, group, personal accounts and supervisor in submission.json. Confirm the topic and scope with the supervisor.\n\n## Traceability\nReport requirement/section: 1; 11\n\n## Planning\nDue date: 2026-10-21\nSuggested work area: Research / coordination\n\n## Evidence\nLink actual artifacts, commits and review records before marking this task complete.\n\nLocal planning reference: PLAN-01",
+      "id": "3-19",
+      "$type": "Issue"
+    },
+    {
+      "customFields": [
+        {
+          "value": {
+            "name": "Critical",
+            "id": "164-1",
+            "$type": "EnumBundleElement"
+          },
+          "name": "Priority",
+          "$type": "SingleEnumIssueCustomField"
+        },
+        {
+          "value": null,
+          "name": "Assignee",
+          "$type": "SingleUserIssueCustomField"
+        },
+        {
+          "value": {
+            "name": "Backlog",
+            "id": "166-15",
+            "$type": "StateBundleElement"
+          },
+          "name": "Stage",
+          "$type": "StateIssueCustomField"
+        },
+        {
+          "value": {
+            "name": "Zhan",
+            "id": "164-14",
+            "$type": "EnumBundleElement"
+          },
+          "name": "Planned owner",
+          "$type": "SingleEnumIssueCustomField"
+        },
+        {
+          "value": 1792670400000,
+          "name": "Due Date",
+          "$type": "DateIssueCustomField"
+        }
+      ],
+      "resolved": null,
+      "summary": "Conduct 3–5 user discussions",
+      "idReadable": "AITU-2",
+      "description": "## Planned responsible student\nZhan\n\nThis is a name-based planning assignment. The YouTrack Assignee field can be linked after separate personal user accounts are added.\n\n## Expected outcome\nRetain actual anonymized discussion records, dates, consent and participant roles. Separate observations from assumptions.\n\n## Acceptance criteria\n- Retain actual anonymized discussion records, dates, consent and participant roles. Separate observations from assumptions.\n\n## Traceability\nReport requirement/section: 2\n\n## Planning\nDue date: 2026-10-22\nSuggested work area: Research / UX\n\n## Evidence\nLink actual artifacts, commits and review records before marking this task complete.\n\nLocal planning reference: PLAN-02",
+      "id": "3-20",
+      "$type": "Issue"
+    },
+    {
+      "customFields": [
+        {
+          "value": {
+            "name": "Major",
+            "id": "164-2",
+            "$type": "EnumBundleElement"
+          },
+          "name": "Priority",
+          "$type": "SingleEnumIssueCustomField"
+        },
+        {
+          "value": null,
+          "name": "Assignee",
+          "$type": "SingleUserIssueCustomField"
+        },
+        {
+          "value": {
+            "name": "Backlog",
+            "id": "166-15",
+            "$type": "StateBundleElement"
+          },
+          "name": "Stage",
+          "$type": "StateIssueCustomField"
+        },
+        {
+          "value": {
+            "name": "Ayadil",
+            "id": "164-13",
+            "$type": "EnumBundleElement"
+          },
+          "name": "Planned owner",
+          "$type": "SingleEnumIssueCustomField"
+        },
+        {
+          "value": 1792670400000,
+          "name": "Due Date",
+          "$type": "DateIssueCustomField"
+        }
+      ],
+      "resolved": null,
+      "summary": "Revise requirements using discussion findings",
+      "idReadable": "AITU-3",
+      "description": "## Planned responsible student\nAyadil\n\nThis is a name-based planning assignment. The YouTrack Assignee field can be linked after separate personal user accounts are added.\n\n## Expected outcome\nLink each confirmed finding to FR/NFR IDs and record the rationale for changed or rejected requirements.\n\n## Acceptance criteria\n- Link each confirmed finding to FR/NFR IDs and record the rationale for changed or rejected requirements.\n\n## Traceability\nReport requirement/section: 2; 6\n\n## Planning\nDue date: 2026-10-22\nSuggested work area: Research / backend / frontend\n\n## Evidence\nLink actual artifacts, commits and review records before marking this task complete.\n\nLocal planning reference: PLAN-03",
+      "id": "3-21",
+      "$type": "Issue"
+    },
+    {
+      "customFields": [
+        {
+          "value": {
+            "name": "Major",
+            "id": "164-2",
+            "$type": "EnumBundleElement"
+          },
+          "name": "Priority",
+          "$type": "SingleEnumIssueCustomField"
+        },
+        {
+          "value": null,
+          "name": "Assignee",
+          "$type": "SingleUserIssueCustomField"
+        },
+        {
+          "value": {
+            "name": "Backlog",
+            "id": "166-15",
+            "$type": "StateBundleElement"
+          },
+          "name": "Stage",
+          "$type": "StateIssueCustomField"
+        },
+        {
+          "value": {
+            "name": "Zhan",
+            "id": "164-14",
+            "$type": "EnumBundleElement"
+          },
+          "name": "Planned owner",
+          "$type": "SingleEnumIssueCustomField"
+        },
+        {
+          "value": 1792670400000,
+          "name": "Due Date",
+          "$type": "DateIssueCustomField"
+        }
+      ],
+      "resolved": null,
+      "summary": "Review the literature and source analysis",
+      "idReadable": "AITU-4",
+      "description": "## Planned responsible student\nZhan\n\nThis is a name-based planning assignment. The YouTrack Assignee field can be linked after separate personal user accounts are added.\n\n## Expected outcome\nUse at least 12 meaningful sources, including eight scientific publications. Connect limitations to engineering decisions.\n\n## Acceptance criteria\n- Use at least 12 meaningful sources, including eight scientific publications. Connect limitations to engineering decisions.\n\n## Traceability\nReport requirement/section: 3\n\n## Planning\nDue date: 2026-10-22\nSuggested work area: Research\n\n## Evidence\nLink actual artifacts, commits and review records before marking this task complete.\n\nLocal planning reference: PLAN-04",
+      "id": "3-22",
+      "$type": "Issue"
+    },
+    {
+      "customFields": [
+        {
+          "value": {
+            "name": "Major",
+            "id": "164-2",
+            "$type": "EnumBundleElement"
+          },
+          "name": "Priority",
+          "$type": "SingleEnumIssueCustomField"
+        },
+        {
+          "value": null,
+          "name": "Assignee",
+          "$type": "SingleUserIssueCustomField"
+        },
+        {
+          "value": {
+            "name": "Backlog",
+            "id": "166-15",
+            "$type": "StateBundleElement"
+          },
+          "name": "Stage",
+          "$type": "StateIssueCustomField"
+        },
+        {
+          "value": {
+            "name": "Zhan",
+            "id": "164-14",
+            "$type": "EnumBundleElement"
+          },
+          "name": "Planned owner",
+          "$type": "SingleEnumIssueCustomField"
+        },
+        {
+          "value": 1792670400000,
+          "name": "Due Date",
+          "$type": "DateIssueCustomField"
+        }
+      ],
+      "resolved": null,
+      "summary": "Review existing systems against common criteria",
+      "idReadable": "AITU-5",
+      "description": "## Planned responsible student\nZhan\n\nThis is a name-based planning assignment. The YouTrack Assignee field can be linked after separate personal user accounts are added.\n\n## Expected outcome\nCompare four relevant systems against eight consistent criteria. Distinguish unsupported capabilities from absent features.\n\n## Acceptance criteria\n- Compare four relevant systems against eight consistent criteria. Distinguish unsupported capabilities from absent features.\n\n## Traceability\nReport requirement/section: 4\n\n## Planning\nDue date: 2026-10-22\nSuggested work area: Research\n\n## Evidence\nLink actual artifacts, commits and review records before marking this task complete.\n\nLocal planning reference: PLAN-05",
+      "id": "3-23",
+      "$type": "Issue"
+    },
+    {
+      "customFields": [
+        {
+          "value": {
+            "name": "Major",
+            "id": "164-2",
+            "$type": "EnumBundleElement"
+          },
+          "name": "Priority",
+          "$type": "SingleEnumIssueCustomField"
+        },
+        {
+          "value": null,
+          "name": "Assignee",
+          "$type": "SingleUserIssueCustomField"
+        },
+        {
+          "value": {
+            "name": "Backlog",
+            "id": "166-15",
+            "$type": "StateBundleElement"
+          },
+          "name": "Stage",
+          "$type": "StateIssueCustomField"
+        },
+        {
+          "value": {
+            "name": "Ayadil",
+            "id": "164-13",
+            "$type": "EnumBundleElement"
+          },
+          "name": "Planned owner",
+          "$type": "SingleEnumIssueCustomField"
+        },
+        {
+          "value": 1792670400000,
+          "name": "Due Date",
+          "$type": "DateIssueCustomField"
+        }
+      ],
+      "resolved": null,
+      "summary": "Review technology alternatives and ADRs",
+      "idReadable": "AITU-6",
+      "description": "## Planned responsible student\nAyadil\n\nThis is a name-based planning assignment. The YouTrack Assignee field can be linked after separate personal user accounts are added.\n\n## Expected outcome\nCompare at least three key decisions with two or three reasonable alternatives each. Link trade-offs to requirements.\n\n## Acceptance criteria\n- Compare at least three key decisions with two or three reasonable alternatives each. Link trade-offs to requirements.\n\n## Traceability\nReport requirement/section: 5\n\n## Planning\nDue date: 2026-10-22\nSuggested work area: Backend / architecture\n\n## Evidence\nLink actual artifacts, commits and review records before marking this task complete.\n\nLocal planning reference: PLAN-06",
+      "id": "3-24",
+      "$type": "Issue"
+    },
+    {
+      "customFields": [
+        {
+          "value": {
+            "name": "Major",
+            "id": "164-2",
+            "$type": "EnumBundleElement"
+          },
+          "name": "Priority",
+          "$type": "SingleEnumIssueCustomField"
+        },
+        {
+          "value": null,
+          "name": "Assignee",
+          "$type": "SingleUserIssueCustomField"
+        },
+        {
+          "value": {
+            "name": "Backlog",
+            "id": "166-15",
+            "$type": "StateBundleElement"
+          },
+          "name": "Stage",
+          "$type": "StateIssueCustomField"
+        },
+        {
+          "value": {
+            "name": "Ayadil",
+            "id": "164-13",
+            "$type": "EnumBundleElement"
+          },
+          "name": "Planned owner",
+          "$type": "SingleEnumIssueCustomField"
+        },
+        {
+          "value": 1792670400000,
+          "name": "Due Date",
+          "$type": "DateIssueCustomField"
+        }
+      ],
+      "resolved": null,
+      "summary": "Review architectural diagrams",
+      "idReadable": "AITU-7",
+      "description": "## Planned responsible student\nAyadil\n\nThis is a name-based planning assignment. The YouTrack Assignee field can be linked after separate personal user accounts are added.\n\n## Expected outcome\nCheck system context, use cases and components against the implementation. Retain readable exports and editable sources.\n\n## Acceptance criteria\n- Check system context, use cases and components against the implementation. Retain readable exports and editable sources.\n\n## Traceability\nReport requirement/section: 7\n\n## Planning\nDue date: 2026-10-22\nSuggested work area: Backend / architecture\n\n## Evidence\nLink actual artifacts, commits and review records before marking this task complete.\n\nLocal planning reference: PLAN-07",
+      "id": "3-25",
+      "$type": "Issue"
+    },
+    {
+      "customFields": [
+        {
+          "value": {
+            "name": "Major",
+            "id": "164-2",
+            "$type": "EnumBundleElement"
+          },
+          "name": "Priority",
+          "$type": "SingleEnumIssueCustomField"
+        },
+        {
+          "value": null,
+          "name": "Assignee",
+          "$type": "SingleUserIssueCustomField"
+        },
+        {
+          "value": {
+            "name": "Backlog",
+            "id": "166-15",
+            "$type": "StateBundleElement"
+          },
+          "name": "Stage",
+          "$type": "StateIssueCustomField"
+        },
+        {
+          "value": {
+            "name": "Zhan",
+            "id": "164-14",
+            "$type": "EnumBundleElement"
+          },
+          "name": "Planned owner",
+          "$type": "SingleEnumIssueCustomField"
+        },
+        {
+          "value": 1792584000000,
+          "name": "Due Date",
+          "$type": "DateIssueCustomField"
+        }
+      ],
+      "resolved": null,
+      "summary": "Verify the updated interface palette and UX",
+      "idReadable": "AITU-8",
+      "description": "## Planned responsible student\nZhan\n\nThis is a name-based planning assignment. The YouTrack Assignee field can be linked after separate personal user accounts are added.\n\n## Expected outcome\nReview the AITU-style application palette, visible keyboard focus and core desktop/mobile screens without horizontal overflow.\n\n## Acceptance criteria\n- Review the AITU-style application palette, visible keyboard focus and core desktop/mobile screens without horizontal overflow.\n\n## Traceability\nReport requirement/section: 8; NFR-04/05\n\n## Planning\nDue date: 2026-10-21\nSuggested work area: Frontend / UX\n\n## Evidence\nLink actual artifacts, commits and review records before marking this task complete.\n\nLocal planning reference: PLAN-08",
+      "id": "3-26",
+      "$type": "Issue"
+    },
+    {
+      "customFields": [
+        {
+          "value": {
+            "name": "Major",
+            "id": "164-2",
+            "$type": "EnumBundleElement"
+          },
+          "name": "Priority",
+          "$type": "SingleEnumIssueCustomField"
+        },
+        {
+          "value": null,
+          "name": "Assignee",
+          "$type": "SingleUserIssueCustomField"
+        },
+        {
+          "value": {
+            "name": "Backlog",
+            "id": "166-15",
+            "$type": "StateBundleElement"
+          },
+          "name": "Stage",
+          "$type": "StateIssueCustomField"
+        },
+        {
+          "value": {
+            "name": "Ayadil",
+            "id": "164-13",
+            "$type": "EnumBundleElement"
+          },
+          "name": "Planned owner",
+          "$type": "SingleEnumIssueCustomField"
+        },
+        {
+          "value": 1792670400000,
+          "name": "Due Date",
+          "$type": "DateIssueCustomField"
+        }
+      ],
+      "resolved": null,
+      "summary": "Verify the application and preserve results",
+      "idReadable": "AITU-9",
+      "description": "## Planned responsible student\nAyadil\n\nThis is a name-based planning assignment. The YouTrack Assignee field can be linked after separate personal user accounts are added.\n\n## Expected outcome\nRecord pytest, production build, browser E2E and Alembic results. Explicitly identify checks that were not performed.\n\n## Acceptance criteria\n- Record pytest, production build, browser E2E and Alembic results. Explicitly identify checks that were not performed.\n\n## Traceability\nReport requirement/section: 9\n\n## Planning\nDue date: 2026-10-22\nSuggested work area: QA / backend / frontend\n\n## Evidence\nLink actual artifacts, commits and review records before marking this task complete.\n\nLocal planning reference: PLAN-09",
+      "id": "3-27",
+      "$type": "Issue"
+    },
+    {
+      "customFields": [
+        {
+          "value": {
+            "name": "Normal",
+            "id": "164-3",
+            "$type": "EnumBundleElement"
+          },
+          "name": "Priority",
+          "$type": "SingleEnumIssueCustomField"
+        },
+        {
+          "value": null,
+          "name": "Assignee",
+          "$type": "SingleUserIssueCustomField"
+        },
+        {
+          "value": {
+            "name": "Backlog",
+            "id": "166-15",
+            "$type": "StateBundleElement"
+          },
+          "name": "Stage",
+          "$type": "StateIssueCustomField"
+        },
+        {
+          "value": {
+            "name": "Zhan",
+            "id": "164-14",
+            "$type": "EnumBundleElement"
+          },
+          "name": "Planned owner",
+          "$type": "SingleEnumIssueCustomField"
+        },
+        {
+          "value": 1793966400000,
+          "name": "Due Date",
+          "$type": "DateIssueCustomField"
+        }
+      ],
+      "resolved": null,
+      "summary": "Prepare independent matching relevance labels",
+      "idReadable": "AITU-10",
+      "description": "## Planned responsible student\nZhan\n\nThis is a name-based planning assignment. The YouTrack Assignee field can be linked after separate personal user accounts are added.\n\n## Expected outcome\nFreeze development/test splits, preserve independent expert ratings and record agreement before resolving disagreements.\n\n## Acceptance criteria\n- Freeze development/test splits, preserve independent expert ratings and record agreement before resolving disagreements.\n\n## Traceability\nReport requirement/section: 9; FR-07/11\n\n## Planning\nDue date: 2026-11-06\nSuggested work area: Research / QA\n\n## Evidence\nLink actual artifacts, commits and review records before marking this task complete.\n\nLocal planning reference: PLAN-10",
+      "id": "3-28",
+      "$type": "Issue"
+    },
+    {
+      "customFields": [
+        {
+          "value": {
+            "name": "Normal",
+            "id": "164-3",
+            "$type": "EnumBundleElement"
+          },
+          "name": "Priority",
+          "$type": "SingleEnumIssueCustomField"
+        },
+        {
+          "value": null,
+          "name": "Assignee",
+          "$type": "SingleUserIssueCustomField"
+        },
+        {
+          "value": {
+            "name": "Backlog",
+            "id": "166-15",
+            "$type": "StateBundleElement"
+          },
+          "name": "Stage",
+          "$type": "StateIssueCustomField"
+        },
+        {
+          "value": {
+            "name": "Ayadil",
+            "id": "164-13",
+            "$type": "EnumBundleElement"
+          },
+          "name": "Planned owner",
+          "$type": "SingleEnumIssueCustomField"
+        },
+        {
+          "value": 1794571200000,
+          "name": "Due Date",
+          "$type": "DateIssueCustomField"
+        }
+      ],
+      "resolved": null,
+      "summary": "Evaluate matching baselines and latency",
+      "idReadable": "AITU-11",
+      "description": "## Planned responsible student\nAyadil\n\nThis is a name-based planning assignment. The YouTrack Assignee field can be linked after separate personal user accounts are added.\n\n## Expected outcome\nCompare B0/B1/B2 using nDCG@5, Precision@5 and p95 latency under fixed conditions. Preserve negative outcomes.\n\n## Acceptance criteria\n- Compare B0/B1/B2 using nDCG@5, Precision@5 and p95 latency under fixed conditions. Preserve negative outcomes.\n\n## Traceability\nReport requirement/section: 9; NFR-06\n\n## Planning\nDue date: 2026-11-13\nSuggested work area: Backend / QA\n\n## Evidence\nLink actual artifacts, commits and review records before marking this task complete.\n\nLocal planning reference: PLAN-11",
+      "id": "3-29",
+      "$type": "Issue"
+    },
+    {
+      "customFields": [
+        {
+          "value": {
+            "name": "Critical",
+            "id": "164-1",
+            "$type": "EnumBundleElement"
+          },
+          "name": "Priority",
+          "$type": "SingleEnumIssueCustomField"
+        },
+        {
+          "value": null,
+          "name": "Assignee",
+          "$type": "SingleUserIssueCustomField"
+        },
+        {
+          "value": {
+            "name": "Backlog",
+            "id": "166-15",
+            "$type": "StateBundleElement"
+          },
+          "name": "Stage",
+          "$type": "StateIssueCustomField"
+        },
+        {
+          "value": {
+            "name": "Ayadil",
+            "id": "164-13",
+            "$type": "EnumBundleElement"
+          },
+          "name": "Planned owner",
+          "$type": "SingleEnumIssueCustomField"
+        },
+        {
+          "value": 1792670400000,
+          "name": "Due Date",
+          "$type": "DateIssueCustomField"
+        }
+      ],
+      "resolved": null,
+      "summary": "Set up the shared repository and access",
+      "idReadable": "AITU-12",
+      "description": "## Planned responsible student\nAyadil\n\nThis is a name-based planning assignment. The YouTrack Assignee field can be linked after separate personal user accounts are added.\n\n## Expected outcome\nUse one real repository and personal accounts. Verify access for both students, the supervisor and committee.\n\n## Acceptance criteria\n- Use one real repository and personal accounts. Verify access for both students, the supervisor and committee.\n\n## Traceability\nReport requirement/section: 10\n\n## Planning\nDue date: 2026-10-22\nSuggested work area: Coordination\n\n## Evidence\nLink actual artifacts, commits and review records before marking this task complete.\n\nLocal planning reference: PLAN-12",
+      "id": "3-30",
+      "$type": "Issue"
+    },
+    {
+      "customFields": [
+        {
+          "value": {
+            "name": "Critical",
+            "id": "164-1",
+            "$type": "EnumBundleElement"
+          },
+          "name": "Priority",
+          "$type": "SingleEnumIssueCustomField"
+        },
+        {
+          "value": null,
+          "name": "Assignee",
+          "$type": "SingleUserIssueCustomField"
+        },
+        {
+          "value": {
+            "name": "Backlog",
+            "id": "166-15",
+            "$type": "StateBundleElement"
+          },
+          "name": "Stage",
+          "$type": "StateIssueCustomField"
+        },
+        {
+          "value": {
+            "name": "Zhan",
+            "id": "164-14",
+            "$type": "EnumBundleElement"
+          },
+          "name": "Planned owner",
+          "$type": "SingleEnumIssueCustomField"
+        },
+        {
+          "value": 1792670400000,
+          "name": "Due Date",
+          "$type": "DateIssueCustomField"
+        }
+      ],
+      "resolved": null,
+      "summary": "Set up the tracker and assign responsibilities",
+      "idReadable": "AITU-13",
+      "description": "## Planned responsible student\nZhan\n\nThis is a name-based planning assignment. The YouTrack Assignee field can be linked after separate personal user accounts are added.\n\n## Expected outcome\nCreate the real board and tasks. Assign the two actual participants, priorities, deadlines and acceptance criteria. Verify reviewer access.\n\n## Acceptance criteria\n- Create the real board and tasks. Assign the two actual participants, priorities, deadlines and acceptance criteria. Verify reviewer access.\n\n## Traceability\nReport requirement/section: 10\n\n## Planning\nDue date: 2026-10-22\nSuggested work area: Coordination / team\n\n## Evidence\nLink actual artifacts, commits and review records before marking this task complete.\n\nLocal planning reference: PLAN-13",
+      "id": "3-31",
+      "$type": "Issue"
+    },
+    {
+      "customFields": [
+        {
+          "value": {
+            "name": "Major",
+            "id": "164-2",
+            "$type": "EnumBundleElement"
+          },
+          "name": "Priority",
+          "$type": "SingleEnumIssueCustomField"
+        },
+        {
+          "value": null,
+          "name": "Assignee",
+          "$type": "SingleUserIssueCustomField"
+        },
+        {
+          "value": {
+            "name": "Backlog",
+            "id": "166-15",
+            "$type": "StateBundleElement"
+          },
+          "name": "Stage",
+          "$type": "StateIssueCustomField"
+        },
+        {
+          "value": {
+            "name": "Ayadil",
+            "id": "164-13",
+            "$type": "EnumBundleElement"
+          },
+          "name": "Planned owner",
+          "$type": "SingleEnumIssueCustomField"
+        },
+        {
+          "value": 1792756800000,
+          "name": "Due Date",
+          "$type": "DateIssueCustomField"
+        }
+      ],
+      "resolved": null,
+      "summary": "Link code changes and reviews to real tasks",
+      "idReadable": "AITU-14",
+      "description": "## Planned responsible student\nAyadil\n\nThis is a name-based planning assignment. The YouTrack Assignee field can be linked after separate personal user accounts are added.\n\n## Expected outcome\nUse real issue IDs in branches and commits/MRs. Link changes back to tasks and preserve review comments and individual contributions.\n\n## Acceptance criteria\n- Use real issue IDs in branches and commits/MRs. Link changes back to tasks and preserve review comments and individual contributions.\n\n## Traceability\nReport requirement/section: 10\n\n## Planning\nDue date: 2026-10-23\nSuggested work area: Team\n\n## Evidence\nLink actual artifacts, commits and review records before marking this task complete.\n\nLocal planning reference: PLAN-14",
+      "id": "3-32",
+      "$type": "Issue"
+    },
+    {
+      "customFields": [
+        {
+          "value": {
+            "name": "Critical",
+            "id": "164-1",
+            "$type": "EnumBundleElement"
+          },
+          "name": "Priority",
+          "$type": "SingleEnumIssueCustomField"
+        },
+        {
+          "value": null,
+          "name": "Assignee",
+          "$type": "SingleUserIssueCustomField"
+        },
+        {
+          "value": {
+            "name": "Backlog",
+            "id": "166-15",
+            "$type": "StateBundleElement"
+          },
+          "name": "Stage",
+          "$type": "StateIssueCustomField"
+        },
+        {
+          "value": {
+            "name": "Zhan",
+            "id": "164-14",
+            "$type": "EnumBundleElement"
+          },
+          "name": "Planned owner",
+          "$type": "SingleEnumIssueCustomField"
+        },
+        {
+          "value": 1792756800000,
+          "name": "Due Date",
+          "$type": "DateIssueCustomField"
+        }
+      ],
+      "resolved": null,
+      "summary": "Obtain substantive supervisor feedback",
+      "idReadable": "AITU-15",
+      "description": "## Planned responsible student\nZhan\n\nThis is a name-based planning assignment. The YouTrack Assignee field can be linked after separate personal user accounts are added.\n\n## Expected outcome\nRetain actual comments on deliverables and decisions, the reviewed version and a response decision for each comment.\n\n## Acceptance criteria\n- Retain actual comments on deliverables and decisions, the reviewed version and a response decision for each comment.\n\n## Traceability\nReport requirement/section: 11\n\n## Planning\nDue date: 2026-10-23\nSuggested work area: Coordination / supervisor\n\n## Evidence\nLink actual artifacts, commits and review records before marking this task complete.\n\nLocal planning reference: PLAN-15",
+      "id": "3-33",
+      "$type": "Issue"
+    },
+    {
+      "customFields": [
+        {
+          "value": {
+            "name": "Critical",
+            "id": "164-1",
+            "$type": "EnumBundleElement"
+          },
+          "name": "Priority",
+          "$type": "SingleEnumIssueCustomField"
+        },
+        {
+          "value": null,
+          "name": "Assignee",
+          "$type": "SingleUserIssueCustomField"
+        },
+        {
+          "value": {
+            "name": "Backlog",
+            "id": "166-15",
+            "$type": "StateBundleElement"
+          },
+          "name": "Stage",
+          "$type": "StateIssueCustomField"
+        },
+        {
+          "value": {
+            "name": "Zhan",
+            "id": "164-14",
+            "$type": "EnumBundleElement"
+          },
+          "name": "Planned owner",
+          "$type": "SingleEnumIssueCustomField"
+        },
+        {
+          "value": 1792756800000,
+          "name": "Due Date",
+          "$type": "DateIssueCustomField"
+        }
+      ],
+      "resolved": null,
+      "summary": "Address review comments and finalize the report",
+      "idReadable": "AITU-16",
+      "description": "## Planned responsible student\nZhan\n\nThis is a name-based planning assignment. The YouTrack Assignee field can be linked after separate personal user accounts are added.\n\n## Expected outcome\nLink revisions to actual feedback. Complete confirmed identity fields and regenerate reviewed final Word/PDF files.\n\n## Acceptance criteria\n- Link revisions to actual feedback. Complete confirmed identity fields and regenerate reviewed final Word/PDF files.\n\n## Traceability\nReport requirement/section: 11; Appendix B\n\n## Planning\nDue date: 2026-10-23\nSuggested work area: Team\n\n## Evidence\nLink actual artifacts, commits and review records before marking this task complete.\n\nLocal planning reference: PLAN-16",
+      "id": "3-34",
+      "$type": "Issue"
+    },
+    {
+      "customFields": [
+        {
+          "value": {
+            "name": "Critical",
+            "id": "164-1",
+            "$type": "EnumBundleElement"
+          },
+          "name": "Priority",
+          "$type": "SingleEnumIssueCustomField"
+        },
+        {
+          "value": null,
+          "name": "Assignee",
+          "$type": "SingleUserIssueCustomField"
+        },
+        {
+          "value": {
+            "name": "Backlog",
+            "id": "166-15",
+            "$type": "StateBundleElement"
+          },
+          "name": "Stage",
+          "$type": "StateIssueCustomField"
+        },
+        {
+          "value": {
+            "name": "Zhan",
+            "id": "164-14",
+            "$type": "EnumBundleElement"
+          },
+          "name": "Planned owner",
+          "$type": "SingleEnumIssueCustomField"
+        },
+        {
+          "value": 1792756800000,
+          "name": "Due Date",
+          "$type": "DateIssueCustomField"
+        }
+      ],
+      "resolved": null,
+      "summary": "Compile actual board and task screenshots into PDF",
+      "idReadable": "AITU-17",
+      "description": "## Planned responsible student\nZhan\n\nThis is a name-based planning assignment. The YouTrack Assignee field can be linked after separate personal user accounts are added.\n\n## Expected outcome\nCapture the real overview and readable task cards with assignees, deadlines and acceptance criteria. Combine them into one PDF.\n\n## Acceptance criteria\n- Capture the real overview and readable task cards with assignees, deadlines and acceptance criteria. Combine them into one PDF.\n\n## Traceability\nReport requirement/section: 10; Appendix B\n\n## Planning\nDue date: 2026-10-23\nSuggested work area: Coordination\n\n## Evidence\nLink actual artifacts, commits and review records before marking this task complete.\n\nLocal planning reference: PLAN-17",
+      "id": "3-35",
+      "$type": "Issue"
+    },
+    {
+      "customFields": [
+        {
+          "value": {
+            "name": "Critical",
+            "id": "164-1",
+            "$type": "EnumBundleElement"
+          },
+          "name": "Priority",
+          "$type": "SingleEnumIssueCustomField"
+        },
+        {
+          "value": null,
+          "name": "Assignee",
+          "$type": "SingleUserIssueCustomField"
+        },
+        {
+          "value": {
+            "name": "Backlog",
+            "id": "166-15",
+            "$type": "StateBundleElement"
+          },
+          "name": "Stage",
+          "$type": "StateIssueCustomField"
+        },
+        {
+          "value": {
+            "name": "Ayadil",
+            "id": "164-13",
+            "$type": "EnumBundleElement"
+          },
+          "name": "Planned owner",
+          "$type": "SingleEnumIssueCustomField"
+        },
+        {
+          "value": 1792843200000,
+          "name": "Due Date",
+          "$type": "DateIssueCustomField"
+        }
+      ],
+      "resolved": null,
+      "summary": "Verify access and submit the team materials",
+      "idReadable": "AITU-18",
+      "description": "## Planned responsible student\nAyadil\n\nThis is a name-based planning assignment. The YouTrack Assignee field can be linked after separate personal user accounts are added.\n\n## Expected outcome\nOne representative verifies all links, uploads the unified report and separate tracker-evidence PDF, and submits before 18:00 UTC+5 on 24 October 2026. Retain confirmation.\n\n## Acceptance criteria\n- One representative verifies all links, uploads the unified report and separate tracker-evidence PDF, and submits before 18:00 UTC+5 on 24 October 2026. Retain confirmation.\n\n## Traceability\nReport requirement/section: Appendix B\n\n## Planning\nDue date: 2026-10-24\nSuggested work area: Representative\n\n## Evidence\nLink actual artifacts, commits and review records before marking this task complete.\n\nLocal planning reference: PLAN-18",
+      "id": "3-36",
+      "$type": "Issue"
+    }
+  ]
+}
