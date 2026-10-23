@@ -1,0 +1,14 @@
+.env
+.venv/
+.local/
+__pycache__/
+*.pyc
+.pytest_cache/
+node_modules/
+dist/
+*.tsbuildinfo
+coverage/
+test-results/
+playwright-report/
+*.log
+aws_academy_progress.md
