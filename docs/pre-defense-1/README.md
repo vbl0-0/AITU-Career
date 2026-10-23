@@ -13,3 +13,7 @@ The English report contains eleven ordered main sections, a contents list and tw
 The application source, setup scripts and migration instructions are in the repository. Run the full authenticated application locally with the development guide. Both personal accounts have published deliveries; AI assistance and limitations of authorship attribution are stated in the report.
 
 Interviews and supervisor feedback are optional according to the team's 24 October clarification; none are fabricated. Independent matching-quality evaluation, real embedding-model evaluation, Docker runtime and live HeadHunter access remain separate limitations/next-stage work. The representative still needs to inspect the final form page, upload the two PDFs and retain the actual submission confirmation before 18:00 UTC+5 on 24 October 2026.
+
+Current tracker: 13 completed issues; two optional activities closed as not planned; three open issues (#10/#11 are later-stage evaluation, #18 is actual submission). GitHub's built-in closure workflow places both completed and not-planned cards in Done; the state reason and optional task titles distinguish activities that were not performed.
+
+Current issue state is in [github-current-issues.json](evidence/github-current-issues.json) and the refreshed GitHub screenshots. The dated YouTrack export, `tasks.csv`, `youtrack-plan.json` and 22 October migration snapshot are historical planning/migration evidence, not current completion claims.

@@ -79,6 +79,10 @@ def finalize_sections(sources, sections, cfg, root):
         ]),
         paragraph('Submission version: ' + version + '. One representative submits both students\' materials before 18:00 UTC+5 on 24 October 2026. A form confirmation is retained only after actual submission.'),
     ]
+    current_issues = root / 'docs/pre-defense-1/evidence/github-current-issues.json'
+    if current_issues.exists():
+        counts = json.loads(current_issues.read_text(encoding='utf-8'))['counts']
+        by_number[10]['blocks'].append(paragraph('Tracker snapshot: '+str(counts['completed'])+' completed, '+str(counts['not_planned'])+' optional activities closed as not planned, and '+str(counts['open'])+' open. GitHub\'s built-in closed-item workflow places both closure types in Done; the issue state reason distinguishes cancelled scope from performed work. Snapshot: '+f'{repo}/blob/{tag}/docs/pre-defense-1/evidence/github-current-issues.json'+'.'))
     by_number[11]['title'] = '11. Review Status and Optional Supervisor Feedback'
     by_number[11]['blocks'] = [
         paragraph(clarification),

@@ -1094,6 +1094,10 @@
         {
           "type": "p",
           "text": "Submission version: https://github.com/vbl0-0/AITU-Career/tree/prob-period-1. One representative submits both students' materials before 18:00 UTC+5 on 24 October 2026. A form confirmation is retained only after actual submission."
+        },
+        {
+          "type": "p",
+          "text": "Tracker snapshot: 13 completed, 2 optional activities closed as not planned, and 3 open. GitHub's built-in closed-item workflow places both closure types in Done; the issue state reason distinguishes cancelled scope from performed work. Snapshot: https://github.com/vbl0-0/AITU-Career/blob/prob-period-1/docs/pre-defense-1/evidence/github-current-issues.json."
         }
       ]
     },
