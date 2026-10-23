@@ -1,0 +1,24 @@
+@startuml
+left to right direction
+actor "Student / graduate" as Student
+actor Administrator as Admin
+rectangle "AITU Career" {
+  usecase "UC-01: Sign in / session" as Login
+  usecase "UC-02: Manage profile / portfolio" as Profile
+  usecase "UC-03: Browse jobs / matching" as Jobs
+  usecase "UC-04: Review gaps / recalculate" as Growth
+  usecase "UC-05: Manage jobs / catalogs" as Catalog
+  usecase "UC-06: Manage users / statistics" as Users
+  note bottom
+    Active authorized session is a precondition
+    of all protected use cases.
+  end note
+}
+Student -- Login
+Admin -- Login
+Student -- Profile
+Student -- Jobs
+Student -- Growth
+Admin -- Catalog
+Admin -- Users
+@enduml

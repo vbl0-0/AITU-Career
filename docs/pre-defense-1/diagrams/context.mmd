@@ -1,0 +1,5 @@
+flowchart LR
+  Graduate[Student / graduate] -->|Profile and analysis| App[AITU Career]
+  Admin[Administrator] -->|Jobs and catalogs| App
+  App --> Data[(Persisted profiles and vacancies)]
+  App -.->|Optional import and refresh| HH[HeadHunter API adapter]

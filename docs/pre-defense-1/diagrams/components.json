@@ -1,0 +1,142 @@
+{
+  "title": "Component Diagram — modular monolith",
+  "width": 1100,
+  "height": 705,
+  "nodes": [
+    {
+      "id": "browser",
+      "x": 20,
+      "y": 190,
+      "w": 180,
+      "h": 100,
+      "lines": [
+        "Browser",
+        "React + TypeScript"
+      ],
+      "kind": "box"
+    },
+    {
+      "id": "api",
+      "x": 305,
+      "y": 145,
+      "w": 240,
+      "h": 105,
+      "lines": [
+        "FastAPI routers",
+        "CRUD / HH import adapter",
+        "FR-03–FR-06 / FR-10"
+      ],
+      "kind": "box"
+    },
+    {
+      "id": "auth",
+      "x": 305,
+      "y": 355,
+      "w": 240,
+      "h": 105,
+      "lines": [
+        "Auth / security",
+        "JWT + sessions + Argon2id",
+        "FR-01 / FR-02"
+      ],
+      "kind": "box"
+    },
+    {
+      "id": "ai",
+      "x": 635,
+      "y": 145,
+      "w": 240,
+      "h": 105,
+      "lines": [
+        "AI matching module",
+        "Score / gaps / fingerprint",
+        "FR-07–FR-09 / FR-11"
+      ],
+      "kind": "box"
+    },
+    {
+      "id": "orm",
+      "x": 635,
+      "y": 355,
+      "w": 240,
+      "h": 105,
+      "lines": [
+        "Models / SQLAlchemy",
+        "Session / migrations",
+        "NFR-02"
+      ],
+      "kind": "box"
+    },
+    {
+      "id": "model",
+      "x": 635,
+      "y": 565,
+      "w": 240,
+      "h": 85,
+      "lines": [
+        "Optional local embeddings",
+        "Keyword fallback"
+      ],
+      "kind": "box"
+    },
+    {
+      "id": "db",
+      "x": 940,
+      "y": 355,
+      "w": 140,
+      "h": 105,
+      "lines": [
+        "PostgreSQL",
+        "Persistent",
+        "source of truth"
+      ],
+      "kind": "box"
+    }
+  ],
+  "edges": [
+    [
+      "browser",
+      "api",
+      "/api JSON"
+    ],
+    [
+      "api",
+      "auth",
+      "Authorize"
+    ],
+    [
+      "api",
+      "ai",
+      "Analyze"
+    ],
+    [
+      "api",
+      "orm",
+      "CRUD"
+    ],
+    [
+      "auth",
+      "orm",
+      "Sessions"
+    ],
+    [
+      "orm",
+      "db",
+      "SQL"
+    ],
+    [
+      "ai",
+      "model",
+      "Optional",
+      "dashed",
+      "right"
+    ]
+  ],
+  "boundary": [
+    270,
+    65,
+    640,
+    610,
+    "Backend process — 127.0.0.1:8000"
+  ]
+}

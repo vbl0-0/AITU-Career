@@ -1,0 +1,93 @@
+{
+  "title": "System Context — AITU Career",
+  "width": 1100,
+  "height": 660,
+  "nodes": [
+    {
+      "id": "graduate",
+      "x": 25,
+      "y": 160,
+      "w": 210,
+      "h": 120,
+      "lines": [
+        "Student / graduate",
+        "Profile, skills, opportunities"
+      ],
+      "kind": "box"
+    },
+    {
+      "id": "system",
+      "x": 400,
+      "y": 215,
+      "w": 300,
+      "h": 150,
+      "lines": [
+        "AITU Career",
+        "Profile + matching + guidance",
+        "React / FastAPI / PostgreSQL"
+      ],
+      "kind": "box"
+    },
+    {
+      "id": "admin",
+      "x": 865,
+      "y": 160,
+      "w": 210,
+      "h": 120,
+      "lines": [
+        "Administrator",
+        "Jobs and skill catalog"
+      ],
+      "kind": "box"
+    },
+    {
+      "id": "data",
+      "x": 400,
+      "y": 500,
+      "w": 300,
+      "h": 100,
+      "lines": [
+        "Persisted project data",
+        "Profiles / demo or imported jobs"
+      ],
+      "kind": "box"
+    },
+    {
+      "id": "hh",
+      "x": 25,
+      "y": 470,
+      "w": 230,
+      "h": 115,
+      "lines": [
+        "HeadHunter API adapter",
+        "Optional import/refresh",
+        "Live access not verified"
+      ],
+      "kind": "box"
+    }
+  ],
+  "edges": [
+    [
+      "graduate",
+      "system",
+      "HTTPS / local HTTP"
+    ],
+    [
+      "admin",
+      "system",
+      "Manage catalog"
+    ],
+    [
+      "system",
+      "data",
+      "Read / persist"
+    ],
+    [
+      "system",
+      "hh",
+      "Optional API call",
+      "dashed"
+    ]
+  ],
+  "boundary": null
+}

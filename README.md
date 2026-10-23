@@ -23,21 +23,22 @@ The team consists of two students:
 Supervisor: Оразова Арайлым Жанболаткызы, Senior Lecturer.
 Names retain the spelling in the supplied project justification. Confirmed
 details are stored in [submission.json](docs/pre-defense-1/submission.json).
-Planned work areas include backend/data, frontend/UX, research and QA; actual
-individual contributions still require linked changes and review evidence.
+Actual account-linked deliveries and the use of OpenAI Codex assistance are
+recorded in the report. Publication history does not imply exclusive original
+authorship of every imported line.
 
 Repository: [vbl0-0/AITU-Career](https://github.com/vbl0-0/AITU-Career).
 The [GitHub Project](https://github.com/users/vbl0-0/projects/1) contains 18 issues
 migrated from AITU-1 through AITU-18. Ayadil (@vbl0-0) and Zhan (@igiiaw) each
 have nine assigned issues. Status, priority, original due date, planned owner and
 YouTrack ID are recorded. Board and table views are public for reading.
-Uploading the application code, progressive contributions, actual reviews and
-supervisor/committee verification remain outstanding. Confirm the tracker
-substitution with the supervisor. See [migration evidence](docs/pre-defense-1/github-project-migration.json).
+Frontend, backend, repository automation and research/report-source deliveries
+are merged, preserving the original personal-account commits. The repository and
+Project are public for reading. See [migration evidence](docs/pre-defense-1/github-project-migration.json).
 
 ## Scope and current status
 
-Implemented locally: authentication and roles; AITU-oriented profile and education;
+Implemented and published: authentication and roles; AITU-oriented profile and education;
 skills with levels; projects, certificates and experience; jobs and saved jobs;
 weighted matching with explanations; stale analysis detection; recommendations;
 and administration. Seed data contains 30 explicitly fictional vacancies.
@@ -68,13 +69,18 @@ is an internal heuristic, not a validated employment predictor.
   [proposed tracker tasks](docs/pre-defense-1/tasks.csv)
 - [Development and demo guide](docs/DEVELOPMENT.md)
 - [HeadHunter import and access setup](docs/VACANCY_IMPORT.md)
-- [Validation on 19 October](docs/pre-defense-1/evidence/validation.html)
-- [Historical validation on 5 October](docs/VALIDATION.md)
+- [Current verification on 24 October](docs/pre-defense-1/evidence/validation.html)
+- [Public screen walkthrough](https://vbl0-0.github.io/AITU-Career/)
+- [Copy/paste form answers](docs/pre-defense-1/FORM_ANSWERS.txt)
+- [Technical verification notes](docs/VALIDATION.md)
 - [Original project specification](docs/ORIGINAL_PROJECT_SPECIFICATION.md)
 
 The dossier covers proposal, relevance, literature, existing systems, technology
 choices, requirements, architecture, prototype, evaluation, management/risks and
-supervisor feedback. Interviews and real feedback are pending and clearly labeled.
+review status. According to the team's 24 October clarification, interviews and
+supervisor feedback are optional; no interview or approval evidence is invented.
+The public prototype is a screen walkthrough of actual captures. Run the full
+authenticated application locally using the development guide.
 The deadline stated in the announcement is **24 October 2026, before 18:00 UTC+5**.
 
 ## Technology and structure
@@ -157,5 +163,5 @@ Never commit `.env`, passwords, tokens, local database contents or identifiable
 interview records. `.env.example` contains placeholders only. Each participant
 must use an identifiable personal account. Link branches/commits/merge requests
 to real tracker task IDs, review before merging, and tag the exact reviewed
-submission as `pre-defense-1` without moving that tag later. See
+submission as `prob-period-1` without moving that tag later. See
 [workflow](docs/pre-defense-1/templates/repository-workflow.html).
