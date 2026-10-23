@@ -28,7 +28,7 @@ def candidates():
 
 def destination(relative):
     path = relative.as_posix()
-    if path.startswith('.github/') or path in ('.gitignore', '.env.example', 'README.md', 'docs/TEAM_DELIVERY.md',
+    if path.startswith('.github/') or path in ('.gitignore', '.env.example', 'README.md', 'docs/TEAM_DELIVERY.md', 'docs/PROJECT_AUTOMATION.md',
                 'scripts/package_team_deliveries.py', 'scripts/apply-team-stage.ps1'):
         return 'Ayadil', '00-repository'
     if path.startswith('backend/'):
