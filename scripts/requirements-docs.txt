@@ -1,0 +1,2 @@
+# Optional report export helper; not an application runtime dependency.
+PyMuPDF==1.28.2
