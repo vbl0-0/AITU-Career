@@ -1,0 +1,155 @@
+[
+  {
+    "id": "S01",
+    "citation": "Zhang M., Jensen K., Sonniks S., Plank B. (2022). SkillSpan: Hard and Soft Skill Extraction from English Job Postings. NAACL, 4962–4984.",
+    "url": "https://aclanthology.org/2022.naacl-main.366/",
+    "type": "Scientific publication",
+    "finding": "Expert annotation of hard and soft skill mentions and domain-adapted extraction models.",
+    "limitation": "English job postings do not establish performance on Russian/Kazakh texts or AITU profiles.",
+    "application": "Evaluate extraction separately from ranking; retain reference spans and annotation rules."
+  },
+  {
+    "id": "S02",
+    "citation": "Senger E., Zhang M., van der Goot R., Plank B. (2024). Deep Learning-based Computational Job Market Analysis: A Survey on Skill Extraction and Classification from Job Postings. NLP4HR, 1–15.",
+    "url": "https://aclanthology.org/2024.nlp4hr-1.1/",
+    "type": "Scientific publication",
+    "finding": "Survey of terminology, datasets and neural skill extraction methods.",
+    "limitation": "Different datasets and task definitions prevent direct comparison of reported scores.",
+    "application": "Define the annotation unit, skill terminology and normalization rules before evaluation."
+  },
+  {
+    "id": "S03",
+    "citation": "Zhang M., van der Goot R., Plank B. (2023). ESCOXLM-R: Multilingual Taxonomy-driven Pre-training for the Job Market Domain. ACL, 11871–11890.",
+    "url": "https://aclanthology.org/2023.acl-long.662/",
+    "type": "Scientific publication",
+    "finding": "Multilingual domain-adaptive pre-training using the ESCO taxonomy.",
+    "limitation": "Transfer to local occupations and languages requires validation; large-model adaptation needs resources.",
+    "application": "Maintain canonical skills and aliases; consider ESCO alignment as a future extension."
+  },
+  {
+    "id": "S04",
+    "citation": "Nguyen K., Zhang M., Montariol S., Bosselut A. (2024). Rethinking Skill Extraction in the Job Market Domain using Large Language Models. NLP4HR, 27–42.",
+    "url": "https://aclanthology.org/2024.nlp4hr-1.3/",
+    "type": "Scientific publication",
+    "finding": "Few-shot LLM extraction explores complex skill mentions.",
+    "limitation": "The study does not establish universal superiority over supervised methods; inference requires quality control and resources.",
+    "application": "Keep external LLM calls optional and assess extraction against fixed labels."
+  },
+  {
+    "id": "S05",
+    "citation": "Kavas H., Serra-Vidal M., Wanner L. (2025). Multilingual Skill Extraction for Job Vacancy–Job Seeker Matching in Knowledge Graphs. GenAIK, 146–155.",
+    "url": "https://aclanthology.org/2025.genaik-1.15/",
+    "type": "Scientific publication",
+    "finding": "Multilingual vacancy–candidate matching through skill extraction, ESCO alignment and a knowledge graph.",
+    "limitation": "The graph pipeline is more complex than a dictionary, and its benefit for AITU graduates remains unmeasured.",
+    "application": "Compare normalization with semantic expansion and retain the origin of each match."
+  },
+  {
+    "id": "S06",
+    "citation": "Laosaengpha N., Tativannarat T., Piansaddhayanon C., Rutherford A., Chuangsuwanich E. (2024). Learning Job Title Representation from Job Description Aggregation Network. Findings of ACL, 1319–1329.",
+    "url": "https://aclanthology.org/2024.findings-acl.77/",
+    "type": "Scientific publication",
+    "finding": "Job-title representations incorporate information from descriptions beyond extracted skills.",
+    "limitation": "Learning job-title representations is different from assessing an individual candidate.",
+    "application": "Describe the current score as skill-requirement coverage, not a probability of being hired."
+  },
+  {
+    "id": "S07",
+    "citation": "Reimers N., Gurevych I. (2019). Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks. EMNLP-IJCNLP, 3982–3992.",
+    "url": "https://aclanthology.org/D19-1410/",
+    "type": "Scientific publication; foundational work",
+    "finding": "Siamese sentence encoders enable efficient embedding-based text comparison.",
+    "limitation": "Text similarity does not prove skill proficiency or satisfaction of all job conditions.",
+    "application": "Use similarity only as supplementary evidence with a limited contribution."
+  },
+  {
+    "id": "S08",
+    "citation": "Gao T., Yao X., Chen D. (2021). SimCSE: Simple Contrastive Learning of Sentence Embeddings. EMNLP, 6894–6910.",
+    "url": "https://aclanthology.org/2021.emnlp-main.552/",
+    "type": "Scientific publication",
+    "finding": "Contrastive learning produces sentence representations in supervised and unsupervised settings.",
+    "limitation": "Semantic textual similarity benchmarks do not replace domain-specific matching evaluation.",
+    "application": "Select an encoder using local ranking quality and latency as well as general benchmarks."
+  },
+  {
+    "id": "S09",
+    "citation": "Wang L., Yang N., Huang X., Yang L., Majumder R., Wei F. (2024). Multilingual E5 Text Embeddings: A Technical Report. arXiv:2402.05672.",
+    "url": "https://arxiv.org/abs/2402.05672",
+    "type": "Technical report / preprint",
+    "finding": "A family of multilingual retrieval embeddings offers different model sizes.",
+    "limitation": "Input conventions, model size and inference cost affect suitability.",
+    "application": "Include E5 in a future comparison; it is not the model currently configured in the prototype."
+  },
+  {
+    "id": "S10",
+    "citation": "European Commission. What is ESCO?",
+    "url": "https://esco.ec.europa.eu/en/about-esco/what-esco",
+    "type": "Official classification",
+    "finding": "A standardized vocabulary of occupations and skills.",
+    "limitation": "A European taxonomy requires validation in the local context.",
+    "application": "Allow future external identifiers in the skill catalog."
+  },
+  {
+    "id": "S11",
+    "citation": "LinkedIn Help. Find how you match up with jobs on LinkedIn.",
+    "url": "https://www.linkedin.com/help/linkedin/answer/a7120158",
+    "type": "Official product documentation",
+    "finding": "Profile/resume qualifications are compared with job requirements and explained.",
+    "limitation": "Availability may depend on subscription and rollout.",
+    "application": "Compare against modern matching features rather than assuming competitors only list jobs."
+  },
+  {
+    "id": "S12",
+    "citation": "Handshake Help Center. Jobs Digests and Recommendations.",
+    "url": "https://support.joinhandshake.com/hc/en-us/articles/360000684947-Jobs-Digests-and-Recommendations",
+    "type": "Official product documentation",
+    "finding": "Recommendations use student interests and platform activity.",
+    "limitation": "Behavioral signals require interaction history.",
+    "application": "Use explicit profile data for the cold-start MVP."
+  },
+  {
+    "id": "S13",
+    "citation": "hh.kz. Digitizing candidate skills: guidance on key skills in vacancies.",
+    "url": "https://hh.kz/article/25442",
+    "type": "Official product documentation",
+    "finding": "Key skills are used in job descriptions and search.",
+    "limitation": "This source does not establish the complete current matching feature set.",
+    "application": "Use hh.kz as a regional reference; mark unsupported capabilities as not established."
+  },
+  {
+    "id": "S14",
+    "citation": "Coursera. Introducing Career Academy.",
+    "url": "https://blog.coursera.org/introducing-career-academy/",
+    "type": "Official product documentation",
+    "finding": "Career roles are linked to skills, courses and practical learning.",
+    "limitation": "A product description does not establish improved employment outcomes.",
+    "application": "Distinguish learning recommendations from employment probability."
+  },
+  {
+    "id": "S15",
+    "citation": "FastAPI. Features.",
+    "url": "https://fastapi.tiangolo.com/features/",
+    "type": "Official technical documentation",
+    "finding": "Typed validation and OpenAPI support.",
+    "limitation": "Authorization and application-specific checks still require implementation.",
+    "application": "Use a validated API boundary and generated Swagger documentation."
+  },
+  {
+    "id": "S16",
+    "citation": "PostgreSQL. About.",
+    "url": "https://www.postgresql.org/about/",
+    "type": "Official technical documentation",
+    "finding": "Relational integrity, constraints and transactions.",
+    "limitation": "Database operation remains a team responsibility.",
+    "application": "Use foreign keys, uniqueness constraints and migrations."
+  },
+  {
+    "id": "S17",
+    "citation": "Sentence Transformers. Semantic Textual Similarity.",
+    "url": "https://www.sbert.net/docs/sentence_transformer/usage/semantic_textual_similarity.html",
+    "type": "Official technical documentation",
+    "finding": "Embedding similarity computation.",
+    "limitation": "A similarity threshold depends on the task and data.",
+    "application": "Keep the threshold configurable and provide a keyword fallback."
+  }
+]
