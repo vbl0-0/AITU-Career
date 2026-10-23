@@ -1,0 +1,10 @@
+flowchart LR
+  Browser[React / TypeScript] -->|REST / JSON| API
+  subgraph Backend[FastAPI modular monolith]
+    API[Routers and validation] --> Auth[JWT / sessions / Argon2id]
+    API --> AI[Score / gaps / recommendations]
+    API --> ORM[SQLAlchemy models / session]
+    API --> HH[HH import and refresh adapter]
+    AI -.-> Optional[Local embedding cache / fallback]
+  end
+  ORM --> DB[(PostgreSQL)]

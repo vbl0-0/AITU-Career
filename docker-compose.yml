@@ -1,0 +1,61 @@
+services:
+  db:
+    image: postgres:18-alpine
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-aitu_career}
+      POSTGRES_USER: ${POSTGRES_USER:-aitu}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Run python scripts/setup_env.py first}
+    volumes:
+      - postgres_data:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+    restart: unless-stopped
+
+  backend:
+    build:
+      context: ./backend
+      args:
+        INSTALL_SEMANTIC: ${INSTALL_SEMANTIC:-false}
+    environment:
+      DATABASE_URL: postgresql+psycopg://${POSTGRES_USER:-aitu}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB:-aitu_career}
+      JWT_SECRET: ${JWT_SECRET:?Run python scripts/setup_env.py first}
+      CORS_ORIGINS: ${CORS_ORIGINS:-http://localhost:8080}
+      COOKIE_SECURE: ${COOKIE_SECURE:-false}
+      SEED_DEMO: ${SEED_DEMO:-true}
+      DEMO_PASSWORD: ${DEMO_PASSWORD:-}
+      BOOTSTRAP_ADMIN_EMAIL: ${BOOTSTRAP_ADMIN_EMAIL:-}
+      BOOTSTRAP_ADMIN_NAME: ${BOOTSTRAP_ADMIN_NAME:-Platform Administrator}
+      BOOTSTRAP_ADMIN_PASSWORD: ${BOOTSTRAP_ADMIN_PASSWORD:-}
+      HH_ACCESS_TOKEN: ${HH_ACCESS_TOKEN:-}
+      HH_USER_AGENT: ${HH_USER_AGENT:-AITU-Career/1.0}
+      HH_TIMEOUT_SECONDS: ${HH_TIMEOUT_SECONDS:-10}
+      SEMANTIC_ENABLED: ${SEMANTIC_ENABLED:-false}
+      SEMANTIC_MODEL: ${SEMANTIC_MODEL:-sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2}
+      SEMANTIC_THRESHOLD: ${SEMANTIC_THRESHOLD:-0.85}
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "127.0.0.1:8000:8000"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/health')"]
+      interval: 10s
+      timeout: 5s
+      retries: 20
+      start_period: 30s
+    restart: unless-stopped
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "127.0.0.1:8080:80"
+    depends_on:
+      backend:
+        condition: service_healthy
+    restart: unless-stopped
+
+volumes:
+  postgres_data:

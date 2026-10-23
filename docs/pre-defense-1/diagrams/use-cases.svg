@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 730" role="img" aria-label="Use Case Diagram — protected application scenarios">
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="none" stroke="#526579"/></marker></defs>
+<rect width="1100" height="730" fill="white"/>
+<text x="28" y="36" font-family="Segoe UI,Arial" font-size="23" font-weight="700" fill="#103f6b">Use Case Diagram — protected application scenarios</text>
+<rect x="220" y="65" width="680" height="620" rx="10" fill="#f7fafe" stroke="#9dbcd8" stroke-dasharray="6 5"/>
+<text x="235" y="90" font-family="Segoe UI,Arial" font-size="16" fill="#103f6b">AITU Career — active session is a precondition of protected cases</text>
+<path d="M190,310.0 L385,135.0" fill="none" stroke="#526579" stroke-width="1.5"  />
+<path d="M910,310.0 L715,135.0" fill="none" stroke="#526579" stroke-width="1.5"  />
+<path d="M190,310.0 L260,275.0" fill="none" stroke="#526579" stroke-width="1.5"  />
+<path d="M190,310.0 L260,422.5" fill="none" stroke="#526579" stroke-width="1.5"  />
+<path d="M190,310.0 L260,577.5" fill="none" stroke="#526579" stroke-width="1.5"  />
+<path d="M910,310.0 L870,275.0" fill="none" stroke="#526579" stroke-width="1.5"  />
+<path d="M910,310.0 L870,462.5" fill="none" stroke="#526579" stroke-width="1.5"  />
+<g stroke="#103f6b" stroke-width="2.3" fill="none"><circle cx="100.0" cy="265" r="13"/><path d="M100.0,278 v35 m-27,-23 h54 m-27,23 l-23,27 m23,-27 l23,27"/></g>
+<text x="100.0" y="360" text-anchor="middle" font-family="Segoe UI,Arial" font-size="16" fill="#103f6b">Student / graduate</text>
+<g stroke="#103f6b" stroke-width="2.3" fill="none"><circle cx="1000.0" cy="265" r="13"/><path d="M1000.0,278 v35 m-27,-23 h54 m-27,23 l-23,27 m23,-27 l23,27"/></g>
+<text x="1000.0" y="360" text-anchor="middle" font-family="Segoe UI,Arial" font-size="16" fill="#103f6b">Administrator</text>
+<ellipse cx="550.0" cy="135.0" rx="165.0" ry="35.0" fill="#eaf3fc" stroke="#0f6cbf"/>
+<text x="550.0" y="140.0" text-anchor="middle" font-family="Segoe UI,Arial" font-size="16" fill="#103f6b">UC-01: Sign in / session</text>
+<ellipse cx="400.0" cy="275.0" rx="140.0" ry="45.0" fill="#eaf3fc" stroke="#0f6cbf"/>
+<text x="400.0" y="270.0" text-anchor="middle" font-family="Segoe UI,Arial" font-size="16" fill="#103f6b">UC-02: Manage profile</text>
+<text x="400.0" y="292.0" text-anchor="middle" font-family="Segoe UI,Arial" font-size="16" fill="#103f6b">Education / skills / portfolio</text>
+<ellipse cx="400.0" cy="422.5" rx="140.0" ry="42.5" fill="#eaf3fc" stroke="#0f6cbf"/>
+<text x="400.0" y="417.5" text-anchor="middle" font-family="Segoe UI,Arial" font-size="16" fill="#103f6b">UC-03: Browse jobs</text>
+<text x="400.0" y="439.5" text-anchor="middle" font-family="Segoe UI,Arial" font-size="16" fill="#103f6b">View match and explanation</text>
+<ellipse cx="400.0" cy="577.5" rx="140.0" ry="42.5" fill="#eaf3fc" stroke="#0f6cbf"/>
+<text x="400.0" y="572.5" text-anchor="middle" font-family="Segoe UI,Arial" font-size="16" fill="#103f6b">UC-04: Review gaps</text>
+<text x="400.0" y="594.5" text-anchor="middle" font-family="Segoe UI,Arial" font-size="16" fill="#103f6b">Update and recalculate</text>
+<ellipse cx="740.0" cy="275.0" rx="130.0" ry="45.0" fill="#eaf3fc" stroke="#0f6cbf"/>
+<text x="740.0" y="270.0" text-anchor="middle" font-family="Segoe UI,Arial" font-size="16" fill="#103f6b">UC-05: Manage jobs</text>
+<text x="740.0" y="292.0" text-anchor="middle" font-family="Segoe UI,Arial" font-size="16" fill="#103f6b">Requirements and catalogs</text>
+<ellipse cx="740.0" cy="462.5" rx="130.0" ry="42.5" fill="#eaf3fc" stroke="#0f6cbf"/>
+<text x="740.0" y="457.5" text-anchor="middle" font-family="Segoe UI,Arial" font-size="16" fill="#103f6b">UC-06: Manage users</text>
+<text x="740.0" y="479.5" text-anchor="middle" font-family="Segoe UI,Arial" font-size="16" fill="#103f6b">Inspect statistics</text>
+</svg>

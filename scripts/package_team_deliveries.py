@@ -36,7 +36,7 @@ def destination(relative):
     if path.startswith('frontend/'):
         return 'Zhan', '01-frontend'
     if path.startswith('docs/pre-defense-1/diagrams/') or path in (
-            'docker-compose.yml', 'docs/DEVELOPMENT.md', 'docs/VALIDATION.md', 'docs/VACANCY_IMPORT.md',
+            'docker-compose.yml', 'docs/index.html', 'docs/.nojekyll', 'docs/DEVELOPMENT.md', 'docs/VALIDATION.md', 'docs/VACANCY_IMPORT.md',
             'scripts/setup_env.py', 'scripts/start-local.ps1', 'scripts/stop-local.ps1', 'scripts/local-postgres.ps1'):
         return 'Ayadil', '02-architecture-and-run'
     if path.startswith('scripts/') or path in ('docs/I18N.md', 'docs/ORIGINAL_PROJECT_SPECIFICATION.md', 'docs/pre-defense-1/sources.json'):

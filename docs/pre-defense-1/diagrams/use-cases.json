@@ -1,0 +1,151 @@
+{
+  "title": "Use Case Diagram — protected application scenarios",
+  "width": 1100,
+  "height": 730,
+  "nodes": [
+    {
+      "id": "graduate",
+      "x": 10,
+      "y": 250,
+      "w": 180,
+      "h": 120,
+      "lines": [
+        "Student / graduate"
+      ],
+      "kind": "actor"
+    },
+    {
+      "id": "admin",
+      "x": 910,
+      "y": 250,
+      "w": 180,
+      "h": 120,
+      "lines": [
+        "Administrator"
+      ],
+      "kind": "actor"
+    },
+    {
+      "id": "auth",
+      "x": 385,
+      "y": 100,
+      "w": 330,
+      "h": 70,
+      "lines": [
+        "UC-01: Sign in / session"
+      ],
+      "kind": "usecase"
+    },
+    {
+      "id": "profile",
+      "x": 260,
+      "y": 230,
+      "w": 280,
+      "h": 90,
+      "lines": [
+        "UC-02: Manage profile",
+        "Education / skills / portfolio"
+      ],
+      "kind": "usecase"
+    },
+    {
+      "id": "jobs",
+      "x": 260,
+      "y": 380,
+      "w": 280,
+      "h": 85,
+      "lines": [
+        "UC-03: Browse jobs",
+        "View match and explanation"
+      ],
+      "kind": "usecase"
+    },
+    {
+      "id": "growth",
+      "x": 260,
+      "y": 535,
+      "w": 280,
+      "h": 85,
+      "lines": [
+        "UC-04: Review gaps",
+        "Update and recalculate"
+      ],
+      "kind": "usecase"
+    },
+    {
+      "id": "catalog",
+      "x": 610,
+      "y": 230,
+      "w": 260,
+      "h": 90,
+      "lines": [
+        "UC-05: Manage jobs",
+        "Requirements and catalogs"
+      ],
+      "kind": "usecase"
+    },
+    {
+      "id": "users",
+      "x": 610,
+      "y": 420,
+      "w": 260,
+      "h": 85,
+      "lines": [
+        "UC-06: Manage users",
+        "Inspect statistics"
+      ],
+      "kind": "usecase"
+    }
+  ],
+  "edges": [
+    [
+      "graduate",
+      "auth",
+      "",
+      "association"
+    ],
+    [
+      "admin",
+      "auth",
+      "",
+      "association"
+    ],
+    [
+      "graduate",
+      "profile",
+      "",
+      "association"
+    ],
+    [
+      "graduate",
+      "jobs",
+      "",
+      "association"
+    ],
+    [
+      "graduate",
+      "growth",
+      "",
+      "association"
+    ],
+    [
+      "admin",
+      "catalog",
+      "",
+      "association"
+    ],
+    [
+      "admin",
+      "users",
+      "",
+      "association"
+    ]
+  ],
+  "boundary": [
+    220,
+    65,
+    680,
+    620,
+    "AITU Career — active session is a precondition of protected cases"
+  ]
+}
