@@ -1,0 +1,26 @@
+import { useI18n } from '../i18n';
+import { useEffect, useState } from 'react';
+import { Link, useParams } from 'react-router-dom';
+import { ArrowLeft, ArrowRight, MapPin, BriefcaseBusiness, Sparkles, CheckCircle2, CircleDashed, CircleAlert, RefreshCw } from 'lucide-react';
+import { useData } from '../hooks/useData';
+import { api } from '../services/api';
+import { Empty, ErrorBox, Loading, PageTitle, Ring, SaveButton, Tags, levelNames } from '../components/UI';
+
+export function MatchGroups({ match }: { match: any }) {
+  const { t, number, sourceLabel } = useI18n();
+  return <div className="match-groups">{[['matched', t('match.matched'), CheckCircle2], ['partial', t('match.partial'), CircleDashed], ['missing', t('match.missing'), CircleAlert]].map(([key, title, Icon]: any) => <section key={key} className={`match-group ${key}`}><h3><Icon size={18} />{title}<span>{match[key].length}</span></h3>{match[key].length ? match[key].map((skill: any) => <div className="match-skill" key={skill.skill_id}><strong>{skill.name}</strong><small>{t('match.requiredLevel', { type: skill.required ? t('common.required') : t('common.preferred'), level: t(levelNames[skill.level]) })}</small>{skill.user_level && <small>{t('match.userLevel', { level: t(levelNames[skill.user_level]), percent: number(Math.round(skill.contribution * 100)) })}</small>}{skill.related_skill && <small>{t('match.related', { skill: skill.related_skill })}</small>}{skill.sources.length > 0 && <small>{t('match.evidence', { sources: skill.sources.map(sourceLabel).join('; ') })}</small>}</div>) : <p className="muted">{t('match.noSkills')}</p>}</section>)}</div>;
+}
+
+export default function JobDetail() {
+  const { t, number, date, enumLabel, matchExplanation } = useI18n();
+  const { id } = useParams();
+  const { data: job, loading, error, reload } = useData('/jobs/' + id);
+  const [match, setMatch] = useState<any>(null);
+  const [failure, setFailure] = useState('');
+  const [analyzing, setAnalyzing] = useState(false);
+  useEffect(() => { if (!job || job.is_active === false) { setMatch(null); setAnalyzing(false); return; } let active = true; setAnalyzing(true); setMatch(null); setFailure(''); api(`/jobs/${id}/match`, { method: 'POST' }).then(result => { if (active) setMatch(result); }).catch(err => { if (active) setFailure(err.message); }).finally(() => { if (active) setAnalyzing(false); }); return () => { active = false; }; }, [id, job]);
+  async function recalculate() { setAnalyzing(true); setFailure(''); try { setMatch(await api(`/jobs/${id}/match`, { method: 'POST' })); } catch (err: any) { setFailure(err.message); } finally { setAnalyzing(false); } }
+  if (loading) return <Loading />;
+  if (error) return <ErrorBox message={error} retry={reload} />;
+  return <><Link className="back-link" to="/jobs"><ArrowLeft size={16} /> {t('common.allJobs')}</Link><PageTitle eyebrow={job.company} title={job.title} description={`${job.role} · ${job.experience_level}`} action={<SaveButton id={job.id} saved={job.saved} />} /><div className="job-detail-grid"><article className="panel job-description"><div className="detail-meta"><span><MapPin size={17} />{job.location}</span><span><BriefcaseBusiness size={17} />{enumLabel(job.employment_type)}</span></div><h2>{job.salary_min !== null || job.salary_max !== null ? `${job.salary_min === null ? '…' : number(job.salary_min)}–${job.salary_max === null ? '…' : number(job.salary_max)} ${job.currency}` : t('jobs.noSalary')}</h2>{job.is_demo && <div className="demo-notice">{t('jobs.demoDescription')}</div>}{job.is_active === false && <div className="demo-notice">{t('jobs.closed')}</div>}{job.source === 'hh' && <div className="data-note"><p>{t('jobs.importNote')}</p>{job.source_url && <a className="button outline" href={job.source_url} target="_blank" rel="noopener noreferrer">{t('jobs.original')}</a>}{job.last_synced_at && <p>{t('jobs.checked', { date: date(job.last_synced_at, true) })}</p>}</div>}<h3>{t('jobs.about')}</h3><p className="description-text">{job.description}</p><h3>{t('jobs.requiredSkills')}</h3><Tags items={job.skills.filter((s: any) => s.required).map((s: any) => s.name)} /><h3>{t('jobs.preferredSkills')}</h3><Tags items={job.skills.filter((s: any) => !s.required).map((s: any) => s.name)} /><p className="data-note">{t('jobs.requirementsHint')}</p></article><aside className="panel match-summary"><span className="card-kicker"><Sparkles size={16} /> {t('match.yourMatch')}</span>{job.is_active === false ? <Empty title={t('jobs.closed')} /> : analyzing ? <Loading /> : failure ? <ErrorBox message={failure} retry={recalculate} /> : match && <>{match.score !== null ? <Ring value={match.score} label={t('common.matchLabel')} /> : <Empty title={t('match.insufficient')} />}<p>{matchExplanation(match)}</p><Link className="button primary full" to={`/matches/${match.id}`}>{t('match.detail')} <ArrowRight size={17} /></Link><button disabled={analyzing} className="button text full" onClick={recalculate}><RefreshCw size={15} />{t('match.recalculate')}</button><p className="data-note">{t('match.conditionsNote')}</p></>}</aside></div>{match && <section className="analysis-section"><div className="section-heading"><h2>{t('match.requirementsTitle')}</h2></div><MatchGroups match={match} /></section>}</>;
+}
