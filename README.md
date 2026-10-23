@@ -60,6 +60,7 @@ is an internal heuristic, not a validated employment predictor.
 
 - [Submission package and remaining work](docs/pre-defense-1/README.md)
 - [Two-part initial delivery and collaboration instructions](docs/TEAM_DELIVERY.md)
+- [Project status automation and one-time activation](docs/PROJECT_AUTOMATION.md)
 - [Unified report (PDF)](docs/pre-defense-1/report.pdf)
 - [Editable report (Word)](docs/pre-defense-1/report.docx)
 - [Browser report](docs/pre-defense-1/report.html)

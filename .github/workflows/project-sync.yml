@@ -1,0 +1,44 @@
+name: Project status sync
+
+on:
+  push:
+    branches: [main, 'AITU-*']
+  pull_request:
+    types: [opened, reopened, ready_for_review, converted_to_draft, edited, closed]
+  issues:
+    types: [closed, reopened]
+  workflow_dispatch:
+  schedule:
+    - cron: '*/15 * * * *'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: aitu-career-project-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    # Fork PRs never receive the project token. Only trusted code from main runs.
+    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          persist-credentials: false
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: '22'
+          package-manager-cache: false
+      - name: Synchronize existing issue cards
+        env:
+          PROJECTS_TOKEN: ${{ secrets.PROJECTS_TOKEN }}
+        run: |
+          if [ -f .github/scripts/project-sync.mjs ]; then
+            node .github/scripts/project-sync.mjs
+          else
+            echo '::notice::Project sync becomes available after the setup PR is merged into main.'
+          fi
