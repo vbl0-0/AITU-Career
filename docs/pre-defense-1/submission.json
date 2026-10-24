@@ -22,11 +22,11 @@
   "repository_url": "https://github.com/vbl0-0/AITU-Career",
   "tracker_url": "https://github.com/users/vbl0-0/projects/1",
   "submission_tag": "prob-period-1",
-  "previous_submission_tag": "prob-period-1-before-feedback-20261024",
+  "previous_submission_tag": "prob-period-1-before-academic-20261024",
   "prototype_url": "https://vbl0-0.github.io/AITU-Career/",
   "report_upload_filename": "SE-2425_Kozhabek_ProbPeriod1.pdf",
   "report_status": "Revised after supervisor feedback of 24 October 2026. AI scope, evaluation protocol and contribution evidence are clarified. Independent matching evaluation and GitHub peer review remain next-stage actions.",
-  "report_revision": "Supervisor feedback revision — 24 October 2026",
+  "report_revision": "Academic report layout revision ? 24 October 2026",
   "supervisor_feedback_record": "docs/pre-defense-1/evidence/supervisor-feedback-2026-10-24.json",
   "interviews_required": false,
   "supervisor_feedback_required": false,
@@ -42,5 +42,6 @@
     "evidence/supervisor-feedback-2026-10-24.json"
   ],
   "team_size": 2,
-  "report_date": "24 October 2026"
+  "report_date": "24 October 2026",
+  "report_layout": "academic"
 }

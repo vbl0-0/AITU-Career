@@ -1,21 +1,44 @@
 <!doctype html><html lang="en"><meta charset="utf-8"><style>
-@page { size:A4; margin:18mm 16mm 19mm; }
-* { box-sizing:border-box; } body { color:#111; font:10.5pt/1.45 'Segoe UI',Arial,sans-serif; margin:0; }
-h1 { color:#111; font-size:25pt; line-height:1.2; } h2 { font-size:18pt; color:#111; line-height:1.3; margin:0 0 18px; }
-h3 { font-size:12pt; color:#111; } p { margin:0 0 10px; orphans:3; widows:3; } a { color:#111; overflow-wrap:anywhere; }
-section { break-before:page; } .cover { min-height:238mm; display:flex; flex-direction:column; justify-content:space-between; }
-.label { color:#333; font-weight:700; letter-spacing:2px; font-size:10pt; } .status { border-left:3px solid #555; background:#f3f3f3; padding:14px; }
-table { width:100%; border-collapse:collapse; table-layout:fixed; margin:12px 0 16px; font-size:9pt; line-height:1.4; }
-th,td { border:1px solid #d9e3ed; padding:7px; vertical-align:top; overflow-wrap:anywhere; } th { background:#eaf3fc; text-align:left; color:#111; }
-tr { break-inside:avoid; } thead { display:table-header-group; } figure { margin:18px 0; break-inside:avoid; }
-figure img { display:block; max-width:100%; max-height:210mm; margin:auto; object-fit:contain; } figcaption { font-size:9pt; color:#444; margin:8px 0; }
-.toc { line-height:2; list-style:none; padding:0; } .small { font-size:9pt; color:#444; }
-.section-1, .section-2 { font-size:10pt; line-height:1.38; }
-.section-1 table, .section-2 table { font-size:8.8pt; line-height:1.35; }
-.section-1 td, .section-1 th, .section-2 td, .section-2 th { padding:6px; }
-.section-2 { font-size:9.7pt; line-height:1.35; }
-.section-2 table { font-size:8.7pt; line-height:1.3; }
-.section-2 td, .section-2 th { padding:5.5px; }
-.section-12 { font-size:9.5pt; line-height:1.35; }
-.fields td { height:28px; } h2,h3 { break-after:avoid; }
-</style><h2>Appendix B. Submission Checklist and Evidence Status</h2><p>Submission form: <a href="https://forms.cloud.microsoft/r/Yy6AXT5pe3">https://forms.cloud.microsoft/r/Yy6AXT5pe3</a>. The provided screenshots specify a repository URL, the exact prob-period-1 version URL, individual contributions, current status, one board/task PDF (maximum 10 MB) and one consolidated report PDF (maximum 100 MB). This report contains the eleven main sections in order and a table of contents.</p><table><thead><tr><th>Requirement</th><th>Prepared artifact</th><th>Scope or remaining limit</th></tr></thead><tbody><tr><td>Repository and version</td><td><a href="https://github.com/vbl0-0/AITU-Career">https://github.com/vbl0-0/AITU-Career</a>; <a href="https://github.com/vbl0-0/AITU-Career/tree/prob-period-1">https://github.com/vbl0-0/AITU-Career/tree/prob-period-1</a></td><td>The tag identifies the submitted package.</td></tr><tr><td>Identity and contributions</td><td>Confirmed names, groups, supervisor and account-linked delivery records.</td><td>AI assistance and current-delivery limits are disclosed.</td></tr><tr><td>Research and comparisons</td><td>17 sources including eight scientific publications; four systems and eight common criteria; five technology decisions.</td><td>Local user demand and real matching quality are not empirically established.</td></tr><tr><td>Requirements and architecture</td><td>Testable FR/NFR criteria and editable diagram sources/exports.</td><td><a href="https://github.com/vbl0-0/AITU-Career/tree/prob-period-1/docs/pre-defense-1/diagrams">https://github.com/vbl0-0/AITU-Career/tree/prob-period-1/docs/pre-defense-1/diagrams</a></td></tr><tr><td>Prototype</td><td><a href="https://vbl0-0.github.io/AITU-Career/">https://vbl0-0.github.io/AITU-Career/</a></td><td>A public screen walkthrough; the complete API-backed application runs locally.</td></tr><tr><td>Verification</td><td>Current backend, browser, build, translation and migration results.</td><td>Docker runtime and real embedding-model evaluation were not performed.</td></tr><tr><td>Interviews and supervisor feedback</td><td>No interviews; actual supervisor messages of 24 October and the response matrix are recorded in Section 11.</td><td>Evaluation and human peer review remain next-stage work.</td></tr><tr><td>Task evidence PDF</td><td>tracker-evidence.pdf with genuine board and task captures.</td><td>Tasks show actual progress; later-stage work can remain open.</td></tr><tr><td>Unified editable report</td><td>report.docx, report.html and matching report.pdf.</td><td>Use the final named PDF copy for the form.</td></tr><tr><td>Form submission</td><td>Prepared answers and both upload files.</td><td>The representative must verify the final form page and retain the actual confirmation.</td></tr></tbody></table><p>Report upload filename: SE-2425_Kozhabek_ProbPeriod1.pdf. Deadline: 24 October 2026 before 18:00 UTC+5. Known fields are completed; any genuinely unknown personal information stays blank. The package does not assert that the form has already been submitted.</p></html>
+@page { size:A4; margin:25mm 20mm 22mm 30mm; }
+* { box-sizing:border-box; }
+body { margin:0; color:#111; background:white; font:11pt/1.28 'Times New Roman',Times,serif; }
+h1,h2,h3 { color:#111; font-family:'Times New Roman',Times,serif; break-after:avoid; }
+h1 { font-size:23pt; line-height:1.22; font-weight:400; }
+h2 { font-size:18pt; line-height:1.15; font-weight:400; margin:18pt 0 12pt; }
+h3 { font-size:13pt; line-height:1.18; font-weight:700; margin:15pt 0 7pt; }
+p { margin:0 0 7pt; text-align:justify; orphans:3; widows:3; }
+a { color:#111; text-decoration:underline; overflow-wrap:anywhere; }
+ul,ol { padding-left:6mm; margin:5pt 0 9pt; } li { margin-bottom:4pt; }
+table { width:100%; border-collapse:collapse; table-layout:fixed; font-size:8.6pt; line-height:1.18; margin:7pt 0 10pt; border-top:.7pt solid #111; border-bottom:.7pt solid #111; }
+th,td { border:0; border-bottom:.35pt solid #aaa; padding:4pt 3pt; text-align:left; vertical-align:top; overflow-wrap:anywhere; }
+th { color:#111; background:white; font-weight:700; border-bottom:.7pt solid #111; }
+thead { display:table-header-group; } tr { break-inside:avoid; }
+caption { caption-side:top; color:#111; text-align:center; font-size:10pt; padding-bottom:5pt; }
+figure { margin:12pt 0 15pt; break-inside:avoid; text-align:center; }
+figure img { display:block; max-width:100%; max-height:188mm; width:auto; height:auto; object-fit:contain; margin:0 auto; }
+figcaption { color:#111; font-size:10pt; line-height:1.2; margin-top:6pt; text-align:center; }
+.cover { height:248mm; display:flex; flex-direction:column; align-items:center; text-align:center; break-after:page; }
+.cover-title { border-top:3px double #111; border-bottom:3px double #111; padding:6mm 0; margin:13mm 0 11mm; width:100%; }
+.cover-title h1 { margin:0; }
+.cover p { text-align:center; margin:0 0 5mm; }
+.cover-authors { margin:1mm 0 0; }
+.university-logo { width:49mm; height:49mm; object-fit:contain; margin:1mm 0; }
+.cover-bottom { margin-top:auto; padding-bottom:2mm; }
+.cover-bottom p { margin-bottom:2mm; }
+.front-matter { break-after:page; font-size:10.5pt; line-height:1.22; }
+.front-matter h2,.toc-section h2 { margin-top:0; font-size:23pt; }
+.front-matter h3 { font-size:13pt; }
+.front-matter table { font-size:8.6pt; }
+.front-matter table:first-of-type td:first-child { width:27%; }
+.toc-section { break-after:page; }
+.toc-row { break-inside:avoid; margin:0 0 4pt; line-height:1.25; }
+.toc-row a { display:flex; align-items:baseline; gap:5pt; text-decoration:none; }
+.toc-row.level-0 { font-weight:700; margin-top:7pt; }
+.toc-row.level-1 { padding-left:6mm; }
+.toc-dots { flex:1; border-bottom:1px dotted #777; min-width:6mm; }
+.toc-page { min-width:10mm; text-align:right; }
+.chapter { break-before:auto; }
+.chapter.first-chapter h2 { margin-top:0; }
+.small { font-size:9pt; }
+@media screen { body { width:160mm; margin:25mm auto; } }
+</style><h2>Appendix B. Submission Checklist and Evidence Status</h2><p>Submission form: <a href="https://forms.cloud.microsoft/r/Yy6AXT5pe3">https://forms.cloud.microsoft/r/Yy6AXT5pe3</a>. The provided screenshots specify a repository URL, the exact prob-period-1 version URL, individual contributions, current status, one board/task PDF (maximum 10 MB) and one consolidated report PDF (maximum 100 MB). This report contains the eleven main sections in order and a table of contents.</p><table><caption>Table 13.1. Overview</caption><colgroup><col style="width:26%"><col style="width:38%"><col style="width:36%"></colgroup><thead><tr><th>Requirement</th><th>Prepared artifact</th><th>Scope or remaining limit</th></tr></thead><tbody><tr><td>Repository and version</td><td><a href="https://github.com/vbl0-0/AITU-Career">https://github.com/vbl0-0/AITU-Career</a>; <a href="https://github.com/vbl0-0/AITU-Career/tree/prob-period-1">https://github.com/vbl0-0/AITU-Career/tree/prob-period-1</a></td><td>The tag identifies the submitted package.</td></tr><tr><td>Identity and contributions</td><td>Confirmed names, groups, supervisor and account-linked delivery records.</td><td>AI assistance and current-delivery limits are disclosed.</td></tr><tr><td>Research and comparisons</td><td>17 sources including eight scientific publications; four systems and eight common criteria; five technology decisions.</td><td>Local user demand and real matching quality are not empirically established.</td></tr><tr><td>Requirements and architecture</td><td>Testable FR/NFR criteria and editable diagram sources/exports.</td><td><a href="https://github.com/vbl0-0/AITU-Career/tree/prob-period-1/docs/pre-defense-1/diagrams">https://github.com/vbl0-0/AITU-Career/tree/prob-period-1/docs/pre-defense-1/diagrams</a></td></tr><tr><td>Prototype</td><td><a href="https://vbl0-0.github.io/AITU-Career/">https://vbl0-0.github.io/AITU-Career/</a></td><td>A public screen walkthrough; the complete API-backed application runs locally.</td></tr><tr><td>Verification</td><td>Current backend, browser, build, translation and migration results.</td><td>Docker runtime and real embedding-model evaluation were not performed.</td></tr><tr><td>Interviews and supervisor feedback</td><td>No interviews; actual supervisor messages of 24 October and the response matrix are recorded in Section 11.</td><td>Evaluation and human peer review remain next-stage work.</td></tr><tr><td>Task evidence PDF</td><td>tracker-evidence.pdf with genuine board and task captures.</td><td>Tasks show actual progress; later-stage work can remain open.</td></tr><tr><td>Unified editable report</td><td>report.docx, report.html and matching report.pdf.</td><td>Use the final named PDF copy for the form.</td></tr><tr><td>Form submission</td><td>Prepared answers and both upload files.</td><td>The representative must verify the final form page and retain the actual confirmation.</td></tr></tbody></table><p>Report upload filename: SE-2425_Kozhabek_ProbPeriod1.pdf. Deadline: 24 October 2026 before 18:00 UTC+5. Known fields are completed; any genuinely unknown personal information stays blank. The package does not assert that the form has already been submitted.</p></html>

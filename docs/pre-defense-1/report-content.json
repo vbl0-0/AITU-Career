@@ -23,11 +23,11 @@
     "repository_url": "https://github.com/vbl0-0/AITU-Career",
     "tracker_url": "https://github.com/users/vbl0-0/projects/1",
     "submission_tag": "prob-period-1",
-    "previous_submission_tag": "prob-period-1-before-feedback-20261024",
+    "previous_submission_tag": "prob-period-1-before-academic-20261024",
     "prototype_url": "https://vbl0-0.github.io/AITU-Career/",
     "report_upload_filename": "SE-2425_Kozhabek_ProbPeriod1.pdf",
     "report_status": "Revised after supervisor feedback of 24 October 2026. AI scope, evaluation protocol and contribution evidence are clarified. Independent matching evaluation and GitHub peer review remain next-stage actions.",
-    "report_revision": "Supervisor feedback revision — 24 October 2026",
+    "report_revision": "Academic report layout revision ? 24 October 2026",
     "supervisor_feedback_record": "docs/pre-defense-1/evidence/supervisor-feedback-2026-10-24.json",
     "interviews_required": false,
     "supervisor_feedback_required": false,
@@ -43,7 +43,8 @@
       "evidence/supervisor-feedback-2026-10-24.json"
     ],
     "team_size": 2,
-    "report_date": "24 October 2026"
+    "report_date": "24 October 2026",
+    "report_layout": "academic"
   },
   "sources": [
     {
@@ -200,21 +201,197 @@
       "application": "Keep the threshold configurable and provide a keyword fallback."
     }
   ],
+  "front_matter": [
+    {
+      "type": "table",
+      "headers": [
+        "Field",
+        "Details"
+      ],
+      "rows": [
+        [
+          "Project",
+          "AI-Based Platform to Support the Employment of Astana IT University Graduates"
+        ],
+        [
+          "Team",
+          "Қожабек Аяділ Нұрланұлы, SE-2425; Амантай Жан Әділұлы, SE-2419"
+        ],
+        [
+          "Supervisor",
+          "Оразова Арайлым Жанболаткызы, Senior Lecturer"
+        ],
+        [
+          "Repository",
+          "https://github.com/vbl0-0/AITU-Career"
+        ],
+        [
+          "Submitted version",
+          "https://github.com/vbl0-0/AITU-Career/tree/prob-period-1"
+        ],
+        [
+          "Task tracker",
+          "https://github.com/users/vbl0-0/projects/1"
+        ],
+        [
+          "Prototype",
+          "https://vbl0-0.github.io/AITU-Career/ — screen walkthrough; full application runs locally"
+        ],
+        [
+          "Diagram sources",
+          "https://github.com/vbl0-0/AITU-Career/tree/prob-period-1/docs/pre-defense-1/diagrams"
+        ],
+        [
+          "Report date",
+          "24 October 2026"
+        ],
+        [
+          "Earlier prepared version",
+          "https://github.com/vbl0-0/AITU-Career/tree/prob-period-1-before-academic-20261024"
+        ]
+      ],
+      "widths": [
+        22,
+        78
+      ]
+    },
+    {
+      "type": "h3",
+      "text": "Completed work"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Analysis: proposal and scope, a targeted review of 17 sources including 8 scientific publications, comparison of four systems against eight common criteria, and five technology decisions.",
+        "Requirements: 12 functional and 8 non-functional requirements with priorities, acceptance criteria and verification methods.",
+        "Design: system context, protected use cases, component architecture, data relationships and an API contract; readable exports and editable diagram sources.",
+        "Working version: FastAPI and PostgreSQL backend; React interface; authentication and roles; graduate portfolio, vacancies, explained skill matching, recommendations and administration.",
+        "Prototype: actual application captures and a public screen walkthrough; Kazakh, Russian and English interfaces in the locally running application.",
+        "Verification: 60 backend tests and 20 browser tests passed; translation parity, production build and Alembic consistency were checked. The detailed results are in Chapter 9.",
+        "Project management: a shared repository and GitHub Project with assigned tasks, original deadlines, current issue states and links to actual commits and pull requests.",
+        "Supervisor feedback: the messages of 24 October 2026 and the reporting changes made in response are recorded in Chapter 11."
+      ]
+    },
+    {
+      "type": "h3",
+      "text": "Known limitations"
+    },
+    {
+      "type": "list",
+      "items": [
+        "The vacancy seed contains 30 fictional demonstration positions. The HeadHunter adapter is implemented, but live provider access and a real vacancy import have not been verified.",
+        "The verified matching baseline uses deterministic catalogue and evidence rules. The optional embedding adapter has not been evaluated with a real model.",
+        "Independent relevance labels and ranking-quality experiments are not yet available; passing functional tests establishes software behavior rather than matching effectiveness.",
+        "The public prototype presents captured screens. Authentication, editing and live calculations require the locally running backend.",
+        "Docker runtime, a comprehensive accessibility audit and independent human peer review remain outstanding.",
+        "User interviews were optional for this submission and were not conducted. Their proposed role in later validation is described in Chapter 2."
+      ]
+    },
+    {
+      "type": "h3",
+      "text": "Outstanding tasks"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Prepare the frozen evaluation dataset and independent relevance labels (GitHub issue #10).",
+        "Compare the B0/B1/B2 matching methods and record ranking quality, latency and error analysis (issue #11).",
+        "Introduce reciprocal human review of substantive pull requests and retain review comments, follow-up fixes and actual contribution records.",
+        "Complete the final file/link check, submit through the form and retain the real confirmation (issue #18)."
+      ]
+    },
+    {
+      "type": "h3",
+      "text": "Chapters and repository files"
+    },
+    {
+      "type": "p",
+      "text": "The report is generated from versioned project content and evidence. The following paths identify its exported chapters and the principal implementation or evidence sources."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Chapter",
+        "Repository files"
+      ],
+      "rows": [
+        [
+          "1. Project Proposal",
+          "docs/pre-defense-1/01-section.html; docs/pre-defense-1/submission.json"
+        ],
+        [
+          "2. Evidence of Relevance",
+          "docs/pre-defense-1/02-section.html; docs/pre-defense-1/sources.json"
+        ],
+        [
+          "3. Literature Review",
+          "docs/pre-defense-1/03-section.html; docs/pre-defense-1/sources.json"
+        ],
+        [
+          "4. Existing System Comparison",
+          "docs/pre-defense-1/04-section.html; scripts/submission_content_en.py"
+        ],
+        [
+          "5. Technology Comparison",
+          "docs/pre-defense-1/05-section.html; scripts/submission_content_en.py"
+        ],
+        [
+          "6. Requirements Specification",
+          "docs/pre-defense-1/06-section.html; backend/app/ai/matching.py; backend/tests/test_matching.py"
+        ],
+        [
+          "7. Architecture and Diagrams",
+          "docs/pre-defense-1/07-section.html; docs/pre-defense-1/diagrams; docs/pre-defense-1/evidence/openapi.json"
+        ],
+        [
+          "8. UX and Prototype",
+          "docs/pre-defense-1/08-section.html; frontend/src/pages; docs/pre-defense-1/prototype"
+        ],
+        [
+          "9. Verification and Evaluation Plan",
+          "docs/pre-defense-1/09-section.html; docs/pre-defense-1/evidence/validation.json; backend/tests; frontend/tests"
+        ],
+        [
+          "10. Project Management and Risks",
+          "docs/pre-defense-1/10-section.html; docs/TEAM_DELIVERY.md; docs/pre-defense-1/evidence/development-history.json"
+        ],
+        [
+          "11. Supervisor Feedback",
+          "docs/pre-defense-1/11-section.html; docs/pre-defense-1/evidence/supervisor-feedback-2026-10-24.json"
+        ]
+      ],
+      "widths": [
+        35,
+        65
+      ]
+    }
+  ],
   "sections": [
     {
-      "title": "1. Project Proposal and Scope",
+      "title": "1. Project Proposal",
       "blocks": [
         {
-          "type": "p",
-          "text": "AI-Based Platform to Support the Employment of Astana IT University Graduates."
+          "type": "h3",
+          "text": "1.1 Problem",
+          "anchor": "chapter-1-sub-1"
         },
         {
           "type": "p",
           "text": "Problem statement. Graduates need to compare their educational and practical experience with heterogeneous IT job requirements and identify an actionable next step. The existence and scale of this need specifically among AITU graduates remain hypotheses until local user discussions are completed. Research on skill extraction supports the technical relevance of the task, but does not establish local demand [S01–S05]."
         },
         {
+          "type": "h3",
+          "text": "1.2 Target users",
+          "anchor": "chapter-1-sub-2"
+        },
+        {
           "type": "p",
           "text": "Target users are senior AITU students and graduates, plus an administrator of the educational prototype. A career-center representative is a potential requirements expert. An employer dashboard is outside the current MVP."
+        },
+        {
+          "type": "h3",
+          "text": "1.3 Aim and objectives",
+          "anchor": "chapter-1-sub-3"
         },
         {
           "type": "p",
@@ -251,7 +428,17 @@
               "Prepare submission evidence",
               "Unified report, editable diagrams, traceable tasks and actual verification evidence."
             ]
+          ],
+          "caption": "Table 1.1. Aim and objectives",
+          "widths": [
+            28,
+            72
           ]
+        },
+        {
+          "type": "h3",
+          "text": "1.4 Scope",
+          "anchor": "chapter-1-sub-4"
         },
         {
           "type": "p",
@@ -262,44 +449,59 @@
           "text": "Excluded from this stage: automated hiring decisions, validated prediction of employment, university SSO/DU/Moodle integration, large-scale collection of external vacancies, production SLA, employer accounts and training a large language model. Visual similarity to university services does not imply integration or institutional endorsement."
         },
         {
+          "type": "h3",
+          "text": "1.5 Team",
+          "anchor": "chapter-1-sub-5"
+        },
+        {
           "type": "p",
-          "text": "The team consists of two students. Confirmed names and GitHub accounts are recorded below. Actual contributions are recorded when supported by completed work and review evidence."
+          "text": "The project is carried out by two students. Their confirmed identities and account-linked delivery responsibilities are recorded below; detailed contribution evidence is provided in Chapter 10."
         },
         {
           "type": "table",
           "headers": [
-            "Team member",
-            "Full name",
-            "GitHub account",
-            "Agreed contribution"
+            "Student",
+            "Group",
+            "GitHub account"
           ],
           "rows": [
             [
-              "1",
               "Қожабек Аяділ Нұрланұлы",
-              "https://github.com/vbl0-0",
-              "Backend/API and migration delivery, backend regression tests and repository automation; publication and verification assisted by OpenAI Codex. Evidence: https://github.com/vbl0-0/AITU-Career/pull/19 ; https://github.com/vbl0-0/AITU-Career/pull/21 ; commits 6c434f2 and 0b8c8bb. These records describe current delivery, not exclusive initial authorship of all imported code."
+              "SE-2425",
+              "https://github.com/vbl0-0"
             ],
             [
-              "2",
               "Амантай Жан Әділұлы",
-              "https://github.com/igiiaw",
-              "Frontend, multilingual interface, research documentation and report-source delivery; publication and verification assisted by OpenAI Codex. Evidence: https://github.com/vbl0-0/AITU-Career/pull/20 ; https://github.com/vbl0-0/AITU-Career/pull/22 ; commits 7717652, c12021f and 203f7c7. These records describe current delivery, not exclusive initial authorship of all imported code."
+              "SE-2419",
+              "https://github.com/igiiaw"
             ]
+          ],
+          "caption": "Table 1.2. Team",
+          "widths": [
+            26,
+            38,
+            36
           ]
         }
-      ]
+      ],
+      "anchor": "chapter-1"
     },
     {
-      "title": "2. Evidence of Relevance and Optional User Research",
+      "title": "2. Evidence of Relevance",
       "blocks": [
         {
-          "type": "p",
-          "text": "On 24 October 2026, the team clarified that user interviews and supervisor feedback are optional for this submission. This is a team-reported requirement clarification, not a recorded supervisor approval."
+          "type": "h3",
+          "text": "2.1 Sources of evidence",
+          "anchor": "chapter-2-sub-1"
         },
         {
           "type": "p",
-          "text": "Relevance at this stage is supported by the literature and system comparison in Sections 3–4. No user interviews were conducted and no interview results are presented. Local demand, explanation usefulness and the employment-readiness indicator remain hypotheses rather than empirically established conclusions."
+          "text": "Relevance at this stage is grounded in the scientific literature and system comparison in Chapters 3–4. User interviews were optional and were not conducted; local demand and user-comprehension claims therefore remain hypotheses."
+        },
+        {
+          "type": "h3",
+          "text": "2.2 Findings and assumptions",
+          "anchor": "chapter-2-sub-2"
         },
         {
           "type": "table",
@@ -329,24 +531,46 @@
               "Documented configurable heuristic.",
               "It is not a validated predictor of hiring success."
             ]
+          ],
+          "caption": "Table 2.1. Findings and assumptions",
+          "widths": [
+            26,
+            38,
+            36
           ]
         },
         {
-          "type": "p",
-          "text": "Future optional research may include anonymized discussions with graduates, career-center staff and recruiters. Findings should be recorded with actual dates and consent, separated from interpretations and linked to requirement decisions. Such evidence is not a prerequisite for this submission and no participant identities or fabricated responses are included."
-        }
-      ]
-    },
-    {
-      "title": "3. Critical Literature Review",
-      "blocks": [
-        {
-          "type": "p",
-          "text": "A targeted engineering search was performed on 19 October 2026 using ACL Anthology, arXiv and official product/technical documentation. Queries covered skill extraction from job postings, multilingual skill matching, sentence embeddings and job-title representations. Inclusion required verifiable metadata and a direct connection to extraction, retrieval or an engineering decision. This is not claimed to be an exhaustive systematic review."
+          "type": "h3",
+          "text": "2.3 Further validation",
+          "anchor": "chapter-2-sub-3"
         },
         {
           "type": "p",
-          "text": "The review uses 17 sources: eight peer-reviewed scientific publications S01–S08, technical report S09 and eight official materials S10–S17. The scientific core is from 2021–2025; Sentence-BERT (2019) is retained as foundational work. The limitations and applications below are the project’s analysis of transferability, not verbatim author claims."
+          "text": "Later validation may include anonymized discussions with graduates, career-center staff and recruiters. Record actual dates and consent, distinguish observations from interpretations, and link findings to requirement decisions."
+        }
+      ],
+      "anchor": "chapter-2"
+    },
+    {
+      "title": "3. Literature Review",
+      "blocks": [
+        {
+          "type": "h3",
+          "text": "3.1 Search scope",
+          "anchor": "chapter-3-sub-1"
+        },
+        {
+          "type": "p",
+          "text": "A targeted engineering search was performed on 19 October 2026 using ACL Anthology, arXiv and official product/technical documentation. Queries covered skill extraction from job postings, multilingual skill matching, sentence embeddings and job-title representations. Inclusion required verifiable metadata and a direct connection to extraction, retrieval or an engineering decision."
+        },
+        {
+          "type": "p",
+          "text": "The review uses 17 sources: eight peer-reviewed scientific publications S01–S08, technical report S09 and eight official materials S10–S17. The scientific core is from 2021–2025; Sentence-BERT (2019) is retained as foundational work. The table connects the reviewed findings and limitations to engineering decisions for this project."
+        },
+        {
+          "type": "h3",
+          "text": "3.2 Literature comparison",
+          "anchor": "chapter-3-sub-2"
         },
         {
           "type": "table",
@@ -401,11 +625,18 @@
               "Input conventions, model size and inference cost affect suitability.",
               "Include E5 in a future comparison; it is not the model currently configured in the prototype."
             ]
+          ],
+          "caption": "Table 3.1. Literature comparison",
+          "widths": [
+            26,
+            38,
+            36
           ]
         },
         {
           "type": "h3",
-          "text": "Synthesis and research questions"
+          "text": "3.3 Synthesis and research questions",
+          "anchor": "chapter-3-sub-3"
         },
         {
           "type": "p",
@@ -419,14 +650,25 @@
           "type": "p",
           "text": "RQ1: do alias normalization and optional semantic matching improve nDCG@5 over exact skill matching on a fixed profile/vacancy dataset while retaining interpretable explanations? RQ2: do users distinguish skill coverage from the probability of employment? The contribution is a testable engineering adaptation to AITU. Superiority over commercial systems is not asserted."
         }
-      ]
+      ],
+      "anchor": "chapter-3"
     },
     {
       "title": "4. Existing System Comparison",
       "blocks": [
         {
+          "type": "h3",
+          "text": "4.1 Systems and criteria",
+          "anchor": "chapter-4-sub-1"
+        },
+        {
           "type": "p",
           "text": "Four relevant systems are compared on eight consistent criteria using official public documentation: LinkedIn [S11], Handshake [S12], hh.kz [S13] and Coursera Career Academy [S14]. No private product accounts were audited. “Not established” means that the cited sources do not establish the capability; it does not mean the capability is absent."
+        },
+        {
+          "type": "h3",
+          "text": "4.2 Comparison",
+          "anchor": "chapter-4-sub-2"
         },
         {
           "type": "table",
@@ -494,17 +736,29 @@
               "Not established",
               "Not established"
             ]
-          ]
+          ],
+          "caption": "Table 4.1. Comparison"
+        },
+        {
+          "type": "h3",
+          "text": "4.3 Implications for AITU Career",
+          "anchor": "chapter-4-sub-3"
         },
         {
           "type": "p",
           "text": "Matching and skill-development recommendations already exist in competing systems. The rationale for this prototype is controllable AITU-specific adaptation, an accessible per-requirement calculation and reproducible evaluation on a fixed dataset. Optional future user research can test the local-demand hypothesis. Commercial systems are not quantitative baselines because their internal algorithms and evaluation data are unavailable."
         }
-      ]
+      ],
+      "anchor": "chapter-4"
     },
     {
-      "title": "5. Technology Comparison and Architectural Decisions",
+      "title": "5. Technology Comparison",
       "blocks": [
+        {
+          "type": "h3",
+          "text": "5.1 Technology alternatives",
+          "anchor": "chapter-5-sub-1"
+        },
         {
           "type": "p",
           "text": "The alternatives are assessed for a small educational prototype with a Python analysis module, relational data and no interaction history. Assessments are qualitative; no unperformed performance measurements are implied."
@@ -542,20 +796,42 @@
               "React/TypeScript: typed components already implemented. Vue/TypeScript: a comparable SPA option requiring component migration. Server templates: a smaller client stack but a different approach to interactive profile editing.",
               "React/TypeScript with Vite follows the implemented journeys; no unmeasured speed advantage is claimed."
             ]
+          ],
+          "caption": "Table 5.1. Technology alternatives",
+          "widths": [
+            19,
+            45,
+            36
           ]
+        },
+        {
+          "type": "h3",
+          "text": "5.2 Architectural decisions",
+          "anchor": "chapter-5-sub-2"
         },
         {
           "type": "p",
           "text": "ADR-01: use a modular monolith. Authorization, API, analysis and persistence have separate code responsibilities but share one backend deployment. Revisit separation only if profiling demonstrates interference from inference. ADR-02: PostgreSQL is the source of truth; preserve algorithm version and input revisions with saved analyses. ADR-03: absence of the optional model must not break keyword analysis."
         }
-      ]
+      ],
+      "anchor": "chapter-5"
     },
     {
-      "title": "6. Requirements Specification and Acceptance Criteria",
+      "title": "6. Requirements Specification",
       "blocks": [
+        {
+          "type": "h3",
+          "text": "6.1 Priorities and traceability",
+          "anchor": "chapter-6-sub-1"
+        },
         {
           "type": "p",
           "text": "MoSCoW priorities: Must denotes mandatory MVP behavior; Should denotes a planned improvement; Could denotes an optional extension. An implemented feature is not evidence that users need it. Requirement IDs connect the specification, components, tasks and verification."
+        },
+        {
+          "type": "h3",
+          "text": "6.2 Functional requirements",
+          "anchor": "chapter-6-sub-2"
         },
         {
           "type": "table",
@@ -638,7 +914,19 @@
               "Fictional vacancies are labeled; readiness reports its sample scope and components.",
               "UI inspection; career summary"
             ]
+          ],
+          "caption": "Table 6.1. Functional requirements",
+          "widths": [
+            13,
+            19,
+            43,
+            25
           ]
+        },
+        {
+          "type": "h3",
+          "text": "6.3 Non-functional requirements",
+          "anchor": "chapter-6-sub-3"
         },
         {
           "type": "table",
@@ -697,11 +985,19 @@
               "Submission files exclude .env/tokens and identifiable interview data.",
               "Package inventory and staged-diff review"
             ]
+          ],
+          "caption": "Table 6.2. Non-functional requirements",
+          "widths": [
+            13,
+            19,
+            43,
+            25
           ]
         },
         {
           "type": "h3",
-          "text": "Matching and readiness rules"
+          "text": "6.4 Matching and readiness rules",
+          "anchor": "chapter-6-sub-4"
         },
         {
           "type": "p",
@@ -713,7 +1009,8 @@
         },
         {
           "type": "h3",
-          "text": "AI functionality: implemented baseline and optional learned extension"
+          "text": "6.5 AI functionality and implementation status",
+          "anchor": "chapter-6-sub-5"
         },
         {
           "type": "p",
@@ -752,21 +1049,38 @@
               "A model trained on local hiring outcomes, validated success probabilities and an adaptive recommender are not implemented.",
               "Future research possibilities; no effectiveness result is claimed."
             ]
+          ],
+          "caption": "Table 6.3. AI functionality and implementation status",
+          "widths": [
+            26,
+            38,
+            36
           ]
         },
         {
+          "type": "h3",
+          "text": "6.6 Worked example",
+          "anchor": "chapter-6-sub-6"
+        },
+        {
           "type": "p",
-          "text": "Illustrative calculation, not a real student result: Python level 3 of required 3 with weight 2 contributes 2; SQL level 1 of required 2 with weight 2 contributes 1; absent Git with weight 1 contributes 0. The score is 100 × (2 + 1 + 0) / (2 + 2 + 1) = 60%. Python is matched, SQL is partial and Git is missing. This demonstrates an explainable calculation, not measured recommendation accuracy."
+          "text": "Illustrative calculation: Python level 3 of required 3 with weight 2 contributes 2; SQL level 1 of required 2 with weight 2 contributes 1; absent Git with weight 1 contributes 0. The score is 100 × (2 + 1 + 0) / (2 + 2 + 1) = 60%. Python is matched, SQL is partial and Git is missing."
         },
         {
           "type": "p",
           "text": "Implementation reference: https://github.com/vbl0-0/AITU-Career/blob/prob-period-1/backend/app/ai/matching.py. Matching correctness tests verify rules and boundaries. Only an independent relevance experiment can establish whether this approach ranks useful vacancies better than simpler alternatives."
         }
-      ]
+      ],
+      "anchor": "chapter-6"
     },
     {
-      "title": "7. Architecture, Diagrams and Data",
+      "title": "7. Architecture and Diagrams",
       "blocks": [
+        {
+          "type": "h3",
+          "text": "7.1 System context",
+          "anchor": "chapter-7-sub-1"
+        },
         {
           "type": "p",
           "text": "Students/graduates and administrators use React, FastAPI and PostgreSQL. An explicit HeadHunter API adapter supports import, refresh, deduplication and source/availability tracking; live provider access was not available and no real import is claimed. University SSO and DU/Moodle are not integrated. Default keyword analysis needs no external AI service; the optional embedding model is disabled in the verified configuration."
@@ -774,17 +1088,27 @@
         {
           "type": "image",
           "path": "diagrams/context.svg",
-          "caption": "Figure 1. System context and responsibility boundaries."
+          "caption": "Figure 7.1. System context and responsibility boundaries."
+        },
+        {
+          "type": "h3",
+          "text": "7.2 Use cases",
+          "anchor": "chapter-7-sub-2"
         },
         {
           "type": "image",
           "path": "diagrams/use-cases.svg",
-          "caption": "Figure 2. User roles and protected use cases."
+          "caption": "Figure 7.2. User roles and protected use cases."
+        },
+        {
+          "type": "h3",
+          "text": "7.3 Components",
+          "anchor": "chapter-7-sub-3"
         },
         {
           "type": "image",
           "path": "diagrams/components.svg",
-          "caption": "Figure 3. Draft component architecture aligned with the implementation."
+          "caption": "Figure 7.3. Draft component architecture aligned with the implementation."
         },
         {
           "type": "table",
@@ -819,7 +1143,18 @@
               "Relationships, constraints, persisted analyses and repeatable seed.",
               "NFR-02/03"
             ]
+          ],
+          "caption": "Table 7.1. Components",
+          "widths": [
+            26,
+            38,
+            36
           ]
+        },
+        {
+          "type": "h3",
+          "text": "7.4 Data model and analysis flow",
+          "anchor": "chapter-7-sub-4"
         },
         {
           "type": "p",
@@ -828,6 +1163,11 @@
         {
           "type": "p",
           "text": "Analysis flow: authenticate and authorize → validate profile/job → normalize catalog terms → collect structured and textual evidence → obtain requirements → calculate weighted coverage → group matched/partial/missing requirements → derive development actions → persist the result with revisions → display it. Input changes do not silently replace the saved snapshot; they flag it as stale."
+        },
+        {
+          "type": "h3",
+          "text": "7.5 API and editable sources",
+          "anchor": "chapter-7-sub-5"
         },
         {
           "type": "table",
@@ -856,24 +1196,36 @@
               "GET /api/health; /docs",
               "Health check and generated API contract."
             ]
+          ],
+          "caption": "Table 7.2. API and editable sources",
+          "widths": [
+            28,
+            72
           ]
         },
         {
           "type": "p",
-          "text": "The full current API contract is available locally at http://localhost:8000/docs. Diagram deliverables include editable SVG, JSON layout models, Mermaid/PlantUML sources and PNG exports. Diagram changes must remain consistent with the code and requirement IDs."
-        },
-        {
-          "type": "p",
-          "text": "Editable diagram sources and exports: https://github.com/vbl0-0/AITU-Career/tree/prob-period-1/docs/pre-defense-1/diagrams. Local OpenAPI: http://localhost:8000/docs. The API is not publicly hosted by the static prototype viewer."
+          "text": "OpenAPI contract: https://github.com/vbl0-0/AITU-Career/blob/prob-period-1/docs/pre-defense-1/evidence/openapi.json. Local Swagger documentation: http://localhost:8000/docs. Editable diagram sources and exports: https://github.com/vbl0-0/AITU-Career/tree/prob-period-1/docs/pre-defense-1/diagrams."
         }
-      ]
+      ],
+      "anchor": "chapter-7"
     },
     {
       "title": "8. UX and Prototype",
       "blocks": [
         {
+          "type": "h3",
+          "text": "8.1 Prototype access",
+          "anchor": "chapter-8-sub-1"
+        },
+        {
           "type": "p",
           "text": "Public screen walkthrough: https://vbl0-0.github.io/AITU-Career/. It presents actual captures of the local application with navigation between screens, not a hosted backend or live editing service. The complete application runs locally using the published development instructions. The interface supports Kazakh, Russian and English; the report is in English. Original screenshot and diagram colors are preserved."
+        },
+        {
+          "type": "h3",
+          "text": "8.2 User scenarios",
+          "anchor": "chapter-8-sub-2"
         },
         {
           "type": "table",
@@ -908,45 +1260,67 @@
               "Admin sign-in → jobs → create/update.",
               "Permission checks and validated skill requirements."
             ]
+          ],
+          "caption": "Table 8.1. User scenarios",
+          "widths": [
+            26,
+            38,
+            36
           ]
+        },
+        {
+          "type": "h3",
+          "text": "8.3 UX states and accessibility",
+          "anchor": "chapter-8-sub-3"
         },
         {
           "type": "p",
           "text": "UX states include loading, no records, validation errors, server failures, save confirmation and stale results. Focus indication, labels and accessible action names are implemented; a comprehensive accessibility audit remains outstanding. A user-evaluation task asks participants to find a relevant vacancy, identify two gaps and explain the score."
         },
         {
+          "type": "h3",
+          "text": "8.4 Screen examples",
+          "anchor": "chapter-8-sub-4"
+        },
+        {
           "type": "image",
           "path": "prototype/landing.png",
-          "caption": "Figure 4. Entry to the graduate journey."
+          "caption": "Figure 8.1. Entry to the graduate journey."
         },
         {
           "type": "image",
           "path": "prototype/dashboard.png",
-          "caption": "Figure 5. Demonstration graduate dashboard."
+          "caption": "Figure 8.2. Demonstration graduate dashboard."
         },
         {
           "type": "image",
           "path": "prototype/mobile.png",
-          "caption": "Figure 6. Mobile interface at 390×844."
+          "caption": "Figure 8.3. Mobile interface at 390×844."
         },
         {
           "type": "image",
           "path": "prototype/job-detail.png",
-          "caption": "Figure 7. Vacancy requirements and explained matching."
+          "caption": "Figure 8.4. Vacancy requirements and explained matching."
         },
         {
           "type": "image",
           "path": "prototype/admin.png",
-          "caption": "Figure 8. Administrative vacancy management."
+          "caption": "Figure 8.5. Administrative vacancy management."
         }
-      ]
+      ],
+      "anchor": "chapter-8"
     },
     {
       "title": "9. Verification and Evaluation Plan",
       "blocks": [
         {
+          "type": "h3",
+          "text": "9.1 Verification results",
+          "anchor": "chapter-9-sub-1"
+        },
+        {
           "type": "p",
-          "text": "Verification checks implementation against requirements. Evaluation examines ranking quality and user understanding. Passing software tests does not demonstrate improved employment outcomes or model accuracy on the real labor market."
+          "text": "Verification checks the software against the specified requirements. Evaluation compares matching quality and user interpretation under controlled conditions."
         },
         {
           "type": "table",
@@ -983,11 +1357,16 @@
               "Targeted UI review (eleven routes, desktop/mobile)",
               "passed: 22 checks passed. Screenshots inspected; no horizontal document overflow or blocking page alert at 1440px/390px. Keyboard skip-link focus has a 3px outline. This is not comprehensive WCAG conformance."
             ]
+          ],
+          "caption": "Table 9.1. Verification results",
+          "widths": [
+            28,
+            72
           ]
         },
         {
           "type": "p",
-          "text": "Machine-readable results: https://github.com/vbl0-0/AITU-Career/blob/prob-period-1/docs/pre-defense-1/evidence/validation.json. The initial connection timeout was resolved by starting the existing project PostgreSQL cluster; no application tables were replaced. Software checks do not establish ranking quality, real-market coverage or improved employment outcomes."
+          "text": "Commands, environment details and observed verification results are retained in https://github.com/vbl0-0/AITU-Career/blob/prob-period-1/docs/pre-defense-1/evidence/validation.json."
         },
         {
           "type": "table",
@@ -1022,11 +1401,18 @@
               "Independent labels and a fixed baseline comparison.",
               "Protocol below; experiment not yet performed"
             ]
+          ],
+          "caption": "Table 9.2. Verification results",
+          "widths": [
+            26,
+            38,
+            36
           ]
         },
         {
           "type": "h3",
-          "text": "Operational evaluation protocol in response to SUP-01 and SUP-02"
+          "text": "9.2 Dataset and matching baselines",
+          "anchor": "chapter-9-sub-2"
         },
         {
           "type": "p",
@@ -1055,7 +1441,18 @@
               "B1 plus the optional local embedding adapter, with model revision and threshold fixed before the held-out run.",
               "Real model not evaluated. If it cannot be loaded, record B2 as not run; do not substitute a fabricated score."
             ]
+          ],
+          "caption": "Table 9.3. Dataset and matching baselines",
+          "widths": [
+            26,
+            38,
+            36
           ]
+        },
+        {
+          "type": "h3",
+          "text": "9.3 Independent labels and evaluation metrics",
+          "anchor": "chapter-9-sub-3"
         },
         {
           "type": "p",
@@ -1089,47 +1486,75 @@
               "Use seed 42 and 1,000 paired profile-level bootstrap resamples for the nDCG difference; report a 95% interval and Precision@5 changes.",
               "Adopt an extension only if held-out nDCG improves with an interval above zero, Precision@5 does not deteriorate, its registered resource budget is met and functional regressions are absent. Otherwise retain the simpler method and report the negative outcome."
             ]
+          ],
+          "caption": "Table 9.4. Independent labels and evaluation metrics",
+          "widths": [
+            26,
+            38,
+            36
           ]
         },
         {
-          "type": "p",
-          "text": "Execution responsibilities are planned: Zhan coordinates the dataset, annotation records and error analysis; Ayadil prepares the reproducible B0/B1/B2 runner, model/configuration hashes and latency measurements. Both inspect the held-out results and review each other's experiment changes. Independent raters must be recruited; account ownership or an AI-assisted check is not treated as expert relevance annotation. The tracker schedules label preparation in #10 and baseline/latency evaluation in #11 for the next stage."
+          "type": "h3",
+          "text": "9.4 Execution responsibilities and planned artifacts",
+          "anchor": "chapter-9-sub-4"
         },
         {
           "type": "p",
-          "text": "Expected evaluation artifacts: a dataset/split manifest, independent labels and agreement record, a committed comparison runner, environment/model configuration, per-profile rankings, metrics/timing files and an interpretation of errors and negative results. These artifacts are planned and are not listed as already available. The 60 backend and 20 browser tests establish implementation behavior, not AI effectiveness."
+          "text": "Execution responsibilities are planned: Zhan coordinates the dataset, annotation records and error analysis; Ayadil prepares the reproducible B0/B1/B2 runner, model/configuration hashes and latency measurements. Both inspect the held-out results and review each other's experiment changes. Independent raters must be recruited. The tracker schedules label preparation in #10 and baseline/latency evaluation in #11 for the next stage."
+        },
+        {
+          "type": "p",
+          "text": "Planned evaluation artifacts: a dataset/split manifest, independent labels and agreement record, a committed comparison runner, environment/model configuration, per-profile rankings, metrics/timing files and an interpretation of errors and negative results. The 60 backend and 20 browser tests establish implementation behavior, not AI effectiveness."
+        },
+        {
+          "type": "h3",
+          "text": "9.5 Validity threats",
+          "anchor": "chapter-9-sub-5"
         },
         {
           "type": "p",
           "text": "Validity threats include convenience sampling, self-reported skills, synthetic vacancies, language bias, tuning leakage, facilitator effects and a small profile sample. Mitigations are independent annotation, a held-out split, negative examples, fixed comparison conditions and retention of raw judgments and errors. Docker and the real embedding model were not exercised in this environment; controlled tests do not replace their evaluation."
         }
-      ]
+      ],
+      "anchor": "chapter-9"
     },
     {
-      "title": "10. Project Management, Responsibilities and Risks",
+      "title": "10. Project Management and Risks",
       "blocks": [
         {
+          "type": "h3",
+          "text": "10.1 Team contributions",
+          "anchor": "chapter-10-sub-1"
+        },
+        {
           "type": "p",
-          "text": "Responsibilities below are supported by dated account-linked delivery records. OpenAI Codex assisted implementation, packaging, technical verification and publication. These records establish what was delivered under each account; imported history alone does not establish exclusive original authorship or the time each person spent. Actual human peer review remains to be added in GitHub, as requested by the supervisor."
+          "text": "OpenAI Codex supported implementation, documentation and technical verification. The contribution table records dated deliveries under each account. Existing modules were imported on 23–24 October 2026; earlier individual development is not reconstructed. No independent peer review is recorded in the checked PRs #19–25. The next-stage review workflow is defined in Section 10.4."
         },
         {
           "type": "table",
           "headers": [
             "Participant / work area",
             "Concrete delivered artifacts and traceability",
-            "Evidence limit"
+            "Delivery record"
           ],
           "rows": [
             [
               "Қожабек Аяділ Нұрланұлы / @vbl0-0",
               "Backend API/models/migrations: 6c434f2; regression tests/container setup: 0b8c8bb; architecture/startup delivery: 26c8605. Related PRs #19, #21, #23 and issues #7/#9/#12/#14.",
-              "AI-assisted current deliveries. No percentage, independent initial code authorship or unrecorded manual review is inferred."
+              "AI-assisted module delivery; linked commits and pull requests."
             ],
             [
               "Амантай Жан Әділұлы / @igiiaw",
               "Frontend/i18n/browser tests: 7717652; references/documentation: c12021f; report sources: 203f7c7; report/evidence exports: d308bb1 and adc5d46. Related PRs #20/#22/#24/#25 and issues #4/#5/#8/#16/#17.",
-              "AI-assisted current deliveries. Account attribution and module responsibility are distinguished from proof of who wrote every imported line."
+              "AI-assisted module delivery; linked commits and pull requests."
             ]
+          ],
+          "caption": "Table 10.1. Team contributions",
+          "widths": [
+            26,
+            38,
+            36
           ]
         },
         {
@@ -1137,8 +1562,186 @@
           "text": "Merged delivery records: https://github.com/vbl0-0/AITU-Career/pull/19 (repository automation); https://github.com/vbl0-0/AITU-Career/pull/20 (frontend); https://github.com/vbl0-0/AITU-Career/pull/21 (backend and regression tests); https://github.com/vbl0-0/AITU-Career/pull/22 (research and report sources). Further delivery PRs are recorded in the repository and linked issue comments. Original commits are preserved through merge commits."
         },
         {
+          "type": "h3",
+          "text": "10.2 Task allocation, deadlines and progress",
+          "anchor": "chapter-10-sub-2"
+        },
+        {
           "type": "p",
           "text": "Tracker: https://github.com/users/vbl0-0/projects/1. The 18 original tasks retain their source IDs, priorities, planned owners and original deadlines. GitHub Issues contain actual acceptance criteria, account assignments and completion evidence. Optional interview/feedback tasks are distinguished from completed work. Later-stage independent labels and matching-quality experiments are not marked complete."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Task",
+            "Assignee",
+            "Original deadline",
+            "Status"
+          ],
+          "rows": [
+            [
+              "#1: Record confirmed team details and project scope",
+              "@vbl0-0",
+              "2026-10-21",
+              "Completed"
+            ],
+            [
+              "#2: Optional user discussions (not required for period 1)",
+              "@igiiaw",
+              "2026-10-22",
+              "Not planned"
+            ],
+            [
+              "#3: Record requirements and confirmed scope clarifications",
+              "@vbl0-0",
+              "2026-10-22",
+              "Completed"
+            ],
+            [
+              "#4: Review the literature and source analysis",
+              "@igiiaw",
+              "2026-10-22",
+              "Completed"
+            ],
+            [
+              "#5: Review existing systems against common criteria",
+              "@igiiaw",
+              "2026-10-22",
+              "Completed"
+            ],
+            [
+              "#6: Review technology alternatives and ADRs",
+              "@vbl0-0",
+              "2026-10-22",
+              "Completed"
+            ],
+            [
+              "#7: Review architectural diagrams",
+              "@vbl0-0",
+              "2026-10-22",
+              "Completed"
+            ],
+            [
+              "#8: Verify the updated interface palette and UX",
+              "@igiiaw",
+              "2026-10-21",
+              "Completed"
+            ],
+            [
+              "#9: Verify the application and preserve results",
+              "@vbl0-0",
+              "2026-10-22",
+              "Completed"
+            ],
+            [
+              "#10: Prepare independent matching relevance labels",
+              "@igiiaw",
+              "2026-11-06",
+              "Open"
+            ],
+            [
+              "#11: Evaluate matching baselines and latency",
+              "@vbl0-0",
+              "2026-11-13",
+              "Open"
+            ],
+            [
+              "#12: Set up the shared repository and access",
+              "@vbl0-0",
+              "2026-10-22",
+              "Completed"
+            ],
+            [
+              "#13: Set up the tracker and assign responsibilities",
+              "@igiiaw",
+              "2026-10-22",
+              "Completed"
+            ],
+            [
+              "#14: Link code changes and reviews to real tasks",
+              "@vbl0-0",
+              "2026-10-23",
+              "Completed"
+            ],
+            [
+              "#15: Record received supervisor feedback and response",
+              "@igiiaw",
+              "2026-10-23",
+              "Completed"
+            ],
+            [
+              "#16: Finalize report and record any optional feedback",
+              "@igiiaw",
+              "2026-10-23",
+              "Completed"
+            ],
+            [
+              "#17: Compile actual board and task screenshots into PDF",
+              "@igiiaw",
+              "2026-10-23",
+              "Completed"
+            ],
+            [
+              "#18: Verify access and submit the team materials",
+              "@vbl0-0",
+              "2026-10-24",
+              "Open"
+            ]
+          ],
+          "caption": "Table 10.2. Task allocation, deadlines and progress",
+          "widths": [
+            51,
+            16,
+            18,
+            15
+          ]
+        },
+        {
+          "type": "p",
+          "text": "The deadlines above are the original recorded planning dates. They are retained alongside the actual issue states; completion evidence and timestamps are available on the linked GitHub issues."
+        },
+        {
+          "type": "p",
+          "text": "Tracker snapshot: 14 completed, 1 optional activities closed as not planned, and 3 open. GitHub's built-in closed-item workflow places both closure types in Done; the issue state reason distinguishes cancelled scope from performed work. Snapshot: https://github.com/vbl0-0/AITU-Career/blob/prob-period-1/docs/pre-defense-1/evidence/github-current-issues.json."
+        },
+        {
+          "type": "h3",
+          "text": "10.3 Recorded development history",
+          "anchor": "chapter-10-sub-3"
+        },
+        {
+          "type": "p",
+          "text": "The original Git metadata records repository setup, automation and frontend import on 23 October 2026, followed by backend, report-source, architecture and submission deliveries on 24 October 2026 (UTC+5 author timestamps). The pre-feedback snapshot contains 11 non-merge commits, preserved with their original author dates and subjects: https://github.com/vbl0-0/AITU-Career/blob/prob-period-1/docs/pre-defense-1/evidence/development-history.json."
+        },
+        {
+          "type": "h3",
+          "text": "10.4 Git workflow and reciprocal peer review",
+          "anchor": "chapter-10-sub-4"
+        },
+        {
+          "type": "p",
+          "text": "The supervisor’s general guidance calls for a traceable development process and mutual review, rather than publication of completed files alone. The existing delivery history and task records are retained. The following process is planned for the next substantive changes; independent approvals and a protected-main review gate have not yet been introduced."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Create or refine a task with one responsible student, an expected result, acceptance criteria, deadline and current status.",
+            "Create a task branch from the current main branch and make small commits that identify the actual task and the change performed.",
+            "Open a pull request explaining the change, the task link, relevant tests and any AI assistance. Update the README and related documentation when behavior or setup changes.",
+            "The other student personally reviews the diff and runs the relevant checks: Zhan reviews Ayadil’s backend changes; Ayadil reviews Zhan’s frontend and report changes.",
+            "Record substantive comments, link corrective commits and obtain a recheck before approval. Preserve the actual review discussion and the participant’s implementation, testing and review actions.",
+            "Merge only after acceptance checks and the required review are satisfied. Add the resulting commit or pull-request link to the task and then update its status.",
+            "Before each submission, verify all shared links and the complete README, and confirm that the report and artifacts match the submitted tag. Preserve versions after they have been submitted."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "The proposed repository gate is one independent approval with the relevant checks passing before merge. Its activation and actual human review records remain next-stage work. The checked review-status snapshot is retained in https://github.com/vbl0-0/AITU-Career/blob/prob-period-1/docs/pre-defense-1/evidence/peer-review-status-2026-10-24.json."
+        },
+        {
+          "type": "h3",
+          "text": "10.5 Risks",
+          "anchor": "chapter-10-sub-5"
         },
         {
           "type": "table",
@@ -1168,59 +1771,42 @@
               "Use the exact prob-period-1 tag and the matching PDF exports; do not move the submitted tag."
             ],
             [
-              "Optional evidence shown as mandatory",
-              "Record the team clarification and keep future interviews/reviews optional."
+              "Different evidence requirements are confused",
+              "Keep interviews optional for this stage, record the received supervisor feedback, and introduce reciprocal peer review for subsequent development."
             ]
+          ],
+          "caption": "Table 10.3. Risks",
+          "widths": [
+            28,
+            72
           ]
-        },
-        {
-          "type": "p",
-          "text": "Submission version: https://github.com/vbl0-0/AITU-Career/tree/prob-period-1. One representative submits both students' materials before 18:00 UTC+5 on 24 October 2026. A form confirmation is retained only after actual submission."
-        },
-        {
-          "type": "p",
-          "text": "Tracker snapshot: 14 completed, 1 optional activities closed as not planned, and 3 open. GitHub's built-in closed-item workflow places both closure types in Done; the issue state reason distinguishes cancelled scope from performed work. Snapshot: https://github.com/vbl0-0/AITU-Career/blob/prob-period-1/docs/pre-defense-1/evidence/github-current-issues.json."
-        },
-        {
-          "type": "h3",
-          "text": "Development history supported by original Git metadata"
-        },
-        {
-          "type": "p",
-          "text": "The original Git metadata records repository setup, automation and frontend import on 23 October 2026, followed by backend, report-source, architecture and submission deliveries on 24 October 2026 (UTC+5 author timestamps). These are the real recorded publication stages; no earlier incremental history is reconstructed. The pre-feedback snapshot contains 11 non-merge commits, preserved with their original author dates and subjects: https://github.com/vbl0-0/AITU-Career/blob/prob-period-1/docs/pre-defense-1/evidence/development-history.json."
-        },
-        {
-          "type": "h3",
-          "text": "Peer review process to introduce in GitHub"
-        },
-        {
-          "type": "p",
-          "text": "The checked PRs #19–25 contain no submitted GitHub review records. Their merge status, automated tests and supervisor feedback are not peer approval. This remains an improvement action, not a completed feature. For the next substantive backend change, Zhan should review Ayadil's PR; for a frontend/report change, Ayadil should review Zhan's PR. Each reviewer personally inspects the diff, runs the relevant checks and records concrete comments and test evidence. The author links resulting fixes, and the reviewer rechecks before approval. Only actual actions may be recorded under a person's account."
-        },
-        {
-          "type": "p",
-          "text": "Use small task-focused PRs, a contribution log stating the participant's actual implementation/test/review actions and any AI assistance, and a checklist covering correctness, authorization/data handling, edge cases and regression evidence. Where repository settings support it, require one independent approval and passing relevant checks before merging; enabling that rule is planned, not claimed as already configured. Preserve review comments and resulting commits rather than creating approvals after the fact. Peer-review status evidence: https://github.com/vbl0-0/AITU-Career/blob/prob-period-1/docs/pre-defense-1/evidence/peer-review-status-2026-10-24.json."
         }
-      ]
+      ],
+      "anchor": "chapter-10"
     },
     {
-      "title": "11. Supervisor Feedback and Response to Comments",
+      "title": "11. Supervisor Feedback",
       "blocks": [
         {
-          "type": "p",
-          "text": "Supervisor feedback was supplied to the team on 24 October 2026. The following record reproduces the two messages transcribed by Ayadil, attributed to Оразова Арайлым Жанболаткызы (display name Arailym). The original private chat was not independently accessed and the messages do not identify an exact reviewed commit. Their positive assessment is recorded without turning it into an unconditional final approval."
+          "type": "h3",
+          "text": "11.1 Reviews received",
+          "anchor": "chapter-11-sub-1"
         },
         {
-          "type": "h3",
-          "text": "SUP-01 — 24 October 2026, 15:28; original English message"
+          "type": "p",
+          "text": "Written supervisor feedback dated 24 October 2026 was supplied to the team. The messages below contain the assessment and requested improvements. They refer to the pre-defence materials without specifying an exact reviewed commit."
+        },
+        {
+          "type": "p",
+          "text": "24 October 2026, 15:28 — original English message:"
         },
         {
           "type": "p",
           "text": "“The team has made good progress in project analysis, system design, documentation, and initial implementation. The report, GitHub repository, task tracker, and prototype are well organized and generally meet the objectives of the current stage. For the next stage, the team should focus on further system testing, evaluating the matching approach, and improving development and code review practices.”"
         },
         {
-          "type": "h3",
-          "text": "SUP-02 — 24 October 2026, 15:29; English translation of the Russian message"
+          "type": "p",
+          "text": "24 October 2026, 15:29 — English translation of the Russian message:"
         },
         {
           "type": "p",
@@ -1228,11 +1814,12 @@
         },
         {
           "type": "p",
-          "text": "The original Russian text, English translation, times and source limitations are retained in https://github.com/vbl0-0/AITU-Career/blob/prob-period-1/docs/pre-defense-1/evidence/supervisor-feedback-2026-10-24.json."
+          "text": "The original text and translation are retained in https://github.com/vbl0-0/AITU-Career/blob/prob-period-1/docs/pre-defense-1/evidence/supervisor-feedback-2026-10-24.json."
         },
         {
-          "type": "p",
-          "text": "The previous prepared snapshot is retained at https://github.com/vbl0-0/AITU-Career/tree/prob-period-1-before-feedback-20261024. It is a preserved pre-feedback assembly, not a claim that the supervisor reviewed that exact commit. The current prob-period-1 package incorporates the reporting changes below before form submission."
+          "type": "h3",
+          "text": "11.2 Comments and decisions",
+          "anchor": "chapter-11-sub-2"
         },
         {
           "type": "table",
@@ -1266,14 +1853,35 @@
               "Continue system testing.",
               "Section 9 preserves actual 60-backend/20-browser verification separately from independent model evaluation and identifies untested areas.",
               "Current verification recorded; further regression coverage and quality experiments belong to the next stage."
+            ],
+            [
+              "General guidance: demonstrate real development history, individual task ownership, deadlines/statuses and reciprocal review; keep README and shared links current.",
+              "Section 10 presents the actual task register, original commit evidence and reciprocal review workflow; the submission summary maps chapters to repository files.",
+              "Existing delivery records documented. Independent human review remains planned; README and link checks form part of each release check."
             ]
+          ],
+          "caption": "Table 11.1. Comments and decisions",
+          "widths": [
+            26,
+            38,
+            36
           ]
         },
         {
+          "type": "h3",
+          "text": "11.3 Follow-up",
+          "anchor": "chapter-11-sub-3"
+        },
+        {
           "type": "p",
-          "text": "Documentation changes above address the current reporting comments. The remaining engineering and evaluation actions are explicitly prospective. Receiving supervisor feedback does not substitute for independent GitHub peer review, independent relevance labels or measured matching effectiveness."
+          "text": "The present revision clarifies the AI functionality, evaluation protocol and delivery evidence. Independent matching evaluation and reciprocal GitHub peer review remain prospective actions in Chapters 9–10. Further comments will be recorded with the affected artifact, the resulting task and the corrective commit or pull request."
+        },
+        {
+          "type": "p",
+          "text": "The additional general instruction is retained in https://github.com/vbl0-0/AITU-Career/blob/prob-period-1/docs/pre-defense-1/evidence/general-development-guidance.json; its original message timestamp was not supplied."
         }
-      ]
+      ],
+      "anchor": "chapter-11"
     },
     {
       "title": "Appendix A. References",
@@ -1346,7 +1954,8 @@
           "type": "p",
           "text": "[S17] Sentence Transformers. Semantic Textual Similarity. Official technical documentation. https://www.sbert.net/docs/sentence_transformer/usage/semantic_textual_similarity.html Accessed 19 October 2026."
         }
-      ]
+      ],
+      "anchor": "chapter-12"
     },
     {
       "title": "Appendix B. Submission Checklist and Evidence Status",
@@ -1413,13 +2022,312 @@
               "Prepared answers and both upload files.",
               "The representative must verify the final form page and retain the actual confirmation."
             ]
+          ],
+          "caption": "Table 13.1. Overview",
+          "widths": [
+            26,
+            38,
+            36
           ]
         },
         {
           "type": "p",
           "text": "Report upload filename: SE-2425_Kozhabek_ProbPeriod1.pdf. Deadline: 24 October 2026 before 18:00 UTC+5. Known fields are completed; any genuinely unknown personal information stays blank. The package does not assert that the form has already been submitted."
         }
-      ]
+      ],
+      "anchor": "chapter-13"
+    }
+  ],
+  "toc_entries": [
+    {
+      "title": "Submission Information",
+      "anchor": "front-summary",
+      "level": 0
+    },
+    {
+      "title": "1. Project Proposal",
+      "anchor": "chapter-1",
+      "level": 0
+    },
+    {
+      "title": "1.1 Problem",
+      "anchor": "chapter-1-sub-1",
+      "level": 1
+    },
+    {
+      "title": "1.2 Target users",
+      "anchor": "chapter-1-sub-2",
+      "level": 1
+    },
+    {
+      "title": "1.3 Aim and objectives",
+      "anchor": "chapter-1-sub-3",
+      "level": 1
+    },
+    {
+      "title": "1.4 Scope",
+      "anchor": "chapter-1-sub-4",
+      "level": 1
+    },
+    {
+      "title": "1.5 Team",
+      "anchor": "chapter-1-sub-5",
+      "level": 1
+    },
+    {
+      "title": "2. Evidence of Relevance",
+      "anchor": "chapter-2",
+      "level": 0
+    },
+    {
+      "title": "2.1 Sources of evidence",
+      "anchor": "chapter-2-sub-1",
+      "level": 1
+    },
+    {
+      "title": "2.2 Findings and assumptions",
+      "anchor": "chapter-2-sub-2",
+      "level": 1
+    },
+    {
+      "title": "2.3 Further validation",
+      "anchor": "chapter-2-sub-3",
+      "level": 1
+    },
+    {
+      "title": "3. Literature Review",
+      "anchor": "chapter-3",
+      "level": 0
+    },
+    {
+      "title": "3.1 Search scope",
+      "anchor": "chapter-3-sub-1",
+      "level": 1
+    },
+    {
+      "title": "3.2 Literature comparison",
+      "anchor": "chapter-3-sub-2",
+      "level": 1
+    },
+    {
+      "title": "3.3 Synthesis and research questions",
+      "anchor": "chapter-3-sub-3",
+      "level": 1
+    },
+    {
+      "title": "4. Existing System Comparison",
+      "anchor": "chapter-4",
+      "level": 0
+    },
+    {
+      "title": "4.1 Systems and criteria",
+      "anchor": "chapter-4-sub-1",
+      "level": 1
+    },
+    {
+      "title": "4.2 Comparison",
+      "anchor": "chapter-4-sub-2",
+      "level": 1
+    },
+    {
+      "title": "4.3 Implications for AITU Career",
+      "anchor": "chapter-4-sub-3",
+      "level": 1
+    },
+    {
+      "title": "5. Technology Comparison",
+      "anchor": "chapter-5",
+      "level": 0
+    },
+    {
+      "title": "5.1 Technology alternatives",
+      "anchor": "chapter-5-sub-1",
+      "level": 1
+    },
+    {
+      "title": "5.2 Architectural decisions",
+      "anchor": "chapter-5-sub-2",
+      "level": 1
+    },
+    {
+      "title": "6. Requirements Specification",
+      "anchor": "chapter-6",
+      "level": 0
+    },
+    {
+      "title": "6.1 Priorities and traceability",
+      "anchor": "chapter-6-sub-1",
+      "level": 1
+    },
+    {
+      "title": "6.2 Functional requirements",
+      "anchor": "chapter-6-sub-2",
+      "level": 1
+    },
+    {
+      "title": "6.3 Non-functional requirements",
+      "anchor": "chapter-6-sub-3",
+      "level": 1
+    },
+    {
+      "title": "6.4 Matching and readiness rules",
+      "anchor": "chapter-6-sub-4",
+      "level": 1
+    },
+    {
+      "title": "6.5 AI functionality and implementation status",
+      "anchor": "chapter-6-sub-5",
+      "level": 1
+    },
+    {
+      "title": "6.6 Worked example",
+      "anchor": "chapter-6-sub-6",
+      "level": 1
+    },
+    {
+      "title": "7. Architecture and Diagrams",
+      "anchor": "chapter-7",
+      "level": 0
+    },
+    {
+      "title": "7.1 System context",
+      "anchor": "chapter-7-sub-1",
+      "level": 1
+    },
+    {
+      "title": "7.2 Use cases",
+      "anchor": "chapter-7-sub-2",
+      "level": 1
+    },
+    {
+      "title": "7.3 Components",
+      "anchor": "chapter-7-sub-3",
+      "level": 1
+    },
+    {
+      "title": "7.4 Data model and analysis flow",
+      "anchor": "chapter-7-sub-4",
+      "level": 1
+    },
+    {
+      "title": "7.5 API and editable sources",
+      "anchor": "chapter-7-sub-5",
+      "level": 1
+    },
+    {
+      "title": "8. UX and Prototype",
+      "anchor": "chapter-8",
+      "level": 0
+    },
+    {
+      "title": "8.1 Prototype access",
+      "anchor": "chapter-8-sub-1",
+      "level": 1
+    },
+    {
+      "title": "8.2 User scenarios",
+      "anchor": "chapter-8-sub-2",
+      "level": 1
+    },
+    {
+      "title": "8.3 UX states and accessibility",
+      "anchor": "chapter-8-sub-3",
+      "level": 1
+    },
+    {
+      "title": "8.4 Screen examples",
+      "anchor": "chapter-8-sub-4",
+      "level": 1
+    },
+    {
+      "title": "9. Verification and Evaluation Plan",
+      "anchor": "chapter-9",
+      "level": 0
+    },
+    {
+      "title": "9.1 Verification results",
+      "anchor": "chapter-9-sub-1",
+      "level": 1
+    },
+    {
+      "title": "9.2 Dataset and matching baselines",
+      "anchor": "chapter-9-sub-2",
+      "level": 1
+    },
+    {
+      "title": "9.3 Independent labels and evaluation metrics",
+      "anchor": "chapter-9-sub-3",
+      "level": 1
+    },
+    {
+      "title": "9.4 Execution responsibilities and planned artifacts",
+      "anchor": "chapter-9-sub-4",
+      "level": 1
+    },
+    {
+      "title": "9.5 Validity threats",
+      "anchor": "chapter-9-sub-5",
+      "level": 1
+    },
+    {
+      "title": "10. Project Management and Risks",
+      "anchor": "chapter-10",
+      "level": 0
+    },
+    {
+      "title": "10.1 Team contributions",
+      "anchor": "chapter-10-sub-1",
+      "level": 1
+    },
+    {
+      "title": "10.2 Task allocation, deadlines and progress",
+      "anchor": "chapter-10-sub-2",
+      "level": 1
+    },
+    {
+      "title": "10.3 Recorded development history",
+      "anchor": "chapter-10-sub-3",
+      "level": 1
+    },
+    {
+      "title": "10.4 Git workflow and reciprocal peer review",
+      "anchor": "chapter-10-sub-4",
+      "level": 1
+    },
+    {
+      "title": "10.5 Risks",
+      "anchor": "chapter-10-sub-5",
+      "level": 1
+    },
+    {
+      "title": "11. Supervisor Feedback",
+      "anchor": "chapter-11",
+      "level": 0
+    },
+    {
+      "title": "11.1 Reviews received",
+      "anchor": "chapter-11-sub-1",
+      "level": 1
+    },
+    {
+      "title": "11.2 Comments and decisions",
+      "anchor": "chapter-11-sub-2",
+      "level": 1
+    },
+    {
+      "title": "11.3 Follow-up",
+      "anchor": "chapter-11-sub-3",
+      "level": 1
+    },
+    {
+      "title": "Appendix A. References",
+      "anchor": "chapter-12",
+      "level": 0
+    },
+    {
+      "title": "Appendix B. Submission Checklist and Evidence Status",
+      "anchor": "chapter-13",
+      "level": 0
     }
   ]
 }

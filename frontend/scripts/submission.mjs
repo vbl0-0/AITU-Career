@@ -66,8 +66,30 @@ try {
     const missing=await page.locator('.missing').allTextContents();
     const broken=await page.locator('img').evaluateAll(imgs=>imgs.filter(i=>!i.complete||i.naturalWidth===0).map(i=>i.src));
     if(missing.length||broken.length)throw new Error('Incomplete report images: '+JSON.stringify({missing,broken}));
-    await page.pdf({path:resolve(output,'report.pdf'),format:'A4',printBackground:true,displayHeaderFooter:true,headerTemplate:'<span></span>',footerTemplate:'<div style="font:9px Arial;width:100%;text-align:center;color:#444444">AITU Career · Probationary period 1 · <span class="pageNumber"></span> / <span class="totalPages"></span></div>',preferCSSPageSize:true});
-    await page.screenshot({path:resolve(output,'report-cover.png')});
+    const academic=JSON.parse(readFileSync(resolve(output,'submission.json'),'utf8')).report_layout==='academic';
+    const docsPython=process.env.DOCS_PYTHON||'python';
+    let stable=!academic;
+    for(let pass=0;pass<(academic?4:1);pass++){
+      await page.pdf({path:resolve(output,'report.pdf'),format:'A4',printBackground:true,displayHeaderFooter:false,outline:academic,tagged:academic,preferCSSPageSize:true});
+      if(!academic)break;
+      const collected=spawnSync(docsPython,[resolve(root,'scripts/finalize_report_pdf.py'),'collect'],{cwd:root,encoding:'utf8'});
+      if(collected.status!==0)throw new Error(collected.stderr||collected.stdout);
+      const result=JSON.parse(collected.stdout.trim());
+      console.log(`Contents pass ${pass+1}: ${result.pages} pages, ${result.toc_entries} entries, changed=${result.changed}`);
+      if(!result.changed){stable=true;break;}
+      const rendered=spawnSync(resolve(root,'.venv/Scripts/python.exe'),[resolve(root,'scripts/prepare_submission.py')],{cwd:root,encoding:'utf8'});
+      if(rendered.status!==0)throw new Error(rendered.stderr||rendered.stdout);
+      await page.goto(pathToFileURL(resolve(output,'report.html')).href);
+      await page.evaluate(()=>document.fonts.ready);
+    }
+    if(academic){
+      if(!stable)throw new Error('Contents pagination did not stabilize; do not publish this report.');
+      const numbered=spawnSync(docsPython,[resolve(root,'scripts/finalize_report_pdf.py'),'stamp'],{cwd:root,encoding:'utf8'});
+      if(numbered.status!==0)throw new Error(numbered.stderr||numbered.stdout);
+      console.log(numbered.stdout.trim());
+    }
+    if(academic)await page.locator('.cover').screenshot({path:resolve(output,'report-cover.png')});
+    else await page.screenshot({path:resolve(output,'report-cover.png')});
     console.log(mode==='report' ? 'Exported report.pdf and report.docx.' : 'Exported report.pdf from existing HTML; DOCX and prototype images preserved.');
   } else if(mode==='evidence') {
     const folder=resolve(process.argv[3]||resolve(output,'evidence/tracker-screenshots'));
