@@ -1,0 +1,67 @@
+{
+  "selected_on": "2026-10-24",
+  "source_capture_manifest": "github-screenshots/capture-manifest.json",
+  "purpose": "Concise form evidence: board, complete task table, and one completed task per team member.",
+  "selection": [
+    {
+      "url": "https://github.com/users/vbl0-0/projects/1/views/1",
+      "file": "01-board.png",
+      "title": "AITU Career - Diploma",
+      "sha256": "9392c9dfac11957cf4b94536b153ddc17b3c8d672e27492bbe1cf327665b9fcd"
+    },
+    {
+      "url": "https://github.com/users/vbl0-0/projects/1/views/2",
+      "file": "02-table.png",
+      "title": "AITU Career - Diploma",
+      "sha256": "2dd0803d0e07981e7eaa640f9ea0b3ed24d618b5f662d8f116d70a5e02518e21"
+    },
+    {
+      "url": "https://github.com/users/vbl0-0/projects/1/views/2",
+      "file": "03-table-bottom.png",
+      "title": "Remaining tasks and deadlines",
+      "sha256": "7b64be92da6db6210d7c3c53efd6b968c63c99af50090bfe4a34d3c09792c1f1"
+    },
+    {
+      "url": "https://github.com/vbl0-0/AITU-Career/issues/8",
+      "file": "11-AITU-8.png",
+      "title": "[AITU-8] Verify the updated interface palette and UX",
+      "sha256": "de99f087b3900b7597e02864caf324ceb67071fe8ac17ba7ba37bd115ee6a7c6"
+    },
+    {
+      "url": "https://github.com/vbl0-0/AITU-Career/issues/9",
+      "file": "12-AITU-9.png",
+      "title": "[AITU-9] Verify the application and preserve results",
+      "sha256": "81010e55994eba0d4ec74864a2a70365b78242abecd852a2cbfb84118aa674d9"
+    }
+  ],
+  "issue_examples": {
+    "8": {
+      "assigned_to": "igiiaw",
+      "pages": [
+        4,
+        5,
+        6
+      ]
+    },
+    "9": {
+      "assigned_to": "vbl0-0",
+      "pages": [
+        7,
+        8,
+        9
+      ]
+    }
+  },
+  "pages": 9,
+  "bytes": 724205,
+  "sha256": "2e35aa64be8147f16b09b8855622f88b3fbd61cf6b5fd6c57213d382124df600",
+  "source_images_preserved": true,
+  "source_links": [
+    "https://github.com/users/vbl0-0/projects/1/views/1",
+    "https://github.com/users/vbl0-0/projects/1/views/2",
+    "https://github.com/vbl0-0/AITU-Career/issues/8",
+    "https://github.com/vbl0-0/AITU-Career/issues/9"
+  ],
+  "reproduction": "Copy the five selected original images and their capture-manifest entries to a temporary folder; run node frontend/scripts/submission.mjs evidence <folder>. Original full screenshot inventory is retained.",
+  "note": "Screenshots show the actual recorded task history and evidence; no independent human peer review is claimed."
+}

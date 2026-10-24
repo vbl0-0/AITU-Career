@@ -3,21 +3,21 @@
   "group": "SE-2425 (student 1); SE-2419 (student 2)",
   "members": [
     {
-      "name": "Қожабек Аяділ Нұрланұлы",
+      "name": "Kozhabek Ayadil Nurlanuly",
       "gitlab": "",
       "contribution": "Backend/API and migration delivery, backend regression tests and repository automation; publication and verification assisted by OpenAI Codex. Evidence: https://github.com/vbl0-0/AITU-Career/pull/19 ; https://github.com/vbl0-0/AITU-Career/pull/21 ; commits 6c434f2 and 0b8c8bb. These records describe current delivery, not exclusive initial authorship of all imported code.",
       "group": "SE-2425",
       "github": "https://github.com/vbl0-0"
     },
     {
-      "name": "Амантай Жан Әділұлы",
+      "name": "Amantay Zhan Adiluly",
       "gitlab": "",
       "contribution": "Frontend, multilingual interface, research documentation and report-source delivery; publication and verification assisted by OpenAI Codex. Evidence: https://github.com/vbl0-0/AITU-Career/pull/20 ; https://github.com/vbl0-0/AITU-Career/pull/22 ; commits 7717652, c12021f and 203f7c7. These records describe current delivery, not exclusive initial authorship of all imported code.",
       "group": "SE-2419",
       "github": "https://github.com/igiiaw"
     }
   ],
-  "supervisor": "Оразова Арайлым Жанболаткызы",
+  "supervisor": "Orazova Arailym Zhanbolatkyzy",
   "supervisor_position": "Senior Lecturer",
   "repository_url": "https://github.com/vbl0-0/AITU-Career",
   "tracker_url": "https://github.com/users/vbl0-0/projects/1",
@@ -26,7 +26,7 @@
   "prototype_url": "https://vbl0-0.github.io/AITU-Career/",
   "report_upload_filename": "SE-2425_Kozhabek_ProbPeriod1.pdf",
   "report_status": "Revised after supervisor feedback of 24 October 2026. AI scope, evaluation protocol and contribution evidence are clarified. Independent matching evaluation and GitHub peer review remain next-stage actions.",
-  "report_revision": "Academic report layout revision ? 24 October 2026",
+  "report_revision": "English name spelling and compact tracker evidence revision, 24 October 2026",
   "supervisor_feedback_record": "docs/pre-defense-1/evidence/supervisor-feedback-2026-10-24.json",
   "interviews_required": false,
   "supervisor_feedback_required": false,
