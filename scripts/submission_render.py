@@ -23,6 +23,41 @@ while len(cfg['members']) < 2:
 cfg.pop('title_ru', None)
 (OUT / 'submission.json').write_text(json.dumps(cfg, ensure_ascii=False, indent=2), encoding='utf-8')
 sources, sections = build_content(cfg, ROOT)
+front_blocks = []
+academic = cfg.get('report_layout') == 'academic'
+if academic:
+    from submission_academic import prepare_academic_report
+    front_blocks, sections = prepare_academic_report(sources, sections, cfg, ROOT)
+toc_entries = [{'title': 'Submission Information', 'anchor': 'front-summary', 'level': 0}]
+for number, section in enumerate(sections, 1):
+    section['anchor'] = f'chapter-{number}'
+    toc_entries.append({'title': section['title'], 'anchor': section['anchor'], 'level': 0})
+    subsection = table_number = figure_number = 0
+    heading = 'Overview'
+    for block in section['blocks']:
+        if block['type'] == 'h3':
+            subsection += 1
+            block['anchor'] = f'chapter-{number}-sub-{subsection}'
+            heading = re.sub(r'^\d+\.\d+\s+', '', block['text'])
+            toc_entries.append({'title': block['text'], 'anchor': block['anchor'], 'level': 1})
+        elif block['type'] == 'table':
+            table_number += 1
+            block['caption'] = f'Table {number}.{table_number}. {heading}'
+            headers=block['headers']
+            if not block.get('widths'):
+                if headers[0]=='Task': block['widths']=[51,16,18,15]
+                elif headers[0]=='ID / priority': block['widths']=[13,19,43,25]
+                elif headers[0]=='Decision': block['widths']=[19,45,36]
+                elif len(headers)==2: block['widths']=[28,72]
+                elif len(headers)==3: block['widths']=[26,38,36]
+        elif block['type'] == 'image':
+            figure_number += 1
+            caption = re.sub(r'^Figure\s+\d+(?:\.\d+)?\.\s*', '', block['caption'])
+            block['caption'] = f'Figure {number}.{figure_number}. {caption}'
+toc_file = OUT / 'toc-pages.json'
+page_map = json.loads(toc_file.read_text(encoding='utf-8')).get('page_map', {}) if toc_file.exists() else {}
+history_file=OUT/'evidence/development-history.json'
+known_commits={item['commit'][:7]:item['commit'] for item in json.loads(history_file.read_text(encoding='utf-8')).get('commits',[])} if history_file.exists() else {}
 
 # Preserve the actual application screenshots, including their original colors.
 for name in ('landing.png','dashboard.png','mobile.png','job-detail.png','admin.png'):
@@ -54,6 +89,51 @@ figure img { display:block; max-width:100%; max-height:210mm; margin:auto; objec
 .section-12 { font-size:9.5pt; line-height:1.35; }
 .fields td { height:28px; } h2,h3 { break-after:avoid; }
 '''
+if academic:
+    CSS = '''
+@page { size:A4; margin:25mm 20mm 22mm 30mm; }
+* { box-sizing:border-box; }
+body { margin:0; color:#111; background:white; font:11pt/1.28 'Times New Roman',Times,serif; }
+h1,h2,h3 { color:#111; font-family:'Times New Roman',Times,serif; break-after:avoid; }
+h1 { font-size:23pt; line-height:1.22; font-weight:400; }
+h2 { font-size:18pt; line-height:1.15; font-weight:400; margin:18pt 0 12pt; }
+h3 { font-size:13pt; line-height:1.18; font-weight:700; margin:15pt 0 7pt; }
+p { margin:0 0 7pt; text-align:justify; orphans:3; widows:3; }
+a { color:#111; text-decoration:underline; overflow-wrap:anywhere; }
+ul,ol { padding-left:6mm; margin:5pt 0 9pt; } li { margin-bottom:4pt; }
+table { width:100%; border-collapse:collapse; table-layout:fixed; font-size:8.6pt; line-height:1.18; margin:7pt 0 10pt; border-top:.7pt solid #111; border-bottom:.7pt solid #111; }
+th,td { border:0; border-bottom:.35pt solid #aaa; padding:4pt 3pt; text-align:left; vertical-align:top; overflow-wrap:anywhere; }
+th { color:#111; background:white; font-weight:700; border-bottom:.7pt solid #111; }
+thead { display:table-header-group; } tr { break-inside:avoid; }
+caption { caption-side:top; color:#111; text-align:center; font-size:10pt; padding-bottom:5pt; }
+figure { margin:12pt 0 15pt; break-inside:avoid; text-align:center; }
+figure img { display:block; max-width:100%; max-height:188mm; width:auto; height:auto; object-fit:contain; margin:0 auto; }
+figcaption { color:#111; font-size:10pt; line-height:1.2; margin-top:6pt; text-align:center; }
+.cover { height:248mm; display:flex; flex-direction:column; align-items:center; text-align:center; break-after:page; }
+.cover-title { border-top:3px double #111; border-bottom:3px double #111; padding:6mm 0; margin:13mm 0 11mm; width:100%; }
+.cover-title h1 { margin:0; }
+.cover p { text-align:center; margin:0 0 5mm; }
+.cover-authors { margin:1mm 0 0; }
+.university-logo { width:49mm; height:49mm; object-fit:contain; margin:1mm 0; }
+.cover-bottom { margin-top:auto; padding-bottom:2mm; }
+.cover-bottom p { margin-bottom:2mm; }
+.front-matter { break-after:page; font-size:10.5pt; line-height:1.22; }
+.front-matter h2,.toc-section h2 { margin-top:0; font-size:23pt; }
+.front-matter h3 { font-size:13pt; }
+.front-matter table { font-size:8.6pt; }
+.front-matter table:first-of-type td:first-child { width:27%; }
+.toc-section { break-after:page; }
+.toc-row { break-inside:avoid; margin:0 0 4pt; line-height:1.25; }
+.toc-row a { display:flex; align-items:baseline; gap:5pt; text-decoration:none; }
+.toc-row.level-0 { font-weight:700; margin-top:7pt; }
+.toc-row.level-1 { padding-left:6mm; }
+.toc-dots { flex:1; border-bottom:1px dotted #777; min-width:6mm; }
+.toc-page { min-width:10mm; text-align:right; }
+.chapter { break-before:auto; }
+.chapter.first-chapter h2 { margin-top:0; }
+.small { font-size:9pt; }
+@media screen { body { width:160mm; margin:25mm auto; } }
+'''
 
 def esc(value): return html.escape(str(value))
 
@@ -65,23 +145,38 @@ def linked(value):
             url = part.rstrip('.,;')
             rendered.append('<a href="'+esc(url)+'">'+esc(url)+'</a>'+esc(part[len(url):]))
         else:
-            rendered.append(esc(part))
+            def reference(match):
+                token=match.group(0)
+                if token.startswith('#'):
+                    url=cfg['repository_url']+'/issues/'+token[1:]
+                elif token[:7] in known_commits:
+                    url=cfg['repository_url']+'/commit/'+known_commits[token[:7]]
+                else:
+                    return token
+                return '<a href="'+esc(url)+'">'+token+'</a>'
+            rendered.append(re.sub(r'(?<![\w])(?:#\d+|[a-f0-9]{7,40})(?![\w])',reference,esc(part)))
     return ''.join(rendered)
 
 def render_block(block):
     kind=block['type']
-    if kind in ('p','h3'): return f'<{kind}>{linked(block["text"])}</{kind}>'
+    if kind in ('p','h3'):
+        anchor=f' id="{esc(block["anchor"])}"' if block.get('anchor') else ''
+        return f'<{kind}{anchor}>{linked(block["text"])}</{kind}>'
+    if kind=='list':
+        return '<ul>'+''.join('<li>'+linked(item)+'</li>' for item in block['items'])+'</ul>'
     if kind=='table':
         headers=block['headers']
         head=''.join('<th>'+esc(v)+'</th>' for v in headers)
         rows=''.join('<tr>'+''.join('<td>'+linked(v)+'</td>' for v in row)+'</tr>' for row in block['rows'])
-        widths=None
-        if headers[0]=='Decision': widths=[19,45,36]
-        elif headers[0]=='ID / priority': widths=[13,19,43,25]
-        elif headers[0]=='Objective': widths=[34,66]
-        elif headers[0]=='Metric': widths=[21,46,33]
+        widths=block.get('widths')
+        if not widths:
+            if headers[0]=='Decision': widths=[19,45,36]
+            elif headers[0]=='ID / priority': widths=[13,19,43,25]
+            elif headers[0]=='Objective': widths=[34,66]
+            elif headers[0]=='Metric': widths=[21,46,33]
         cols='<colgroup>'+''.join(f'<col style="width:{v}%">' for v in widths)+'</colgroup>' if widths else ''
-        return f'<table>{cols}<thead><tr>{head}</tr></thead><tbody>{rows}</tbody></table>'
+        caption='<caption>'+esc(block['caption'])+'</caption>' if block.get('caption') else ''
+        return f'<table>{caption}{cols}<thead><tr>{head}</tr></thead><tbody>{rows}</tbody></table>'
     if kind=='image':
         if not (OUT/block['path']).exists(): raise FileNotFoundError(block['path'])
         return f'<figure><img src="{esc(block["path"])}"><figcaption>{esc(block["caption"])}</figcaption></figure>'
@@ -92,6 +187,18 @@ def cover_fields():
     return rows
 
 def render():
+    if academic:
+        authors=''.join('<p>'+esc(member['name'])+'<br><span class="small">Group '+esc(member.get('group',''))+'</span></p>' for member in cfg['members'])
+        cover='<div class="cover"><div class="cover-title"><h1>'+esc(cfg['title'])+'</h1></div><p>First Submission of Materials, Probationary Period 1</p><p>By</p><div class="cover-authors">'+authors+'</div><img class="university-logo" src="university-logo.png" alt="Astana IT University"><div class="cover-bottom"><p>Astana IT University</p><p>Supervisor: '+esc(cfg['supervisor'])+'<br>'+esc(cfg.get('supervisor_position',''))+'</p><p>October 2026<br>Astana</p></div></div>'
+        front='<section class="front-matter"><h2 id="front-summary">Submission Information</h2>'+''.join(render_block(block) for block in front_blocks)+'</section>'
+        toc='<section class="toc-section"><h2>Table of Contents</h2>'+''.join('<div class="toc-row level-'+str(entry['level'])+'"><a href="#'+esc(entry['anchor'])+'"><span>'+esc(entry['title'])+'</span><span class="toc-dots"></span><span class="toc-page">'+esc(page_map.get(entry['anchor'],''))+'</span></a></div>' for entry in toc_entries)+'</section>'
+        body=''.join('<section class="chapter'+(' first-chapter' if i==0 else '')+'"><h2 id="'+esc(section['anchor'])+'">'+esc(section['title'])+'</h2>'+''.join(render_block(block) for block in section['blocks'])+'</section>' for i,section in enumerate(sections))
+        (OUT/'report.html').write_text('<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AITU Career — First Submission of Materials</title><style>'+CSS+'</style><body>'+cover+front+toc+body+'</body></html>',encoding='utf-8')
+        (OUT/'report-content.json').write_text(json.dumps({'config':cfg,'sources':sources,'front_matter':front_blocks,'sections':sections,'toc_entries':toc_entries},ensure_ascii=False,indent=2),encoding='utf-8')
+        (OUT/'sources.json').write_text(json.dumps(sources,ensure_ascii=False,indent=2),encoding='utf-8')
+        for i,section in enumerate(sections,1):
+            (OUT/f'{i:02d}-section.html').write_text('<!doctype html><html lang="en"><meta charset="utf-8"><style>'+CSS+'</style><h2>'+esc(section['title'])+'</h2>'+''.join(render_block(block) for block in section['blocks'])+'</html>',encoding='utf-8')
+        return
     fields='<table class="fields">'+''.join('<tr><td>'+esc(k)+'</td><td>'+esc(v)+'</td></tr>' for k,v in cover_fields())+'</table>'
     cover='<div class="cover"><div><p class="label">ASTANA IT UNIVERSITY · 2026</p><p>Pre-defense 1 · Report</p></div><div><h1>'+esc(cfg['title'])+'</h1><p>19 October 2026</p><div class="status">Draft for academic review. User discussions and supervisor feedback have not yet been obtained.</div></div><div>'+fields+'<p class="small">Submission deadline: 24 October 2026 before 18:00 (UTC+5).</p></div></div>'
     cover=cover.replace('19 October 2026', esc(REPORT_DATE)).replace('Draft for academic review. User discussions and supervisor feedback have not yet been obtained.', esc(REPORT_STATUS))
@@ -137,6 +244,10 @@ templates()
 
 def write_docx():
     """Create a native editable DOCX using OOXML; no office installation required."""
+    if academic:
+        from submission_docx import write_academic_docx
+        write_academic_docx(cfg, front_blocks, sections, OUT, toc_entries=toc_entries, page_map=page_map)
+        return
     ns='http://schemas.openxmlformats.org/wordprocessingml/2006/main'
     rels=[]; media=[]
     def para(text,style=None):

@@ -1,0 +1,9 @@
+{
+  "source": "General instruction forwarded by the team with the user-provided report-format reference; the original message timestamp was not supplied.",
+  "provided_to_team_on": "2026-10-24",
+  "original_timestamp": null,
+  "language": "ru",
+  "text": "Общее замечание для всех команд: прошу обратить особое внимание на ведение GitHub и YouTrack (или GitHub Projects). Важно не просто создать репозиторий и загрузить готовые файлы, а показать реальную историю разработки и индивидуальный вклад каждого участника. Задачи должны быть распределены между студентами, иметь сроки и статусы выполнения, а изменения — фиксироваться через коммиты и Pull Requests с взаимной проверкой (peer review). Также проверьте актуальность README, доступность всех ссылок и соответствие материалов требованиям первой предзащиты.",
+  "english_summary": "Maintain a real development history and individual contribution evidence. Assign tasks with deadlines and current statuses. Link changes to commits and pull requests with reciprocal peer review. Keep the README current, verify shared-link access and match the first pre-defence requirements.",
+  "report_response": "Section 10 records actual task allocation/deadlines/states and original Git evidence, separates imported deliveries from earlier authorship, and specifies the reciprocal review workflow. Independent peer review remains prospective. No historical work or approval is fabricated."
+}

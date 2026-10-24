@@ -1,6 +1,8 @@
 # Probationary period 1 submission
 
-The English report contains eleven ordered main sections, a contents list and two appendices. Text is black; original colors of screenshots, diagrams and table backgrounds are preserved. Unknown personal details are not invented.
+The English report contains an academic title page, submission summary, a detailed contents list, eleven ordered chapters and two appendices. Text is black; screenshot and diagram colors are preserved. Academic tables have white backgrounds and thin horizontal rules. Unknown personal details are not invented.
+
+The PDF has plain Roman front-matter and Arabic chapter page numbers, without the branded AITU Career footer. The Word copy has native headings and an editable contents field; update the contents fields after editing.
 
 - Form report upload: [SE-2425_Kozhabek_ProbPeriod1.pdf](SE-2425_Kozhabek_ProbPeriod1.pdf).
 - Editable report: [report.docx](report.docx); [HTML](report.html); [PDF](report.pdf).
