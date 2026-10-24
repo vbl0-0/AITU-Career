@@ -79,6 +79,9 @@ The dossier covers proposal, relevance, literature, existing systems, technology
 choices, requirements, architecture, prototype, evaluation, management/risks and
 review status. According to the team's 24 October clarification, interviews and
 supervisor feedback are optional; no interview or approval evidence is invented.
+Supervisor messages dated 24 October at 15:28 and 15:29 are now recorded with a
+response matrix. AI scope, evaluation and contribution history are clarified;
+independent GitHub peer review remains a next-stage action.
 The public prototype is a screen walkthrough of actual captures. Run the full
 authenticated application locally using the development guide.
 The deadline stated in the announcement is **24 October 2026, before 18:00 UTC+5**.

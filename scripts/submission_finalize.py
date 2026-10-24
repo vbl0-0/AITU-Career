@@ -111,4 +111,7 @@ def finalize_sections(sources, sections, cfg, root):
         ]),
         paragraph('Report upload filename: ' + cfg['report_upload_filename'] + '. Deadline: 24 October 2026 before 18:00 UTC+5. Known fields are completed; any genuinely unknown personal information stays blank. The package does not assert that the form has already been submitted.'),
     ]
+    if cfg.get('supervisor_feedback_record'):
+        from submission_feedback import apply_supervisor_feedback
+        return apply_supervisor_feedback(sources, sections, cfg, root)
     return sources, sections

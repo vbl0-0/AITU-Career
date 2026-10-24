@@ -22,9 +22,12 @@
   "repository_url": "https://github.com/vbl0-0/AITU-Career",
   "tracker_url": "https://github.com/users/vbl0-0/projects/1",
   "submission_tag": "prob-period-1",
+  "previous_submission_tag": "prob-period-1-before-feedback-20261024",
   "prototype_url": "https://vbl0-0.github.io/AITU-Career/",
   "report_upload_filename": "SE-2425_Kozhabek_ProbPeriod1.pdf",
-  "report_status": "Probationary period 1 submission. Current implementation and verification evidence are documented. Interviews and supervisor feedback are optional; no such evidence or approval is claimed.",
+  "report_status": "Revised after supervisor feedback of 24 October 2026. AI scope, evaluation protocol and contribution evidence are clarified. Independent matching evaluation and GitHub peer review remain next-stage actions.",
+  "report_revision": "Supervisor feedback revision — 24 October 2026",
+  "supervisor_feedback_record": "docs/pre-defense-1/evidence/supervisor-feedback-2026-10-24.json",
   "interviews_required": false,
   "supervisor_feedback_required": false,
   "requirement_clarification": {
@@ -35,7 +38,9 @@
   "form_url": "https://forms.cloud.microsoft/r/Yy6AXT5pe3",
   "deadline": "2026-10-24T18:00:00+05:00",
   "interview_evidence": [],
-  "supervisor_feedback_evidence": [],
+  "supervisor_feedback_evidence": [
+    "evidence/supervisor-feedback-2026-10-24.json"
+  ],
   "team_size": 2,
   "report_date": "24 October 2026"
 }

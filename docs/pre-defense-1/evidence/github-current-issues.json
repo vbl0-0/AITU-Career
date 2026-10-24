@@ -2,8 +2,8 @@
   "checked_on": "2026-10-24",
   "repository": "vbl0-0/AITU-Career",
   "counts": {
-    "completed": 13,
-    "not_planned": 2,
+    "completed": 14,
+    "not_planned": 1,
     "open": 3
   },
   "issues": [
@@ -485,13 +485,13 @@
     },
     {
       "number": 15,
-      "title": "[AITU-15] Optional supervisor feedback (not required for period 1)",
+      "title": "[AITU-15] Record received supervisor feedback and response",
       "html_url": "https://github.com/vbl0-0/AITU-Career/issues/15",
       "state": "closed",
-      "state_reason": "not_planned",
-      "body": "## Requirement clarification ? 24 October 2026\nThe team clarified that this activity is optional for the current submission. No interview or supervisor feedback evidence was obtained or fabricated. Closed as **not planned for this submission**, not as completed work. It may be reopened for a later stage.\n\n## Expected outcome\nRetain actual comments on deliverables and decisions, the reviewed version and a response decision for each comment.\n\n## Acceptance criteria\n- Retain actual comments on deliverables and decisions, the reviewed version and a response decision for each comment.\n\n## Traceability\nReport requirement/section: 11\n\n## Planning\nDue date: 2026-10-23\nSuggested work area: Coordination / supervisor\n\n## Evidence\nLink actual artifacts, commits and review records before marking this task complete.\n\nLocal planning reference: PLAN-15\n\n## Migration reference\nOriginal task: https://aitu-career-diploma.youtrack.cloud/issue/AITU-15\nPlanned owner: Zhan\nOriginal priority: Critical\nOriginal due date: 2026-10-23\n\nMigration snapshot: 19 October 2026. Status copied as To Do; completion must be supported by actual evidence.",
+      "state_reason": "completed",
+      "body": "## Current evidence ? 24 October 2026\nSupervisor messages at 15:28 and 15:29 were provided by Ayadil and are transcribed in evidence/supervisor-feedback-2026-10-24.json. Section 11 records the actual assessment and the response to comments. Feedback collection is now completed. Independent peer review and matching-quality experiments remain separate next-stage actions. The messages do not identify an exact reviewed commit.\n\n## Earlier optional-scope planning (historical)\n## Requirement clarification ? 24 October 2026\nThe team clarified that this activity is optional for the current submission. No interview or supervisor feedback evidence was obtained or fabricated. Closed as **not planned for this submission**, not as completed work. It may be reopened for a later stage.\n\n## Expected outcome\nRetain actual comments on deliverables and decisions, the reviewed version and a response decision for each comment.\n\n## Acceptance criteria\n- Retain actual comments on deliverables and decisions, the reviewed version and a response decision for each comment.\n\n## Traceability\nReport requirement/section: 11\n\n## Planning\nDue date: 2026-10-23\nSuggested work area: Coordination / supervisor\n\n## Evidence\nLink actual artifacts, commits and review records before marking this task complete.\n\nLocal planning reference: PLAN-15\n\n## Migration reference\nOriginal task: https://aitu-career-diploma.youtrack.cloud/issue/AITU-15\nPlanned owner: Zhan\nOriginal priority: Critical\nOriginal due date: 2026-10-23\n\nMigration snapshot: 19 October 2026. Status copied as To Do; completion must be supported by actual evidence.",
       "created_at": "2026-10-22T12:10:07Z",
-      "updated_at": "2026-10-23T21:44:32Z",
+      "updated_at": "2026-10-24T11:19:36Z",
       "closed_at": "2026-10-23T21:44:32Z",
       "assignees": [
         {
@@ -525,8 +525,8 @@
       "state_reason": "completed",
       "body": "## Expected outcome\nComplete confirmed identity/contribution fields, document actual checks and limitations, preserve editable English Word and matching PDF exports, and use the required prob-period-1 version links. Include real feedback and linked revisions only if feedback is actually received; it is optional for this submission.\n\n## Acceptance criteria\n- Complete confirmed identity/contribution fields, document actual checks and limitations, preserve editable English Word and matching PDF exports, and use the required prob-period-1 version links. Include real feedback and linked revisions only if feedback is actually received; it is optional for this submission.\n\n## Requirement clarification ? 24 October 2026\nThe team reported that interviews and supervisor feedback are optional. This changes the current submission scope; it is not an approval or a fabricated feedback record.\n\n## Historical planning text (superseded where it makes optional evidence mandatory)\n## Expected outcome\nLink revisions to actual feedback. Complete confirmed identity fields and regenerate reviewed final Word/PDF files.\n\n## Acceptance criteria\n- Link revisions to actual feedback. Complete confirmed identity fields and regenerate reviewed final Word/PDF files.\n\n## Traceability\nReport requirement/section: 11; Appendix B\n\n## Planning\nDue date: 2026-10-23\nSuggested work area: Team\n\n## Evidence\nLink actual artifacts, commits and review records before marking this task complete.\n\nLocal planning reference: PLAN-16\n\n## Migration reference\nOriginal task: https://aitu-career-diploma.youtrack.cloud/issue/AITU-16\nPlanned owner: Zhan\nOriginal priority: Critical\nOriginal due date: 2026-10-23\n\nMigration snapshot: 19 October 2026. Status copied as To Do; completion must be supported by actual evidence.",
       "created_at": "2026-10-22T12:10:07Z",
-      "updated_at": "2026-10-23T21:48:05Z",
-      "closed_at": "2026-10-23T21:48:05Z",
+      "updated_at": "2026-10-24T11:19:38Z",
+      "closed_at": "2026-10-24T11:19:38Z",
       "assignees": [
         {
           "login": "igiiaw",

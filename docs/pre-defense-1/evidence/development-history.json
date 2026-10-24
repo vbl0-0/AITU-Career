@@ -1,0 +1,84 @@
+{
+  "recorded_on": "2026-10-24",
+  "source": "Existing Git history of the pre-feedback prob-period-1 snapshot; dates and authors were read, not reconstructed.",
+  "baseline_commit": "088bf4c46f04ad97927852bd7a930e90012a3e1d",
+  "commits": [
+    {
+      "commit": "78f11bdf6cf0698b5607f10b3b915f2c558505b9",
+      "author_date": "2026-10-23T15:45:07+05:00",
+      "author": "Ayadil",
+      "subject": "AITU-12: Prepare shared repository metadata",
+      "url": "https://github.com/vbl0-0/AITU-Career/commit/78f11bdf6cf0698b5607f10b3b915f2c558505b9"
+    },
+    {
+      "commit": "c8ec0f66864749f2520e1b218d11337d1ee97408",
+      "author_date": "2026-10-23T16:16:07+05:00",
+      "author": "Ayadil",
+      "subject": "AITU-14: Automate project issue statuses from branches and pull requests",
+      "url": "https://github.com/vbl0-0/AITU-Career/commit/c8ec0f66864749f2520e1b218d11337d1ee97408"
+    },
+    {
+      "commit": "87bb0f6b9b709540f57581a2a31ac1ccbb4e1675",
+      "author_date": "2026-10-23T16:17:45+05:00",
+      "author": "Ayadil",
+      "subject": "AITU-14: Clarify authorization for a user-owned GitHub Project",
+      "url": "https://github.com/vbl0-0/AITU-Career/commit/87bb0f6b9b709540f57581a2a31ac1ccbb4e1675"
+    },
+    {
+      "commit": "77176520a78dad03c56613bd1ba9aa155b6bf808",
+      "author_date": "2026-10-23T16:53:44+05:00",
+      "author": "Амантай Жан Әділұлы",
+      "subject": "AITU-8: Import existing frontend module and browser checks",
+      "url": "https://github.com/vbl0-0/AITU-Career/commit/77176520a78dad03c56613bd1ba9aa155b6bf808"
+    },
+    {
+      "commit": "6c434f21515a852c4c517dfd21a71ff9d9cf8361",
+      "author_date": "2026-10-24T01:51:32+05:00",
+      "author": "Қожабек Аяділ Нұрланұлы",
+      "subject": "AITU-12: Import backend API and database migrations",
+      "url": "https://github.com/vbl0-0/AITU-Career/commit/6c434f21515a852c4c517dfd21a71ff9d9cf8361"
+    },
+    {
+      "commit": "0b8c8bb4bd09e3d077f09e1e5c550a433d0e6ee0",
+      "author_date": "2026-10-24T01:51:34+05:00",
+      "author": "Қожабек Аяділ Нұрланұлы",
+      "subject": "AITU-9: Add backend regression tests and container configuration",
+      "url": "https://github.com/vbl0-0/AITU-Career/commit/0b8c8bb4bd09e3d077f09e1e5c550a433d0e6ee0"
+    },
+    {
+      "commit": "c12021ff8561b0129c317de90695ac2d2c157e86",
+      "author_date": "2026-10-24T01:51:50+05:00",
+      "author": "Амантай Жан Әділұлы",
+      "subject": "AITU-4: Import research references and implementation documentation",
+      "url": "https://github.com/vbl0-0/AITU-Career/commit/c12021ff8561b0129c317de90695ac2d2c157e86"
+    },
+    {
+      "commit": "203f7c7e78788cadf17bbff0e2b1166c99f606fd",
+      "author_date": "2026-10-24T01:51:52+05:00",
+      "author": "Амантай Жан Әділұлы",
+      "subject": "AITU-16: Import editable report generation sources",
+      "url": "https://github.com/vbl0-0/AITU-Career/commit/203f7c7e78788cadf17bbff0e2b1166c99f606fd"
+    },
+    {
+      "commit": "26c86057eb77dced7278224a7cc8b0b39a77697d",
+      "author_date": "2026-10-24T02:43:53+05:00",
+      "author": "Қожабек Аяділ Нұрланұлы",
+      "subject": "AITU-7: Publish reproducible startup and reviewed architecture",
+      "url": "https://github.com/vbl0-0/AITU-Career/commit/26c86057eb77dced7278224a7cc8b0b39a77697d"
+    },
+    {
+      "commit": "d308bb1f16dc738b3d163110382a787c9b19a981",
+      "author_date": "2026-10-24T02:45:43+05:00",
+      "author": "Амантай Жан Әділұлы",
+      "subject": "AITU-16: Publish the checked English submission report and evidence",
+      "url": "https://github.com/vbl0-0/AITU-Career/commit/d308bb1f16dc738b3d163110382a787c9b19a981"
+    },
+    {
+      "commit": "adc5d46c4ad2d852cfe37a168ecc3289bc88487f",
+      "author_date": "2026-10-24T02:53:23+05:00",
+      "author": "Амантай Жан Әділұлы",
+      "subject": "AITU-17: Refresh genuine task evidence and freeze submission artifacts",
+      "url": "https://github.com/vbl0-0/AITU-Career/commit/adc5d46c4ad2d852cfe37a168ecc3289bc88487f"
+    }
+  ]
+}
