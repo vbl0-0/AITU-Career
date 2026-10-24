@@ -11,6 +11,8 @@ review = json.loads((OUT / 'evidence/ui-review/review.json').read_text(encoding=
 escape = html.escape
 repo = cfg['repository_url']
 version = repo + '/tree/' + cfg['submission_tag']
+counts = json.loads((OUT / 'evidence/github-current-issues.json').read_text(encoding='utf-8'))['counts']
+feedback_notice = ('Supervisor feedback received on 24 October 2026 is recorded in Section 11. AI scope, the evaluation protocol and delivery evidence have been clarified; actual GitHub peer review and independent matching evaluation remain planned.' if cfg.get('supervisor_feedback_record') else 'Supervisor feedback is optional and no feedback record is claimed.')
 
 steps = [
     ('Dashboard', 'Readiness explanation, ranked vacancies and skill gaps', '/dashboard'),
@@ -38,6 +40,8 @@ checks = ''.join('<tr><td>'+escape(c['command'])+'</td><td>'+escape(c['result'])
 
 names = '\n\n'.join(str(i+1)+') '+m['name']+' — '+m['group']+' — '+m['github']+'\n'+m['contribution'] for i,m in enumerate(cfg['members']))
 answers = ('FORM ANSWERS — one representative for both members\n\nTopic:\n'+cfg['title']+'\n\nSupervisor:\n'+cfg['supervisor']+' — '+cfg['supervisor_position']+'\n\n4. Repository URL:\n'+repo+'\n\n5. Tagged project version URL:\n'+version+'\n\n6. Responsibilities and contributions:\n'+names+'\n\nTask references: Ayadil — GitHub issues #7, #9, #12, #14; Zhan — #4, #5, #8, #16, #17. GitHub Projects is used as the permitted tracker alternative; the original YouTrack IDs are retained in issue descriptions. Dates and links document actual publication. No independent initial authorship or human peer approval is inferred from account attribution.\n\n7. Current project status, limitations and next steps:\nThe local React/FastAPI/PostgreSQL prototype implements registration, authentication and roles, graduate profiles and portfolio CRUD, vacancy browsing/saving, weighted skill matching with matched/partial/missing explanations, readiness components, recommendations, administration and Kazakh/Russian/English interfaces. Verification passed: 60 backend tests, 20 browser tests, 459 translation keys, production build and Alembic consistency. The public screen walkthrough is '+cfg['prototype_url']+' . The complete authenticated application is reproducible locally. Vacancies are fictional demonstration data; live HeadHunter access was unavailable. The real embedding model, Docker runtime and independent ranking-quality evaluation have not been exercised. Next phase: independent relevance labels, baseline/latency experiments and authorized live vacancy sourcing. Interviews and supervisor feedback are optional according to the team clarification; none are fabricated.\n\n8. Upload board/task PDF:\ntracker-evidence.pdf (one PDF, maximum 10 MB)\n\n9. Upload consolidated report PDF:\n'+cfg['report_upload_filename']+' (one PDF, maximum 100 MB)\n\nFinal page:\nIts requirements could not be read through the available automated form access. Check it in your normal signed-in browser. Do not treat this preparation as a submitted response. Retain the actual confirmation after submitting before 18:00 UTC+5 on 24 October 2026.\n')
+if cfg.get('supervisor_feedback_record'):
+    answers = answers.replace('Interviews and supervisor feedback are optional according to the team clarification; none are fabricated.', 'Interviews remain optional and were not conducted. '+feedback_notice)
 (OUT / 'FORM_ANSWERS.txt').write_text(answers, encoding='utf-8')
 
 index = '''<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AITU Career — prototype and submission materials</title><style>
@@ -64,9 +68,12 @@ The application source, setup scripts and migration instructions are in the repo
 
 Interviews and supervisor feedback are optional according to the team's 24 October clarification; none are fabricated. Independent matching-quality evaluation, real embedding-model evaluation, Docker runtime and live HeadHunter access remain separate limitations/next-stage work. The representative still needs to inspect the final form page, upload the two PDFs and retain the actual submission confirmation before 18:00 UTC+5 on 24 October 2026.
 
-Current tracker: 13 completed issues; two optional activities closed as not planned; three open issues (#10/#11 are later-stage evaluation, #18 is actual submission). GitHub's built-in closure workflow places both completed and not-planned cards in Done; the state reason and optional task titles distinguish activities that were not performed.
+Current tracker: {completed} completed issues; {not_planned} optional activities closed as not planned; {open} open issues (#10/#11 are later-stage evaluation, #18 is actual submission). GitHub's built-in closure workflow places both completed and not-planned cards in Done; the state reason distinguishes activities that were not performed.
 
 Current issue state is in [github-current-issues.json](evidence/github-current-issues.json) and the refreshed GitHub screenshots. The dated YouTrack export, `tasks.csv`, `youtrack-plan.json` and 22 October migration snapshot are historical planning/migration evidence, not current completion claims.
 '''
+readme = readme.format(**counts)
+if cfg.get('supervisor_feedback_record'):
+    readme += '\n'+feedback_notice+'\n'
 (OUT / 'README.md').write_text(readme, encoding='utf-8')
 print('Prepared public screen viewer, targeted UI report, validation page, form answers and package README.')

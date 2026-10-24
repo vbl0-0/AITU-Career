@@ -23,9 +23,12 @@
     "repository_url": "https://github.com/vbl0-0/AITU-Career",
     "tracker_url": "https://github.com/users/vbl0-0/projects/1",
     "submission_tag": "prob-period-1",
+    "previous_submission_tag": "prob-period-1-before-feedback-20261024",
     "prototype_url": "https://vbl0-0.github.io/AITU-Career/",
     "report_upload_filename": "SE-2425_Kozhabek_ProbPeriod1.pdf",
-    "report_status": "Probationary period 1 submission. Current implementation and verification evidence are documented. Interviews and supervisor feedback are optional; no such evidence or approval is claimed.",
+    "report_status": "Revised after supervisor feedback of 24 October 2026. AI scope, evaluation protocol and contribution evidence are clarified. Independent matching evaluation and GitHub peer review remain next-stage actions.",
+    "report_revision": "Supervisor feedback revision — 24 October 2026",
+    "supervisor_feedback_record": "docs/pre-defense-1/evidence/supervisor-feedback-2026-10-24.json",
     "interviews_required": false,
     "supervisor_feedback_required": false,
     "requirement_clarification": {
@@ -36,7 +39,9 @@
     "form_url": "https://forms.cloud.microsoft/r/Yy6AXT5pe3",
     "deadline": "2026-10-24T18:00:00+05:00",
     "interview_evidence": [],
-    "supervisor_feedback_evidence": [],
+    "supervisor_feedback_evidence": [
+      "evidence/supervisor-feedback-2026-10-24.json"
+    ],
     "team_size": 2,
     "report_date": "24 October 2026"
   },
@@ -705,6 +710,57 @@
         {
           "type": "p",
           "text": "Readiness is an internal heuristic: market 60%, projects 15%, experience 10%, certificates 5% and education 10%, with configurable normalized weights. Market uses up to five highest-scoring target-role vacancies; relevant experience is capped at 180 non-overlapping days. These weights have not been empirically validated as predictors of employment."
+        },
+        {
+          "type": "h3",
+          "text": "AI functionality: implemented baseline and optional learned extension"
+        },
+        {
+          "type": "p",
+          "text": "The implemented decision-support baseline is deterministic: it extracts known skill terms and aliases, combines profile evidence, scores vacancy requirements and derives gap-based actions. This is a knowledge-based matching pipeline, not a trained employment predictor or a generative assistant. The learned AI extension is a local sentence-embedding adapter; it is disabled in the verified configuration. The report therefore separates working rule-based functionality from available but unevaluated machine-learning functionality."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Capability",
+            "Actual mechanism and output",
+            "Evidence / current status"
+          ],
+          "rows": [
+            [
+              "Skill extraction and normalization",
+              "Whole-term catalogue/alias matching in project descriptions, experience text and certificate names; canonical skill IDs and evidence sources are retained.",
+              "extract_skills() and competencies(); implemented and covered by tests. This is not an LLM or a general CV parser."
+            ],
+            [
+              "Proficiency-aware vacancy matching",
+              "Requirement weights and stored skill levels produce a coverage score and matched/partial/missing groups. Inferred evidence contributes at most 0.5; no requirements produce a null score.",
+              "score_requirements() and analyze(); implemented deterministic baseline, algorithm weighted-skills-1.0."
+            ],
+            [
+              "Career recommendations",
+              "Missing and partial requirements are sorted by importance and converted into skill-specific development actions. Readiness combines profile evidence with vacancy coverage.",
+              "analyze() and career_summary(); implemented rules, not learned generation or a probability of hiring."
+            ],
+            [
+              "Semantic skill matching",
+              "Optional SentenceTransformer encodes skill names; normalized dot-product similarity selects a candidate above the configured threshold. Semantic evidence remains partial.",
+              "semantic_candidate(); adapter exists, default threshold 0.85. Real model disabled/unavailable in the verified run; controlled tests and fallback only."
+            ],
+            [
+              "Learned ranking or employment prediction",
+              "A model trained on local hiring outcomes, validated success probabilities and an adaptive recommender are not implemented.",
+              "Future research possibilities; no effectiveness result is claimed."
+            ]
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Illustrative calculation, not a real student result: Python level 3 of required 3 with weight 2 contributes 2; SQL level 1 of required 2 with weight 2 contributes 1; absent Git with weight 1 contributes 0. The score is 100 × (2 + 1 + 0) / (2 + 2 + 1) = 60%. Python is matched, SQL is partial and Git is missing. This demonstrates an explainable calculation, not measured recommendation accuracy."
+        },
+        {
+          "type": "p",
+          "text": "Implementation reference: https://github.com/vbl0-0/AITU-Career/blob/prob-period-1/backend/app/ai/matching.py. Matching correctness tests verify rules and boundaries. Only an independent relevance experiment can establish whether this approach ranks useful vacancies better than simpler alternatives."
         }
       ]
     },
@@ -969,56 +1025,79 @@
           ]
         },
         {
-          "type": "p",
-          "text": "Proposed evaluation data: 20 anonymized or synthetic profiles and 50 legally usable vacancies across four or five IT directions. Fix the dataset version, seed and hashes. Ten profiles form development data (500 pairs); the remaining ten form held-out test data (500 pairs). Two experts independently label each pair 0/1/2. Preserve disagreements before adjudication. Do not tune the dictionary or threshold on held-out judgments. Shared vacancies mean this protocol assesses new-profile rather than unseen-vacancy generalization."
+          "type": "h3",
+          "text": "Operational evaluation protocol in response to SUP-01 and SUP-02"
         },
         {
           "type": "p",
-          "text": "B0: exact case-normalized skill-name overlap, without aliases, as an unweighted fraction. B1: the current alias dictionary, proficiency levels and weights. B2: B1 with optional semantic evidence. Use identical candidate vacancies, profiles and labels; choose the semantic threshold on development data only. Ablations without levels and without inferred evidence help explain the source of any improvement."
+          "text": "The following is a next-stage protocol, not a completed experiment. Freeze 20 anonymized or synthetic profiles and 50 legally usable vacancies, using at least five candidates per evaluated profile. Use ten profiles for development and ten held-out profiles for testing; store IDs, source permissions, split membership and data hashes. This produces 500 development and 500 held-out profile–vacancy pairs. Where development and test share vacancies, the stated claim concerns new profiles rather than unseen vacancies."
         },
         {
           "type": "table",
           "headers": [
-            "Metric",
-            "Calculation and conditions",
-            "Decision criterion / status"
+            "Comparison",
+            "Controlled change",
+            "Result status"
           ],
           "rows": [
             [
-              "Precision@5",
-              "Fraction of top-five items labeled 2; macro-average over test profiles.",
-              "Measure B0/B1/B2; no values claimed."
+              "B0 — exact overlap",
+              "Case-normalized canonical skill-name overlap, without aliases, proficiency levels or requirement weighting.",
+              "Not yet measured."
             ],
             [
-              "nDCG@5",
-              "Gain = 2^rel−1; ideal ranking from the same labels.",
-              "Primary metric; hypothesis B1>B0. Preserve negative outcomes."
+              "B1 — current baseline",
+              "Current catalogue/aliases, evidence levels and requirement weights, with semantic inference disabled.",
+              "Implementation verified; ranking quality not yet measured."
             ],
             [
-              "Extraction F1",
-              "Canonical-skill exact match against reference labels; micro and per-language results.",
-              "Separate extraction quality from ranking quality."
-            ],
-            [
-              "Expert agreement",
-              "Weighted Cohen’s κ before resolving disagreements.",
-              "Report ambiguity rather than hiding disagreement."
-            ],
-            [
-              "Latency",
-              "30 warm-up and 200 measured requests; median/p95 on the same CPU.",
-              "Keyword p95 target ≤500 ms; measurement outstanding."
-            ],
-            [
-              "Explanation comprehension",
-              "Five to eight volunteers identify gaps and interpret the score.",
-              "Pilot target: ≥80% correct responses; not representative evidence."
+              "B2 — semantic extension",
+              "B1 plus the optional local embedding adapter, with model revision and threshold fixed before the held-out run.",
+              "Real model not evaluated. If it cannot be loaded, record B2 as not run; do not substitute a fabricated score."
             ]
           ]
         },
         {
           "type": "p",
-          "text": "Record CPU/RAM, Python/Node/PostgreSQL versions, model revision, threshold, cache state, algorithm version and data hash. Report paired nDCG differences and bootstrap intervals over test profiles with a fixed seed (for example 42 and 1,000 resamples). Small samples limit statistical power; no significance claim is justified without calculation."
+          "text": "Two raters independent of the matching implementation should assign relevance grades 0 (irrelevant), 1 (partly relevant) and 2 (suitable), without seeing algorithm scores. Store both original ratings and weighted Cohen's kappa before adjudication. Rater identities and actual dates remain unfilled until the work occurs. Tune aliases and semantic thresholds only on development data; use the same eligible candidates for all methods and break score ties by vacancy ID."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Measure",
+            "Calculation / procedure",
+            "Decision and retained artifact"
+          ],
+          "rows": [
+            [
+              "Ranking relevance",
+              "Precision@5 = count of grade-2 vacancies in the first five / 5. nDCG@5 uses gains 2^grade − 1 and log2(rank + 1) discount, normalized by the ideal top-five ranking.",
+              "Macro-average per held-out profile. Profiles with zero ideal gain have undefined nDCG and are counted separately; report their number and candidate coverage. Preserve per-profile rankings and labels."
+            ],
+            [
+              "Extraction accuracy",
+              "Micro precision, recall and F1 against annotated canonical skill mentions; show separate Kazakh/Russian/English results and representative errors.",
+              "Keep span/skill reference annotations and the exact normalization rules. No extraction-accuracy figure is currently claimed."
+            ],
+            [
+              "Efficiency",
+              "Same CPU, RAM, data, process and cache conditions; 30 warm-up requests, then 200 measured requests. Record median and p95, model loading separately, and errors.",
+              "Keyword p95 target is at most 500 ms. Pre-register a separate semantic latency/memory budget before comparing B2. Preserve request timings and environment details."
+            ],
+            [
+              "Uncertainty and adoption",
+              "Use seed 42 and 1,000 paired profile-level bootstrap resamples for the nDCG difference; report a 95% interval and Precision@5 changes.",
+              "Adopt an extension only if held-out nDCG improves with an interval above zero, Precision@5 does not deteriorate, its registered resource budget is met and functional regressions are absent. Otherwise retain the simpler method and report the negative outcome."
+            ]
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Execution responsibilities are planned: Zhan coordinates the dataset, annotation records and error analysis; Ayadil prepares the reproducible B0/B1/B2 runner, model/configuration hashes and latency measurements. Both inspect the held-out results and review each other's experiment changes. Independent raters must be recruited; account ownership or an AI-assisted check is not treated as expert relevance annotation. The tracker schedules label preparation in #10 and baseline/latency evaluation in #11 for the next stage."
+        },
+        {
+          "type": "p",
+          "text": "Expected evaluation artifacts: a dataset/split manifest, independent labels and agreement record, a committed comparison runner, environment/model configuration, per-profile rankings, metrics/timing files and an interpretation of errors and negative results. These artifacts are planned and are not listed as already available. The 60 backend and 20 browser tests establish implementation behavior, not AI effectiveness."
         },
         {
           "type": "p",
@@ -1031,22 +1110,25 @@
       "blocks": [
         {
           "type": "p",
-          "text": "The two accounts publish current module deliveries with actual dates. Account attribution documents delivery and verification; it does not reconstruct earlier development history or prove independent authorship of every line. Packaging, code assistance, verification and publication were assisted by OpenAI Codex. No human teammate approval or supervisor approval is claimed."
+          "text": "Responsibilities below are supported by dated account-linked delivery records. OpenAI Codex assisted implementation, packaging, technical verification and publication. These records establish what was delivered under each account; imported history alone does not establish exclusive original authorship or the time each person spent. Actual human peer review remains to be added in GitHub, as requested by the supervisor."
         },
         {
           "type": "table",
           "headers": [
-            "Member",
-            "Published responsibility and evidence"
+            "Participant / work area",
+            "Concrete delivered artifacts and traceability",
+            "Evidence limit"
           ],
           "rows": [
             [
-              "Қожабек Аяділ Нұрланұлы",
-              "Backend/API and migration delivery, backend regression tests and repository automation; publication and verification assisted by OpenAI Codex. Evidence: https://github.com/vbl0-0/AITU-Career/pull/19 ; https://github.com/vbl0-0/AITU-Career/pull/21 ; commits 6c434f2 and 0b8c8bb. These records describe current delivery, not exclusive initial authorship of all imported code."
+              "Қожабек Аяділ Нұрланұлы / @vbl0-0",
+              "Backend API/models/migrations: 6c434f2; regression tests/container setup: 0b8c8bb; architecture/startup delivery: 26c8605. Related PRs #19, #21, #23 and issues #7/#9/#12/#14.",
+              "AI-assisted current deliveries. No percentage, independent initial code authorship or unrecorded manual review is inferred."
             ],
             [
-              "Амантай Жан Әділұлы",
-              "Frontend, multilingual interface, research documentation and report-source delivery; publication and verification assisted by OpenAI Codex. Evidence: https://github.com/vbl0-0/AITU-Career/pull/20 ; https://github.com/vbl0-0/AITU-Career/pull/22 ; commits 7717652, c12021f and 203f7c7. These records describe current delivery, not exclusive initial authorship of all imported code."
+              "Амантай Жан Әділұлы / @igiiaw",
+              "Frontend/i18n/browser tests: 7717652; references/documentation: c12021f; report sources: 203f7c7; report/evidence exports: d308bb1 and adc5d46. Related PRs #20/#22/#24/#25 and issues #4/#5/#8/#16/#17.",
+              "AI-assisted current deliveries. Account attribution and module responsibility are distinguished from proof of who wrote every imported line."
             ]
           ]
         },
@@ -1097,49 +1179,99 @@
         },
         {
           "type": "p",
-          "text": "Tracker snapshot: 13 completed, 2 optional activities closed as not planned, and 3 open. GitHub's built-in closed-item workflow places both closure types in Done; the issue state reason distinguishes cancelled scope from performed work. Snapshot: https://github.com/vbl0-0/AITU-Career/blob/prob-period-1/docs/pre-defense-1/evidence/github-current-issues.json."
+          "text": "Tracker snapshot: 14 completed, 1 optional activities closed as not planned, and 3 open. GitHub's built-in closed-item workflow places both closure types in Done; the issue state reason distinguishes cancelled scope from performed work. Snapshot: https://github.com/vbl0-0/AITU-Career/blob/prob-period-1/docs/pre-defense-1/evidence/github-current-issues.json."
+        },
+        {
+          "type": "h3",
+          "text": "Development history supported by original Git metadata"
+        },
+        {
+          "type": "p",
+          "text": "The original Git metadata records repository setup, automation and frontend import on 23 October 2026, followed by backend, report-source, architecture and submission deliveries on 24 October 2026 (UTC+5 author timestamps). These are the real recorded publication stages; no earlier incremental history is reconstructed. The pre-feedback snapshot contains 11 non-merge commits, preserved with their original author dates and subjects: https://github.com/vbl0-0/AITU-Career/blob/prob-period-1/docs/pre-defense-1/evidence/development-history.json."
+        },
+        {
+          "type": "h3",
+          "text": "Peer review process to introduce in GitHub"
+        },
+        {
+          "type": "p",
+          "text": "The checked PRs #19–25 contain no submitted GitHub review records. Their merge status, automated tests and supervisor feedback are not peer approval. This remains an improvement action, not a completed feature. For the next substantive backend change, Zhan should review Ayadil's PR; for a frontend/report change, Ayadil should review Zhan's PR. Each reviewer personally inspects the diff, runs the relevant checks and records concrete comments and test evidence. The author links resulting fixes, and the reviewer rechecks before approval. Only actual actions may be recorded under a person's account."
+        },
+        {
+          "type": "p",
+          "text": "Use small task-focused PRs, a contribution log stating the participant's actual implementation/test/review actions and any AI assistance, and a checklist covering correctness, authorization/data handling, edge cases and regression evidence. Where repository settings support it, require one independent approval and passing relevant checks before merging; enabling that rule is planned, not claimed as already configured. Preserve review comments and resulting commits rather than creating approvals after the fact. Peer-review status evidence: https://github.com/vbl0-0/AITU-Career/blob/prob-period-1/docs/pre-defense-1/evidence/peer-review-status-2026-10-24.json."
         }
       ]
     },
     {
-      "title": "11. Review Status and Optional Supervisor Feedback",
+      "title": "11. Supervisor Feedback and Response to Comments",
       "blocks": [
         {
           "type": "p",
-          "text": "On 24 October 2026, the team clarified that user interviews and supervisor feedback are optional for this submission. This is a team-reported requirement clarification, not a recorded supervisor approval."
+          "text": "Supervisor feedback was supplied to the team on 24 October 2026. The following record reproduces the two messages transcribed by Ayadil, attributed to Оразова Арайлым Жанболаткызы (display name Arailym). The original private chat was not independently accessed and the messages do not identify an exact reviewed commit. Their positive assessment is recorded without turning it into an unconditional final approval."
+        },
+        {
+          "type": "h3",
+          "text": "SUP-01 — 24 October 2026, 15:28; original English message"
         },
         {
           "type": "p",
-          "text": "No substantive supervisor feedback has been supplied and no approval, signature, meeting or quotation is invented. The absence of optional feedback is not treated as an incomplete mandatory requirement. Independent human peer review is not claimed; available automated technical reviews and corrections are recorded on the actual GitHub issues and PRs."
+          "text": "“The team has made good progress in project analysis, system design, documentation, and initial implementation. The report, GitHub repository, task tracker, and prototype are well organized and generally meet the objectives of the current stage. For the next stage, the team should focus on further system testing, evaluating the matching approach, and improving development and code review practices.”"
+        },
+        {
+          "type": "h3",
+          "text": "SUP-02 — 24 October 2026, 15:29; English translation of the Russian message"
+        },
+        {
+          "type": "p",
+          "text": "“Overall, the team has worked well and the report is fairly complete. However, several aspects need improvement: make the AI functionality and the method for evaluating its effectiveness clearer. It is also important to show each participant's actual contribution, the development history, and to add peer review in GitHub.”"
+        },
+        {
+          "type": "p",
+          "text": "The original Russian text, English translation, times and source limitations are retained in https://github.com/vbl0-0/AITU-Career/blob/prob-period-1/docs/pre-defense-1/evidence/supervisor-feedback-2026-10-24.json."
+        },
+        {
+          "type": "p",
+          "text": "The previous prepared snapshot is retained at https://github.com/vbl0-0/AITU-Career/tree/prob-period-1-before-feedback-20261024. It is a preserved pre-feedback assembly, not a claim that the supervisor reviewed that exact commit. The current prob-period-1 package incorporates the reporting changes below before form submission."
         },
         {
           "type": "table",
           "headers": [
-            "Actual revision",
-            "Rationale and evidence"
+            "Supervisor comment",
+            "Change in this report",
+            "Implementation / next-stage status"
           ],
           "rows": [
             [
-              "Clarify optional interviews and supervisor feedback.",
-              "Team clarification relayed on 24 October 2026; Sections 2 and 11 now state the actual evidence status."
+              "Clarify the AI functionality.",
+              "Section 6 now distinguishes deterministic extraction/matching/recommendation rules, the optional embedding adapter and functionality that does not exist; includes a worked calculation and code reference.",
+              "Documentation updated. No new trained model or generative service is claimed."
             ],
             [
-              "Update current implementation verification.",
-              "60 backend tests, full browser tests, translation parity, production build and migration checks are recorded in the validation artifact."
+              "Explain how matching effectiveness will be evaluated.",
+              "Section 9 specifies B0/B1/B2, data splits, blind independent labels, metrics, latency conditions, adoption criteria and retained artifacts.",
+              "Protocol clarified. Independent quality and latency experiments remain planned in #10/#11."
             ],
             [
-              "Document real deliveries and contributions.",
-              "Merged PRs and original account-linked commits; Section 10 distinguishes publication from initial code authorship."
+              "Show each participant's actual contribution and development history.",
+              "Section 10 lists concrete account-linked artifacts, commit IDs, PRs, real author dates and limits of historical authorship attribution.",
+              "Published evidence documented. Subsequent contribution logs must record actual personal implementation, testing and review actions."
             ],
             [
-              "Use the required submission tag and accessible materials.",
-              "prob-period-1 links, public screen walkthrough, editable diagram sources and separate report/task PDFs."
+              "Add peer review and improve development practices.",
+              "Section 10 defines cross-review responsibilities, task-focused PRs, review evidence, follow-up fixes and a proposed independent-approval gate.",
+              "Not yet performed/configured. No GitHub peer approval is fabricated."
+            ],
+            [
+              "Continue system testing.",
+              "Section 9 preserves actual 60-backend/20-browser verification separately from independent model evaluation and identifies untested areas.",
+              "Current verification recorded; further regression coverage and quality experiments belong to the next stage."
             ]
           ]
         },
         {
           "type": "p",
-          "text": "If optional feedback is received later, record its actual date, reviewed version, comment, response and linked change. Do not retroactively attribute the current technical checks to the supervisor."
+          "text": "Documentation changes above address the current reporting comments. The remaining engineering and evaluation actions are explicitly prospective. Receiving supervisor feedback does not substitute for independent GitHub peer review, independent relevance labels or measured matching effectiveness."
         }
       ]
     },
@@ -1262,9 +1394,9 @@
               "Docker runtime and real embedding-model evaluation were not performed."
             ],
             [
-              "Optional interviews and feedback",
-              "Actual absence and team clarification recorded.",
-              "No fabricated interview, approval or review record."
+              "Interviews and supervisor feedback",
+              "No interviews; actual supervisor messages of 24 October and the response matrix are recorded in Section 11.",
+              "Evaluation and human peer review remain next-stage work."
             ],
             [
               "Task evidence PDF",

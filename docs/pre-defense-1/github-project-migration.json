@@ -374,8 +374,8 @@
     {
       "legacy_id": "AITU-15",
       "local_id": "PLAN-15",
-      "title": "[AITU-15] Optional supervisor feedback (not required for period 1)",
-      "body": "## Requirement clarification ? 24 October 2026\nThe team clarified that this activity is optional for the current submission. No interview or supervisor feedback evidence was obtained or fabricated. Closed as **not planned for this submission**, not as completed work. It may be reopened for a later stage.\n\n## Expected outcome\nRetain actual comments on deliverables and decisions, the reviewed version and a response decision for each comment.\n\n## Acceptance criteria\n- Retain actual comments on deliverables and decisions, the reviewed version and a response decision for each comment.\n\n## Traceability\nReport requirement/section: 11\n\n## Planning\nDue date: 2026-10-23\nSuggested work area: Coordination / supervisor\n\n## Evidence\nLink actual artifacts, commits and review records before marking this task complete.\n\nLocal planning reference: PLAN-15\n\n## Migration reference\nOriginal task: https://aitu-career-diploma.youtrack.cloud/issue/AITU-15\nPlanned owner: Zhan\nOriginal priority: Critical\nOriginal due date: 2026-10-23\n\nMigration snapshot: 19 October 2026. Status copied as To Do; completion must be supported by actual evidence.",
+      "title": "[AITU-15] Record received supervisor feedback and response",
+      "body": "## Current evidence ? 24 October 2026\nSupervisor messages at 15:28 and 15:29 were provided by Ayadil and are transcribed in evidence/supervisor-feedback-2026-10-24.json. Section 11 records the actual assessment and the response to comments. Feedback collection is now completed. Independent peer review and matching-quality experiments remain separate next-stage actions. The messages do not identify an exact reviewed commit.\n\n## Earlier optional-scope planning (historical)\n## Requirement clarification ? 24 October 2026\nThe team clarified that this activity is optional for the current submission. No interview or supervisor feedback evidence was obtained or fabricated. Closed as **not planned for this submission**, not as completed work. It may be reopened for a later stage.\n\n## Expected outcome\nRetain actual comments on deliverables and decisions, the reviewed version and a response decision for each comment.\n\n## Acceptance criteria\n- Retain actual comments on deliverables and decisions, the reviewed version and a response decision for each comment.\n\n## Traceability\nReport requirement/section: 11\n\n## Planning\nDue date: 2026-10-23\nSuggested work area: Coordination / supervisor\n\n## Evidence\nLink actual artifacts, commits and review records before marking this task complete.\n\nLocal planning reference: PLAN-15\n\n## Migration reference\nOriginal task: https://aitu-career-diploma.youtrack.cloud/issue/AITU-15\nPlanned owner: Zhan\nOriginal priority: Critical\nOriginal due date: 2026-10-23\n\nMigration snapshot: 19 October 2026. Status copied as To Do; completion must be supported by actual evidence.",
       "status": "To Do",
       "priority": "Critical",
       "due_date": "2026-10-23",
@@ -394,7 +394,7 @@
       "state": "closed",
       "url": "https://github.com/vbl0-0/AITU-Career/issues/15",
       "item_id": "PVTI_lAHODc8qX84BoOZjzhCsd2Y",
-      "state_reason": "not_planned",
+      "state_reason": "completed",
       "last_verified_on": "2026-10-24"
     },
     {
