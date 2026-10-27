@@ -1,0 +1,47 @@
+name: Matching evaluation checks
+
+on:
+  push:
+    branches: [main, 'AITU-*']
+    paths:
+      - 'backend/app/ai/**'
+      - 'backend/app/evaluation/**'
+      - 'backend/app/core/config.py'
+      - 'backend/evaluation/**'
+      - 'backend/tests/**'
+      - 'backend/requirements*.txt'
+      - '.github/workflows/matching-evaluation-checks.yml'
+  pull_request:
+    paths:
+      - 'backend/app/ai/**'
+      - 'backend/app/evaluation/**'
+      - 'backend/app/core/config.py'
+      - 'backend/evaluation/**'
+      - 'backend/tests/**'
+      - 'backend/requirements*.txt'
+      - '.github/workflows/matching-evaluation-checks.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  offline-evaluation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: backend/requirements.lock.txt
+      - run: python -m pip install -r backend/requirements.lock.txt
+      - name: Test metrics, dataset, runner and existing matching
+        working-directory: backend
+        run: python -m pytest tests/test_evaluation_metrics.py tests/test_evaluation_dataset.py tests/test_evaluation_runner.py tests/test_matching.py
+      - name: Run the explicitly synthetic smoke experiment without a database
+        working-directory: backend
+        run: python -m app.evaluation --dataset evaluation/synthetic-smoke.json --output "$RUNNER_TEMP/matching-evaluation-smoke" --allow-synthetic

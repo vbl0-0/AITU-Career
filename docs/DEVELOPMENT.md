@@ -183,6 +183,20 @@ python -c "from sentence_transformers import SentenceTransformer; SentenceTransf
 
 Для Docker установка библиотек включается через `INSTALL_SEMANTIC=true` при сборке. Модель необходимо предварительно загрузить в контейнер от appuser либо подключить подготовленный кеш в `/home/appuser/.cache/huggingface`; после этого перезапустить сервис. Большая модель не включена в стандартный образ.
 
+## Офлайн-оценка качества подбора
+
+Инструмент сравнения алгоритмов запускается без базы данных и без изменения сайта:
+
+```powershell
+cd backend
+..\.venv\Scripts\python.exe -m app.evaluation --dataset evaluation/synthetic-smoke.json --output ../.local/matching-evaluation/smoke --allow-synthetic
+```
+
+Включённый набор синтетический: он проверяет работу инструмента, а не качество
+подбора. Для исследования нужны независимые оценки из задачи #10. Формат данных,
+метрики, замеры времени и запуск B2 описаны в [MATCHING_EVALUATION.md](MATCHING_EVALUATION.md).
+Сданная версия `prob-period-1` остаётся неизменной.
+
 ## Тесты
 
 ```powershell
