@@ -2,6 +2,7 @@
 import csv
 import hashlib
 import json
+import logging
 import os
 from pathlib import Path
 import shutil
@@ -238,8 +239,12 @@ def test_disabled_or_unavailable_b2_is_never_reported_as_evaluated(dataset_file,
 
 
 @pytest.mark.parametrize('warmup', [0, 1])
-def test_runtime_semantic_fallback_warning_aborts_before_any_result_is_written(dataset_file, tmp_path, monkeypatch, warmup):
+def test_runtime_semantic_fallback_warning_aborts_before_any_result_is_written(dataset_file, tmp_path, monkeypatch, caplog, warmup):
     # Controlled guard test only: no genuine B2 model or model result is claimed.
+    # This test exercises diagnostic capture, unlike the strict error-path tests.
+    # API/migration logging configuration may have disabled this existing logger.
+    monkeypatch.setattr(runner.matching.LOGGER, 'disabled', False)
+    caplog.set_level(logging.WARNING, logger=runner.matching.LOGGER.name)
     monkeypatch.setattr(runner, '_semantic_metadata', lambda: {'test_guard_metadata': True})
     original = runner.rank_profile
 
@@ -254,6 +259,39 @@ def test_runtime_semantic_fallback_warning_aborts_before_any_result_is_written(d
     with pytest.raises(ValueError, match='No keyword fallback may be reported as B2'):
         experiment(dataset_file, output, baselines=('B2',), warmup=warmup)
     assert not output.exists()
+
+
+@pytest.mark.parametrize('logging_mode', ['error-level', 'disabled-logger', 'global-disable'])
+@pytest.mark.parametrize('warmup', [0, 1])
+def test_b2_inference_failure_aborts_even_when_fallback_logs_are_filtered(dataset_file, tmp_path, monkeypatch, logging_mode, warmup):
+    # Real production semantic_candidate/score_requirements path, controlled model
+    # failure only. This does not claim successful real-model evaluation.
+    class BrokenModel:
+        def encode(self, *args, **kwargs):
+            raise RuntimeError('Controlled model encoding failure')
+
+    monkeypatch.setattr(runner, '_semantic_metadata', lambda: {'controlled_preflight_for_test_only': True})
+    monkeypatch.setattr(runner.matching, 'semantic_model', lambda: BrokenModel())
+    logger = runner.matching.LOGGER
+    previous_level, previous_disabled = logger.level, logger.disabled
+    previous_global_disable = logging.root.manager.disable
+    handlers = list(logger.handlers)
+    if logging_mode == 'error-level':
+        logger.setLevel(logging.ERROR)
+    elif logging_mode == 'disabled-logger':
+        logger.disabled = True
+    else:
+        logging.disable(logging.CRITICAL)
+    output = tmp_path / 'result'
+    try:
+        with pytest.raises(ValueError, match='strict evaluation cannot use keyword fallback'):
+            experiment(dataset_file, output, baselines=('B2',), warmup=warmup)
+        assert not output.exists()
+        assert logger.handlers == handlers
+    finally:
+        logger.setLevel(previous_level)
+        logger.disabled = previous_disabled
+        logging.disable(previous_global_disable)
 
 
 def test_changing_rankings_between_repeats_fail_without_output(dataset_file, tmp_path, monkeypatch):
