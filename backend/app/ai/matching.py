@@ -2,6 +2,7 @@
 import logging
 import hashlib
 import json
+import math
 import re
 from collections import Counter
 from datetime import date
@@ -80,22 +81,30 @@ def semantic_model():
         return None
 
 
-def semantic_candidate(name, available):
+def semantic_candidate(name, available, *, strict=False):
     model = semantic_model()
-    if model is None or not available:
+    if model is None:
+        if strict:
+            raise ValueError('Semantic model unavailable; strict evaluation cannot use keyword fallback')
+        return None
+    if not available:
         return None
     try:
         vectors = model.encode([name] + [c['name'] for c in available], normalize_embeddings=True)
         similarity = vectors[1:] @ vectors[0]
         index = int(similarity.argmax())
+        if strict and not math.isfinite(float(similarity[index])):
+            raise ValueError('Semantic model returned a non-finite similarity')
         if float(similarity[index]) >= get_settings().semantic_threshold:
             return available[index], round(float(similarity[index]), 4)
-    except Exception:
+    except Exception as error:
+        if strict:
+            raise ValueError('Semantic inference failed; strict evaluation cannot use keyword fallback') from error
         LOGGER.warning('Semantic inference failed; using keyword fallback', exc_info=True)
     return None
 
 
-def score_requirements(available, requirements, semantic=False):
+def score_requirements(available, requirements, semantic=False, *, strict_semantic=False):
     by_id = {c['skill_id']: c for c in available}
     groups = {'matched': [], 'partial': [], 'missing': []}
     earned = total = 0.0
@@ -106,7 +115,8 @@ def score_requirements(available, requirements, semantic=False):
         similarity = None
         method = 'canonical'
         if competency is None and semantic:
-            candidate = semantic_candidate(requirement['name'], available)
+            candidate = (semantic_candidate(requirement['name'], available, strict=True)
+                         if strict_semantic else semantic_candidate(requirement['name'], available))
             if candidate:
                 competency, similarity = candidate
                 method = 'semantic'
