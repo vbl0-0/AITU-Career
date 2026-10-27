@@ -39,9 +39,15 @@ jobs:
           cache: pip
           cache-dependency-path: backend/requirements.lock.txt
       - run: python -m pip install -r backend/requirements.lock.txt
-      - name: Test metrics, dataset, runner and existing matching
+      - name: Test annotation, metrics, dataset, runner and existing matching
         working-directory: backend
-        run: python -m pytest tests/test_evaluation_metrics.py tests/test_evaluation_dataset.py tests/test_evaluation_runner.py tests/test_matching.py
+        run: >-
+          python -m pytest tests/test_annotation_agreement.py tests/test_annotation_html.py
+          tests/test_annotation_workflow.py tests/test_evaluation_metrics.py
+          tests/test_evaluation_dataset.py tests/test_evaluation_runner.py tests/test_matching.py
       - name: Run the explicitly synthetic smoke experiment without a database
         working-directory: backend
         run: python -m app.evaluation --dataset evaluation/synthetic-smoke.json --output "$RUNNER_TEMP/matching-evaluation-smoke" --allow-synthetic
+      - name: Prepare blank blind annotation templates without a database
+        working-directory: backend
+        run: python -m app.evaluation.annotation prepare --source evaluation/annotation-source.example.json --output "$RUNNER_TEMP/annotation-packet" --assessors R1 R2 --seed 42

@@ -1,0 +1,245 @@
+{
+  "schema_version": 1,
+  "dataset_id": "synthetic-pipeline-smoke-v1-NOT-QUALITY-EVIDENCE",
+  "kind": "synthetic",
+  "catalog": [
+    {
+      "id": 1,
+      "name": "Python",
+      "aliases": [
+        "Python programming"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "SQL",
+      "aliases": [
+        "Structured Query Language"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "JavaScript",
+      "aliases": [
+        "JS development"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Docker",
+      "aliases": []
+    },
+    {
+      "id": 5,
+      "name": "Git",
+      "aliases": []
+    },
+    {
+      "id": 6,
+      "name": "Kotlin",
+      "aliases": []
+    }
+  ],
+  "jobs": [
+    {
+      "id": "V001",
+      "title": "Fictional Python API role",
+      "requirements": [
+        {
+          "skill_id": 1,
+          "level": 2,
+          "weight": 3.0,
+          "required": true
+        },
+        {
+          "skill_id": 2,
+          "level": 2,
+          "weight": 2.0,
+          "required": true
+        },
+        {
+          "skill_id": 5,
+          "level": 1,
+          "weight": 2.0,
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "V002",
+      "title": "Fictional data role",
+      "description": "Python programming and SQL",
+      "requirements": []
+    },
+    {
+      "id": "V003",
+      "title": "Fictional infrastructure role",
+      "requirements": [
+        {
+          "skill_id": 4,
+          "level": 2,
+          "weight": 3.0,
+          "required": true
+        },
+        {
+          "skill_id": 5,
+          "level": 1,
+          "weight": 2.0,
+          "required": true
+        },
+        {
+          "skill_id": 1,
+          "level": 1,
+          "weight": 2.0,
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "V004",
+      "title": "Fictional mobile role",
+      "requirements": [
+        {
+          "skill_id": 6,
+          "level": 2,
+          "weight": 2.0,
+          "required": true
+        },
+        {
+          "skill_id": 5,
+          "level": 1,
+          "weight": 2.0,
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "V005",
+      "title": "Fictional web role",
+      "requirements": [
+        {
+          "skill_id": 3,
+          "level": 2,
+          "weight": 3.0,
+          "required": true
+        },
+        {
+          "skill_id": 5,
+          "level": 1,
+          "weight": 2.0,
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "V006",
+      "title": "Fictional role without skill requirements"
+    }
+  ],
+  "profiles": [
+    {
+      "id": "P001",
+      "split": "dev",
+      "language": "en",
+      "candidate_job_ids": [
+        "V001",
+        "V002",
+        "V003",
+        "V004",
+        "V005",
+        "V006"
+      ],
+      "skills": [
+        {
+          "skill_id": 1,
+          "level": 2
+        },
+        {
+          "skill_id": 5,
+          "level": 1
+        }
+      ],
+      "projects": [
+        {
+          "name": "Fictional API exercise",
+          "description": "SQL in a small API",
+          "skill_ids": []
+        }
+      ]
+    },
+    {
+      "id": "P002",
+      "split": "test",
+      "language": "ru",
+      "candidate_job_ids": [
+        "V001",
+        "V002",
+        "V003",
+        "V004",
+        "V005",
+        "V006"
+      ],
+      "skills": [
+        {
+          "skill_id": 1,
+          "level": 2
+        },
+        {
+          "skill_id": 2,
+          "level": 1
+        }
+      ],
+      "projects": [
+        {
+          "name": "Synthetic project RU",
+          "description": "Учебный проект: Git и Docker",
+          "skill_ids": []
+        }
+      ],
+      "experience": [
+        {
+          "company": "Fictional practice lab",
+          "position": "Python intern",
+          "description": "Учебные задания SQL"
+        }
+      ]
+    },
+    {
+      "id": "P003",
+      "split": "test",
+      "language": "kk",
+      "candidate_job_ids": [
+        "V001",
+        "V002",
+        "V003",
+        "V004",
+        "V005",
+        "V006"
+      ],
+      "skills": [
+        {
+          "skill_id": 5,
+          "level": 1
+        }
+      ],
+      "projects": [
+        {
+          "name": "Synthetic project KK",
+          "description": "Оқу жобасы: JS development",
+          "skill_ids": []
+        }
+      ],
+      "certificates": [
+        {
+          "name": "Fictional JS development exercise"
+        }
+      ]
+    }
+  ],
+  "provenance": "Synthetic workflow example only; no real people, employers, independent ratings or matching-quality evidence.",
+  "person_groups": {
+    "P001": "G001",
+    "P002": "G002",
+    "P003": "G003"
+  }
+}
