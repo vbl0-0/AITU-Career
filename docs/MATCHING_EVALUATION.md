@@ -65,14 +65,15 @@ their individual grades before discussion. If they disagree, supply an
 average grades, treat missing judgments as irrelevant, or generate independent
 labels from the algorithm being evaluated.
 
-Suggested rubric, agreed before labeling:
+The [annotation workflow](ANNOTATION_GUIDE.md) uses the three-level rubric recorded
+in the submitted protocol. The schema also accepts grade 3 for separately versioned
+future studies; it does not require a four-level rubric. Fix one scale before labeling:
 
 | Grade | Interpretation |
 |---|---|
 | 0 | Irrelevant to the profile or target direction. |
-| 1 | Weak fit; substantial important requirements are missing. |
-| 2 | Suitable with identifiable, achievable gaps. |
-| 3 | Strong fit to the supplied profile and vacancy requirements. |
+| 1 | Partly relevant; important requirements are missing or underdeveloped. |
+| 2 | Suitable based on the supplied profile and vacancy evidence. |
 
 Assessors should inspect the same profile and vacancy evidence without seeing the
 baseline scores. Keep grades grounded in that evidence, not assumptions about age,
