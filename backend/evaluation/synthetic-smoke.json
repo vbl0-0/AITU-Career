@@ -1,0 +1,421 @@
+{
+  "schema_version": 1,
+  "dataset_id": "synthetic-pipeline-smoke-v1-NOT-QUALITY-EVIDENCE",
+  "kind": "synthetic",
+  "catalog": [
+    {
+      "id": 1,
+      "name": "Python",
+      "aliases": [
+        "Python programming"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "SQL",
+      "aliases": [
+        "Structured Query Language"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "JavaScript",
+      "aliases": [
+        "JS development"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Docker",
+      "aliases": []
+    },
+    {
+      "id": 5,
+      "name": "Git",
+      "aliases": []
+    },
+    {
+      "id": 6,
+      "name": "Kotlin",
+      "aliases": []
+    }
+  ],
+  "jobs": [
+    {
+      "id": "demo-api",
+      "title": "Fictional Python API role",
+      "requirements": [
+        {
+          "skill_id": 1,
+          "level": 2,
+          "weight": 3.0,
+          "required": true
+        },
+        {
+          "skill_id": 2,
+          "level": 2,
+          "weight": 2.0,
+          "required": true
+        },
+        {
+          "skill_id": 5,
+          "level": 1,
+          "weight": 2.0,
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "demo-data",
+      "title": "Fictional data role",
+      "description": "Python programming and SQL",
+      "requirements": []
+    },
+    {
+      "id": "demo-devops",
+      "title": "Fictional infrastructure role",
+      "requirements": [
+        {
+          "skill_id": 4,
+          "level": 2,
+          "weight": 3.0,
+          "required": true
+        },
+        {
+          "skill_id": 5,
+          "level": 1,
+          "weight": 2.0,
+          "required": true
+        },
+        {
+          "skill_id": 1,
+          "level": 1,
+          "weight": 2.0,
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "demo-mobile",
+      "title": "Fictional mobile role",
+      "requirements": [
+        {
+          "skill_id": 6,
+          "level": 2,
+          "weight": 2.0,
+          "required": true
+        },
+        {
+          "skill_id": 5,
+          "level": 1,
+          "weight": 2.0,
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "demo-web",
+      "title": "Fictional web role",
+      "requirements": [
+        {
+          "skill_id": 3,
+          "level": 2,
+          "weight": 3.0,
+          "required": true
+        },
+        {
+          "skill_id": 5,
+          "level": 1,
+          "weight": 2.0,
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "demo-unspecified",
+      "title": "Fictional role without skill requirements"
+    }
+  ],
+  "profiles": [
+    {
+      "id": "synthetic-dev-en",
+      "split": "dev",
+      "language": "en",
+      "candidate_job_ids": [
+        "demo-api",
+        "demo-data",
+        "demo-devops",
+        "demo-mobile",
+        "demo-web",
+        "demo-unspecified"
+      ],
+      "skills": [
+        {
+          "skill_id": 1,
+          "level": 2
+        },
+        {
+          "skill_id": 5,
+          "level": 1
+        }
+      ],
+      "projects": [
+        {
+          "name": "Fictional API exercise",
+          "description": "SQL in a small API",
+          "skill_ids": []
+        }
+      ]
+    },
+    {
+      "id": "synthetic-test-ru",
+      "split": "test",
+      "language": "ru",
+      "candidate_job_ids": [
+        "demo-api",
+        "demo-data",
+        "demo-devops",
+        "demo-mobile",
+        "demo-web",
+        "demo-unspecified"
+      ],
+      "skills": [
+        {
+          "skill_id": 1,
+          "level": 2
+        },
+        {
+          "skill_id": 2,
+          "level": 1
+        }
+      ],
+      "projects": [
+        {
+          "name": "Synthetic project RU",
+          "description": "Учебный проект: Git и Docker",
+          "skill_ids": []
+        }
+      ],
+      "experience": [
+        {
+          "company": "Fictional practice lab",
+          "position": "Python intern",
+          "description": "Учебные задания SQL"
+        }
+      ]
+    },
+    {
+      "id": "synthetic-test-kk",
+      "split": "test",
+      "language": "kk",
+      "candidate_job_ids": [
+        "demo-api",
+        "demo-data",
+        "demo-devops",
+        "demo-mobile",
+        "demo-web",
+        "demo-unspecified"
+      ],
+      "skills": [
+        {
+          "skill_id": 5,
+          "level": 1
+        }
+      ],
+      "projects": [
+        {
+          "name": "Synthetic project KK",
+          "description": "Оқу жобасы: JS development",
+          "skill_ids": []
+        }
+      ],
+      "certificates": [
+        {
+          "name": "Fictional JS development exercise"
+        }
+      ]
+    }
+  ],
+  "judgments": [
+    {
+      "profile_id": "synthetic-dev-en",
+      "job_id": "demo-api",
+      "ratings": [
+        {
+          "assessor_id": "synthetic-fixture-not-a-person",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "profile_id": "synthetic-dev-en",
+      "job_id": "demo-data",
+      "ratings": [
+        {
+          "assessor_id": "synthetic-fixture-not-a-person",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "profile_id": "synthetic-dev-en",
+      "job_id": "demo-devops",
+      "ratings": [
+        {
+          "assessor_id": "synthetic-fixture-not-a-person",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "profile_id": "synthetic-dev-en",
+      "job_id": "demo-mobile",
+      "ratings": [
+        {
+          "assessor_id": "synthetic-fixture-not-a-person",
+          "grade": 0
+        }
+      ]
+    },
+    {
+      "profile_id": "synthetic-dev-en",
+      "job_id": "demo-web",
+      "ratings": [
+        {
+          "assessor_id": "synthetic-fixture-not-a-person",
+          "grade": 0
+        }
+      ]
+    },
+    {
+      "profile_id": "synthetic-dev-en",
+      "job_id": "demo-unspecified",
+      "ratings": [
+        {
+          "assessor_id": "synthetic-fixture-not-a-person",
+          "grade": 0
+        }
+      ]
+    },
+    {
+      "profile_id": "synthetic-test-ru",
+      "job_id": "demo-api",
+      "ratings": [
+        {
+          "assessor_id": "synthetic-fixture-not-a-person",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "profile_id": "synthetic-test-ru",
+      "job_id": "demo-data",
+      "ratings": [
+        {
+          "assessor_id": "synthetic-fixture-not-a-person",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "profile_id": "synthetic-test-ru",
+      "job_id": "demo-devops",
+      "ratings": [
+        {
+          "assessor_id": "synthetic-fixture-not-a-person",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "profile_id": "synthetic-test-ru",
+      "job_id": "demo-mobile",
+      "ratings": [
+        {
+          "assessor_id": "synthetic-fixture-not-a-person",
+          "grade": 0
+        }
+      ]
+    },
+    {
+      "profile_id": "synthetic-test-ru",
+      "job_id": "demo-web",
+      "ratings": [
+        {
+          "assessor_id": "synthetic-fixture-not-a-person",
+          "grade": 0
+        }
+      ]
+    },
+    {
+      "profile_id": "synthetic-test-ru",
+      "job_id": "demo-unspecified",
+      "ratings": [
+        {
+          "assessor_id": "synthetic-fixture-not-a-person",
+          "grade": 0
+        }
+      ]
+    },
+    {
+      "profile_id": "synthetic-test-kk",
+      "job_id": "demo-api",
+      "ratings": [
+        {
+          "assessor_id": "synthetic-fixture-not-a-person",
+          "grade": 0
+        }
+      ]
+    },
+    {
+      "profile_id": "synthetic-test-kk",
+      "job_id": "demo-data",
+      "ratings": [
+        {
+          "assessor_id": "synthetic-fixture-not-a-person",
+          "grade": 0
+        }
+      ]
+    },
+    {
+      "profile_id": "synthetic-test-kk",
+      "job_id": "demo-devops",
+      "ratings": [
+        {
+          "assessor_id": "synthetic-fixture-not-a-person",
+          "grade": 0
+        }
+      ]
+    },
+    {
+      "profile_id": "synthetic-test-kk",
+      "job_id": "demo-mobile",
+      "ratings": [
+        {
+          "assessor_id": "synthetic-fixture-not-a-person",
+          "grade": 0
+        }
+      ]
+    },
+    {
+      "profile_id": "synthetic-test-kk",
+      "job_id": "demo-web",
+      "ratings": [
+        {
+          "assessor_id": "synthetic-fixture-not-a-person",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "profile_id": "synthetic-test-kk",
+      "job_id": "demo-unspecified",
+      "ratings": [
+        {
+          "assessor_id": "synthetic-fixture-not-a-person",
+          "grade": 0
+        }
+      ]
+    }
+  ]
+}

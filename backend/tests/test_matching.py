@@ -1,7 +1,7 @@
 from types import SimpleNamespace as N
 import pytest
 from datetime import date, timedelta
-from app.ai.matching import career_summary, competencies, extract_skills, score_requirements
+from app.ai.matching import career_summary, competencies, extract_skills, score_requirements, semantic_candidate
 
 
 def competency(identifier, name, level=2, inferred=False):
@@ -73,6 +73,48 @@ def test_semantic_unavailable_uses_keyword_fallback(monkeypatch):
     monkeypatch.setattr('app.ai.matching.semantic_model', lambda: None)
     result = score_requirements([competency(1, 'Python')], [requirement(1, 'Python'), requirement(2, 'Docker')], semantic=True)
     assert result['score'] == 50
+
+
+def test_strict_semantics_rejects_unavailable_model(monkeypatch):
+    monkeypatch.setattr('app.ai.matching.semantic_model', lambda: None)
+    with pytest.raises(ValueError, match='Semantic model unavailable'):
+        score_requirements([competency(1, 'Python')],
+                           [requirement(1, 'Python'), requirement(2, 'Docker')],
+                           semantic=True, strict_semantic=True)
+
+
+def test_default_app_scoring_keeps_fallback_when_inference_raises(monkeypatch):
+    class BrokenModel:
+        def encode(self, *args, **kwargs):
+            raise RuntimeError('Controlled inference failure')
+
+    monkeypatch.setattr('app.ai.matching.semantic_model', lambda: BrokenModel())
+    result = score_requirements([competency(1, 'Python')],
+                                [requirement(1, 'Python'), requirement(2, 'Docker')], semantic=True)
+    assert result['score'] == 50
+    assert result['missing'][0]['name'] == 'Docker'
+
+
+@pytest.mark.parametrize('similarity', [float('nan'), float('inf'), float('-inf')])
+def test_strict_semantics_rejects_nonfinite_model_similarity(monkeypatch, similarity):
+    class Similarities:
+        def argmax(self):
+            return 0
+
+        def __getitem__(self, index):
+            return similarity
+
+    class Vectors:
+        def __getitem__(self, index):
+            return self
+
+        def __matmul__(self, other):
+            return Similarities()
+
+    monkeypatch.setattr('app.ai.matching.semantic_model', lambda: N(encode=lambda *args, **kwargs: Vectors()))
+    with pytest.raises(ValueError, match='Semantic inference failed') as failure:
+        semantic_candidate('Docker', [competency(1, 'Python')], strict=True)
+    assert 'non-finite similarity' in str(failure.value.__cause__)
 
 
 @pytest.fixture
