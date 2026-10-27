@@ -4,6 +4,7 @@ import hashlib
 import importlib.metadata
 import json
 import logging
+import math
 import platform
 import re
 import statistics
@@ -76,6 +77,8 @@ def rank_profile(profile, jobs, catalog, baseline):
             score = round(100 * sum(r['skill_id'] in known for r in requirements) / len(requirements), 1) if requirements else None
         else:
             score = matching.score_requirements(available, requirements, semantic=baseline == 'B2')['score']
+        if score is not None and (not math.isfinite(score) or not 0 <= score <= 100):
+            raise ValueError('Invalid matching score for ' + job_id + '; check requirement weights and scoring inputs.')
         result.append({'job_id': job_id, 'score': score})
     return sorted(result, key=lambda item: (item['score'] is None, -(item['score'] or 0), item['job_id']))
 

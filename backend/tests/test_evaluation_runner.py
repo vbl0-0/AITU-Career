@@ -466,3 +466,18 @@ def test_semantic_weight_fingerprint_changes_even_when_config_is_identical(contr
     after = runner._semantic_metadata()
     assert after['weights_sha256'] != before['weights_sha256']
     assert after['config_sha256'] == before['config_sha256']
+
+
+@pytest.mark.parametrize('weights', [(1e308, 1e308), (1e308, 1.0)])
+def test_finite_weights_that_overflow_production_arithmetic_cannot_publish_scores(payload, dataset_file, tmp_path, weights):
+    # Both inputs are finite: one overflows the sum and one the percentage
+    # multiplication. The production matcher must never yield NaN/Infinity CSVs.
+    for requirement, weight in zip(payload['jobs'][0]['requirements'], weights):
+        requirement['weight'] = weight
+        requirement['level'] = 1
+    Dataset.model_validate(payload)
+    save(dataset_file, payload)
+    output = tmp_path / 'result'
+    with pytest.raises(ValueError, match='Invalid matching score for j-python'):
+        experiment(dataset_file, output, baselines=('B1',))
+    assert not output.exists()
